@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind&apos;s Blog</title>
-    <updated>2020-02-25T13:35:55.481Z</updated>
+    <updated>2020-02-25T13:48:24.340Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -10,4 +10,184 @@
     <logo>https://mornwind.github.io/images/avatar.png</logo>
     <icon>https://mornwind.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Mornwind&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[「少女前线 跨服」（iOS客户端 → 安卓国服）]]></title>
+        <id>https://mornwind.github.io/post/shao-nu-qian-xian-kua-fu-ios/</id>
+        <link href="https://mornwind.github.io/post/shao-nu-qian-xian-kua-fu-ios/">
+        </link>
+        <updated>2020-02-23T10:28:12.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>By: <a href="https://github.com/Mornwind/GF_Region_Switcher">Mornwind</a></p>
+</blockquote>
+<h2 id="参考来源">参考来源</h2>
+<blockquote>
+<p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3630717">B站专栏（cv3630717）</a></p>
+</blockquote>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本文档内所提到的所有客户端与服务器，均限制为<strong>国服</strong>。</li>
+<li>目前本人尚未研究渠道服的跨服，故本项目暂时只支持官服跨服。日后若有时间研究且能写得出来，会尽量加进本项目。</li>
+<li>跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请另寻他法。</li>
+<li>不可跨服充值，否则会充错服，切记。</li>
+</ol>
+<hr>
+<h2 id="配置信息">配置信息</h2>
+<h3 id="1-surge-4-loon">① Surge 4 / Loon</h3>
+<pre><code>[Script]
+# 少女前线 跨服
+http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher.js
+</code></pre>
+<h3 id="2-quantumult-x">② Quantumult X</h3>
+<pre><code>[rewrite_local]
+# 少女前线 跨服
+^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url script-request-body gf_region_switcher.js
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「崩坏3 跨服」（iOS客户端 → 官服服务器）]]></title>
+        <id>https://mornwind.github.io/post/beng-huai-3-kua-fu/</id>
+        <link href="https://mornwind.github.io/post/beng-huai-3-kua-fu/">
+        </link>
+        <updated>2020-02-17T08:36:32.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>By: <a href="https://github.com/Mornwind/BH3_Region_Selector">Mornwind</a></p>
+</blockquote>
+<h2 id="参考来源">参考来源</h2>
+<blockquote>
+<p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：原项目已删除，现跟随本项目转移至 GitHub）</p>
+</blockquote>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本文档内所提到的所有客户端与服务器，均限制为<strong>国服</strong>。</li>
+<li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
+<li>目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。<strong>本文档中关于渠道服的部分，仅作学习参考，尚起不到实际用途。</strong></li>
+<li>&quot;进阶使用（脚本法）&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
+</ol>
+<hr>
+<h2 id="效果预览">效果预览</h2>
+<figure data-type="image" tabindex="1"><img src="/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
+<h2 id="配置信息">配置信息</h2>
+<h3 id="1-新手使用重定向法">⑴ 新手使用（重定向法）</h3>
+<blockquote>
+<p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
+<h4 id="1-surge-4-loon">① Surge 4 / Loon</h4>
+<pre><code>[URL Rewrite]
+# 获取全平台服务器列表
+^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc 302
+
+# 改写连入服务器的客户端标识
+# &gt; 官服
+# &gt;&gt; 安卓国服
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; iOS国服
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 全平台（桌面）服
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt; 渠道服（详见说明文档最前面的&quot;注意事项&quot;部分）
+# &gt;&gt; Bilibili服
+^http:\/\/139\.196\.248\.220\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139&gt;.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 应用宝服
+^http:\/\/115\.159\.20\.29\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://115.159.20.29/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 渠道1服
+^http:\/\/139\.196\.248\.218\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 渠道2服
+^http:\/\/139\.196\.248\.219\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+
+[MITM]
+hostname = global*.bh3.com
+</code></pre>
+<h4 id="2-quantumult-x">② Quantumult X</h4>
+<pre><code>[rewrite_remote]
+# 新手直接订阅使用，无需自行更动
+https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_rewrite.conf, tag=BH3 Region Rewrite, enabled=true
+</code></pre>
+<h3 id="2-进阶使用脚本法">⑵ 进阶使用（脚本法）</h3>
+<blockquote>
+<p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
+<p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
+</blockquote>
+<h4 id="1-surge-4-loon-2">① Surge 4 / Loon</h4>
+<pre><code>[Script]
+# 改写连入服务器的客户端标识
+http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_selector.js
+
+# 自定义服务器列表
+http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list.js
+
+[MITM]
+hostname = global*.bh3.com
+</code></pre>
+<h4 id="2-quantumult-x-2">② Quantumult X</h4>
+<pre><code>[rewrite_local]
+# 改写连入服务器的客户端标识
+^http:\/\/(.*)\/query_gameserver\?version=.* url script-request-body bh3_region_selector.js
+
+# 自定义服务器列表
+^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* url script-response-body bh3_region_list.js
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+<hr>
+<h2 id="附录1app-商店链接">附录1：App 商店链接</h2>
+<ul>
+<li><strong>游戏本体</strong>
+<ul>
+<li><a href="https://apps.apple.com/app/id1143402987">崩坏3</a></li>
+</ul>
+</li>
+<li><strong>代理&amp;抓包工具</strong>
+<ul>
+<li><a href="https://apps.apple.com/app/id1442620678">Surge 4</a></li>
+<li><a href="https://apps.apple.com/app/id1443988620">Quantumult X</a></li>
+<li><a href="https://apps.apple.com/app/id1373567447">Loon</a></li>
+</ul>
+</li>
+<li><strong>抓包工具</strong>
+<ul>
+<li><a href="https://apps.apple.com/app/id1210562295">Thor HTTP</a></li>
+<li><a href="https://apps.apple.com/app/id1445874902">HTTP Catcher</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="附录2崩坏3国服客户端标识">附录2：崩坏3国服客户端标识</h2>
+<blockquote>
+<p>以下为分别连接不同的国服服务器时，有效的客户端标识。</p>
+</blockquote>
+<ul>
+<li><strong>官服</strong>
+<ul>
+<li>安卓国服：<code>gf_android</code>，<code>gf_pc</code></li>
+<li>iOS国服：<code>gf_ios</code>，<code>gf_pc</code></li>
+<li>全平台（桌面）服：<code>gf_pc</code>，<code>gf_android</code>，<code>gf_ios</code></li>
+</ul>
+</li>
+<li><strong>渠道服</strong>
+<ul>
+<li>Bilibili服：<code>gf_pc</code>，<code>gf_android_bilibili</code></li>
+<li>应用宝服：<code>gf_pc</code>，<code>gf_android_tencent</code></li>
+<li>渠道1服：<code>gf_pc</code>，<code>gf_android_coolpad</code>，<code>gf_android_gionee</code>，<code>gf_android_huawei</code>，<code>gf_android_lenovo</code>，<code>gf_android_oppo</code>，<code>gf_android_vivo</code></li>
+<li>渠道2服：<code>gf_pc</code>，<code>gf_android_qihoo</code>，<code>gf_android_uc</code>，<code>gf_android_wandoujia</code>，<code>gf_android_xiaomi</code></li>
+</ul>
+</li>
+<li><strong>测试服</strong>（需搭配测试专用客户端）
+<ul>
+<li>安卓测试服：<code>beta</code></li>
+<li>iOS测试服：<code>beta_ios</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="附录3崩坏3服务器状态标识">附录3：崩坏3服务器状态标识</h2>
+<ul>
+<li><strong>推荐</strong>：<code>&quot;server_state&quot;: &quot;Recommend&quot;</code></li>
+<li><strong>隐藏</strong>：<code>&quot;server_state&quot;: &quot;HIDE&quot;</code></li>
+</ul>
+]]></content>
+    </entry>
 </feed>

@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>我的阅读 | Mornwind&#39;s Blog</title>
+<title>「少女前线 跨服」（iOS客户端 → 安卓国服） | Mornwind&#39;s Blog</title>
 <meta name="description" content="晨风的个人小站" />
 <link rel="shortcut icon" href="https://mornwind.github.io/favicon.ico">
 <link rel="stylesheet" href="https://mornwind.github.io/styles/main.css">
@@ -15,13 +15,23 @@
 <script src="https://mornwind.github.io/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://mornwind.github.io/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <link rel="stylesheet" href="https://mornwind.github.io/media/js/Bmdb.min.css">
-    <script type='text/javascript' src='https://mornwind.github.io/media/js/Bmdb.min.js'></script>
+    <meta name="description" content="
+By: Mornwind
+
+参考来源
+
+① 霞ヶ丘詩羽x：B站专栏（cv3630717）
+
+
+⚠️ 注意事项 ⚠️
+
+本文档内所提到的所有客户端与服务器，均限制为国服。
+目前本人尚未研究渠道服的跨服，故本项目暂时只支持官服跨服。日后若有时..." />
+    <meta name="keywords" content="少女前线,跨服" />
+    <script src="https://mornwind.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://mornwind.github.io/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -88,14 +98,105 @@
         </div>
       </div>
 
-      <main id="friends" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('/media/images/gridea.jpg');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2020-02-23"><i class="fa fa-calendar"></i><span class="lately">2 天前</span></time>
+              
+              <a href="https://mornwind.github.io/post/shao-nu-qian-xian-kua-fu-ios/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/shao-nu-qian-xian-kua-fu-ios/"> </span>
+              </a>
+              <span id="/shao-nu-qian-xian-kua-fu-ios/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="https://mornwind.github.io/tag/girlsfrontline/" class="ctag ctag-0 ctag-girlsfrontline" aria-label="">少女前线</a>
+                    
+                      <a href="https://mornwind.github.io/tag/kuafu/" class="ctag ctag-1 ctag-kuafu" aria-label="">跨服</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">「少女前线 跨服」（iOS客户端 → 安卓国服）</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="section-content" style="margin-top:3em;"></div>
-        </div>
-        </div>
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <blockquote>
+<p>By: <a href="https://github.com/Mornwind/GF_Region_Switcher">Mornwind</a></p>
+</blockquote>
+<h2 id="参考来源">参考来源</h2>
+<blockquote>
+<p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3630717">B站专栏（cv3630717）</a></p>
+</blockquote>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本文档内所提到的所有客户端与服务器，均限制为<strong>国服</strong>。</li>
+<li>目前本人尚未研究渠道服的跨服，故本项目暂时只支持官服跨服。日后若有时间研究且能写得出来，会尽量加进本项目。</li>
+<li>跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请另寻他法。</li>
+<li>不可跨服充值，否则会充错服，切记。</li>
+</ol>
+<hr>
+<h2 id="配置信息">配置信息</h2>
+<h3 id="1-surge-4-loon">① Surge 4 / Loon</h3>
+<pre><code>[Script]
+# 少女前线 跨服
+http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher.js
+</code></pre>
+<h3 id="2-quantumult-x">② Quantumult X</h3>
+<pre><code>[rewrite_local]
+# 少女前线 跨服
+^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url script-request-body gf_region_switcher.js
+</code></pre>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mornwind.github.io/media/images/honkai3.jpg');"></div>
+                 <a href="https://mornwind.github.io/post/beng-huai-3-kua-fu/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2020-02-17">2020-02-17</time>
+                  <h4 class="title white no-margin">「崩坏3 跨服」（iOS客户端 → 官服服务器）</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://mornwind.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <p>请到客户端“主题--自定义配置--valine”中填入ID和KEY</p>
+              </div>
+              <div class="clear"></div>
+            
+
+            </div>
+          </div>
       </main>
-        <footer id="footer" class="grid-container">
+
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -220,15 +321,9 @@
 
         
 
-    <script>
-    new Bmdb({
-      type: 'books',
-      selector: '.section-content',
-      secret: '0bba46738324c778ad2da662837c14d2c1e5bceb22e3729febc9fd3677bdcea5',
-      noMoreText: '没有更多数据了',
-      limit: 30
-    })
-    </script>
+      
+    <script src="https://mornwind.github.io/media/js/functions-post.js"></script>
+
     </div>
     <!-- end: #wrapper -->
   </body>
