@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-02-26T07:39:24.009Z</updated>
+    <updated>2020-02-26T07:40:45.732Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2020, Mornwind</rights>
     <entry>
         <title type="html"><![CDATA[「少女前线 跨服」（iOS客户端 → 安卓国服）]]></title>
-        <id>https://mornwind.github.io/post/Girls-Frontline-ios-Switch-Server/</id>
-        <link href="https://mornwind.github.io/post/Girls-Frontline-ios-Switch-Server/">
+        <id>https://mornwind.github.io/post/GirlsFrontline-iOS-Switch-Server/</id>
+        <link href="https://mornwind.github.io/post/GirlsFrontline-iOS-Switch-Server/">
         </link>
         <updated>2020-02-23T10:28:12.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
