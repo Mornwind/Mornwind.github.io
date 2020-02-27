@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-02-27T07:46:56.540Z</updated>
+    <updated>2020-02-27T08:05:59.277Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://mornwind.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Mornwind</rights>
     <entry>
-        <title type="html"><![CDATA[「少女前线 跨服配置」（iOS客户端 → 安卓国服）]]></title>
+        <title type="html"><![CDATA[「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 安卓国服）]]></title>
         <id>https://mornwind.github.io/post/GirlsFrontline-iOS-Switch-Server-Profile/</id>
         <link href="https://mornwind.github.io/post/GirlsFrontline-iOS-Switch-Server-Profile/">
         </link>
@@ -47,7 +47,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「崩坏3 跨服教程」—— Surge 4 篇（iOS客户端 → 官服服务器）]]></title>
+        <title type="html"><![CDATA[「崩坏3」跨服教程（Surge 4）（iOS客户端 → 官服服务器）]]></title>
         <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Guide/</id>
         <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Guide/">
         </link>
@@ -150,7 +150,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「崩坏3 跨服配置」（iOS客户端 → 官服服务器）]]></title>
+        <title type="html"><![CDATA[「崩坏3」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 官服服务器）]]></title>
         <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/</id>
         <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/">
         </link>
