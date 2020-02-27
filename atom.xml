@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-02-27T14:24:47.625Z</updated>
+    <updated>2020-02-27T15:16:20.641Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -162,7 +162,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：原项目已删除，现跟随本项目转移至 GitHub）</p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问。）</p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
