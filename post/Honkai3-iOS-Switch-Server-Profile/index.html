@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>「崩坏3」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 官服服务器） | Mornwind</title>
+<title>「崩坏3」跨服方式一览（iOS客户端 → 官服服务器） | Mornwind</title>
 <meta name="description" content="晨风的个人小站" />
 <link rel="shortcut icon" href="https://mornwind.github.io/favicon.ico">
 <link rel="stylesheet" href="https://mornwind.github.io/styles/main.css">
@@ -80,7 +80,7 @@ GitHub Link: BH3_Region_Selector
       <div class="hide-on-mobile hide-on-tablet hide-on-desktop">
         <div id="search-lightbox" class="grid-container grid-small grid-parent mfp-hide">
           <div class="search-wrapper section">
-            <form id="gridea-search-form" data-update="1582816573715" action="/search/index.html" class="search-form" _lpchecked="1">
+            <form id="gridea-search-form" data-update="1583152049449" action="/search/index.html" class="search-form" _lpchecked="1">
               <input type="text" name="q" id="s" value="" class="search-field" placeholder="搜点啥..." aria-label="搜点啥..." required="">
               <button type="submit" class="submit" aria-label="Submit">
                 <i class="fa fa-search-line"></i>
@@ -93,9 +93,9 @@ GitHub Link: BH3_Region_Selector
       <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
 
         <div class="center content">
-          <div class="featured-image cover" style="background-image: url('https://uploadstatic.mihoyo.com/contentweb/20191115/2019111515510150417.jpg');">
+          <div class="featured-image cover" style="background-image: url('/media/images/gridea.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-02-17"><i class="fa fa-calendar"></i><span class="lately">10 天前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-02-17"><i class="fa fa-calendar"></i><span class="lately">14 天前</span></time>
               
               <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/#comments" class="comments meta-info" title="">
                 <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/Honkai3-iOS-Switch-Server-Profile/"> </span>
@@ -111,7 +111,7 @@ GitHub Link: BH3_Region_Selector
                       <a href="https://mornwind.github.io/tag/Honkai3/" class="ctag ctag-1 ctag-Honkai3" aria-label="">崩坏3</a>
                     
               </div>
-              <h1 class="title ularge white bold">「崩坏3」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 官服服务器）</h1>
+              <h1 class="title ularge white bold">「崩坏3」跨服方式一览（iOS客户端 → 官服服务器）</h1>
             </div>
           </div>
         </div>  
@@ -136,75 +136,21 @@ GitHub Link: BH3_Region_Selector
 <li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
 <li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
 <li>**本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。**目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。</li>
-<li>&quot;进阶使用（脚本法）&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
 <figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
-<h2 id="配置信息">配置信息</h2>
-<h3 id="1-新手使用重定向法">⑴ 新手使用（重定向法）</h3>
-<blockquote>
-<p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
-<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
-</blockquote>
-<h4 id="1-surge-4-loon">① Surge 4 / Loon</h4>
-<pre><code>[URL Rewrite]
-# 获取全平台服务器列表
-^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc 302
-
-# 改写连入服务器的客户端标识
-# &gt; 官服
-# &gt;&gt; 安卓国服
-^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 header
-# &gt;&gt; iOS国服
-^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 header
-# &gt;&gt; 全平台（桌面）服
-^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-# &gt; 渠道服（详见说明文档最前面的&quot;注意事项&quot;部分）
-# &gt;&gt; Bilibili服
-^http:\/\/139\.196\.248\.220\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139&gt;.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-# &gt;&gt; 应用宝服
-^http:\/\/115\.159\.20\.29\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://115.159.20.29/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-# &gt;&gt; 渠道1服
-^http:\/\/139\.196\.248\.218\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-# &gt;&gt; 渠道2服
-^http:\/\/139\.196\.248\.219\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-
-[MITM]
-hostname = global*.bh3.com
-</code></pre>
-<h4 id="2-quantumult-x">② Quantumult X</h4>
-<pre><code>[rewrite_remote]
-# 新手直接订阅使用，无需自行更动
-https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_rewrite.conf, tag=BH3 Region Rewrite, enabled=true
-</code></pre>
-<h3 id="2-进阶使用脚本法">⑵ 进阶使用（脚本法）</h3>
-<blockquote>
-<p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
-<p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
-</blockquote>
-<h4 id="1-surge-4-loon-2">① Surge 4 / Loon</h4>
-<pre><code>[Script]
-# 自定义服务器列表
-http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list.js
-
-# 改写连入服务器的客户端标识
-http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_selector.js
-
-[MITM]
-hostname = global*.bh3.com
-</code></pre>
-<h4 id="2-quantumult-x-2">② Quantumult X</h4>
-<pre><code>[rewrite_local]
-# 自定义服务器列表
-^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* url script-response-body bh3_region_list.js
-
-# 改写连入服务器的客户端标识
-^http:\/\/(.*)\/query_gameserver\?version=.* url script-request-header bh3_region_selector.js
-
-[MITM]
-hostname = *.bh3.com
-</code></pre>
+<h2 id="跨服工具与配置">跨服工具与配置</h2>
+<h3 id="1-shadowrocket">⑴ Shadowrocket</h3>
+<p><a href="/Shadowrocket/README.md">Shadowrocket 配置文档</a></p>
+<h3 id="2-surge-4-loon">⑵ Surge 4 / Loon</h3>
+<p><a href="/Surge_4/README.md">Surge 4 / Loon 配置文档</a></p>
+<h3 id="3-quantumult-x">⑶ Quantumult X</h3>
+<p><a href="/Quantumult_X/README.md">Quantumult X 配置文档</a></p>
+<h3 id="4-thor-http">⑷ Thor HTTP</h3>
+<p>略（见群内教程）</p>
+<h3 id="5-http-catcher">⑸ HTTP Catcher</h3>
+<p>略（见群内教程）</p>
 <hr>
 <h2 id="附录1app-商店链接">附录1：App 商店链接</h2>
 <ul>
@@ -269,11 +215,11 @@ hostname = *.bh3.com
             <section class="related section">
               
               <article class="prev grid-50 tablet-grid-50 grid-parent">
-                <div class="thumb cover lazy loaded" style="background-image: url('https://uploadstatic.mihoyo.com/contentweb/20200120/2020012014354871886.jpg');"></div>
-                 <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Guide/" class="full-link"></a>
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mornwind.github.io/media/images/SwitchServer.jpg');"></div>
+                 <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Surge-4/" class="full-link"></a>
                  <div class="info">
-                  <time datetime="2020-02-21">2020-02-21</time>
-                  <h4 class="title white no-margin">「崩坏3」跨服教程（Surge 4）（iOS客户端 → 官服服务器）</h4>
+                  <time datetime="2020-02-17">2020-02-17</time>
+                  <h4 class="title white no-margin">「崩坏3」跨服配置（Surge 4 / Loon）（iOS客户端 → 官服服务器）</h4>
                 </div>
                  <span class="epcl-button red">
                   <img src="https://mornwind.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
@@ -326,7 +272,7 @@ jQuery(document).ready(function($){
                   
                   <article class="item post-0 post type-post status-publish format-standard has-post-thumbnail hentry">
                     <a href="https://mornwind.github.io/post/GirlsFrontline-iOS-Switch-Server-Profile/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('http://gf.ppgame.com/CKFinderJava/1/files/1%20(2).png');"></span>
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('/media/images/gridea.jpg');"></span>
                     </a>
                     <div class="info gradient-effect">
                       <time datetime="2020-02-23">2020-02-23</time>
@@ -341,7 +287,7 @@ jQuery(document).ready(function($){
                   
                   <article class="item post-1 post type-post status-publish format-standard has-post-thumbnail hentry">
                     <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Guide/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://uploadstatic.mihoyo.com/contentweb/20200120/2020012014354871886.jpg');"></span>
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('/media/images/gridea.jpg');"></span>
                     </a>
                     <div class="info gradient-effect">
                       <time datetime="2020-02-21">2020-02-21</time>
@@ -355,17 +301,21 @@ jQuery(document).ready(function($){
                   
                   
                   <article class="item post-2 post type-post status-publish format-standard has-post-thumbnail hentry">
-                    <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/" class="thumb hover-effect">
-                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('https://uploadstatic.mihoyo.com/contentweb/20191115/2019111515510150417.jpg');"></span>
+                    <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Quantumult-X/" class="thumb hover-effect">
+                      <span class="fullimage cover" style="display:block;border-radius:50%;background-image: url('/media/images/gridea.jpg');"></span>
                     </a>
                     <div class="info gradient-effect">
                       <time datetime="2020-02-17">2020-02-17</time>
                       <h4 class="title usmall">
-                        <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/">「崩坏3」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 官服服务器）</a>
+                        <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Quantumult-X/">「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）</a>
                       </h4>
                     </div>
                     <div class="clear"></div>
                   </article>
+                  
+                  
+                  
+                  
                   
                   
                   
@@ -431,7 +381,7 @@ jQuery(document).ready(function($){
           <a href="https://mornwind.github.io"><img src="\media\images\custom-footerLogo.png" alt=""></a>
         </div>
         <p class="published border-effect">
-          ©2019 共 4 篇文章
+          ©2019 共 6 篇文章
           <br/>
           Theme <a href="https://gridea.dev/" target="_blank">「Breek」</a> Powered by <a href="https://gridea.dev/" target="_blank">「Gridea」</a>
         </p>

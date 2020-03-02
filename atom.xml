@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-02-27T15:16:20.641Z</updated>
+    <updated>2020-03-02T12:28:14.008Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -54,7 +54,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
         <updated>2020-02-21T11:49:51.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
-<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector">BH3_Region_Selector</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Surge_4">BH3_Region_Selector/Surge_4</a></p>
 </blockquote>
 <h2 id="前言">前言</h2>
 <p>作为一个晚登录两三天没能拿到“登录纪念勋章”的安卓国服的甲板老清洁工，自从嫌弃安卓机的卡慢（以及当年月光的光翼特效显示不出来），咬咬牙入了 iPod 和 iPad 之后，便开始发愁：安卓端甲板上的老婆们，要怎么打包带到 iOS 端？</p>
@@ -70,6 +70,9 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
 <li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
 <li>**本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。**目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。</li>
+</ol>
+<h2 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h2>
+<ol>
 <li>&quot;进阶使用（脚本法）&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
 </ol>
 <hr>
@@ -86,19 +89,19 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <figure data-type="image" tabindex="4"><img src="https://mornwind.github.io/post-images/1582788486793.png" alt="" loading="lazy"></figure>
 <h2 id="方案说明">方案说明</h2>
 <p>本项目包含两种方案，请选择适合自己的方案。（可点击跳转）</p>
-<h3 id="方案一新手使用重定向法">【方案一】新手使用（重定向法）</h3>
+<h3 id="方案一入门方法重定向法">【方案一】入门方法——重定向法</h3>
 <blockquote>
 <p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
 <p>仅使用 URL 重定向（URL Rewrite） 功能实现。</p>
 </blockquote>
-<p>原版：<a href="https://github.com/Mornwind/BH3_Region_Selector#-%E6%96%B0%E6%89%8B%E4%BD%BF%E7%94%A8%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">Mornwind/BH3_Region_Selector</a><br>
+<p>原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E5%85%A5%E9%97%A8%E6%96%B9%E6%B3%95%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
 精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-%E6%96%B0%E6%89%8B%E4%BD%BF%E7%94%A8%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">FlintyLemming/BH3_Region_Selector</a></p>
-<h3 id="方案二进阶使用脚本法">【方案二】进阶使用（脚本法）</h3>
+<h3 id="方案二进阶方法脚本法">【方案二】进阶方法——脚本法</h3>
 <blockquote>
 <p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
 <p>仅使用 脚本（Script） 功能实现。</p>
 </blockquote>
-<p>原版：<a href="https://github.com/Mornwind/BH3_Region_Selector#-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E8%84%9A%E6%9C%AC%E6%B3%95">Mornwind/BH3_Region_Selector</a><br>
+<p>原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95%E8%84%9A%E6%9C%AC%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
 精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E8%84%9A%E6%9C%AC%E6%B3%95">FlintyLemming/BH3_Region_Selector</a></p>
 <h2 id="操作步骤">操作步骤</h2>
 <h3 id="第一步">第一步</h3>
@@ -106,12 +109,12 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <figure data-type="image" tabindex="5"><img src="https://mornwind.github.io/post-images/1582788507478.jpg" alt="" loading="lazy"></figure>
 <h3 id="第二步">第二步</h3>
 <p>挑选好你想使用的方案，然后在 GitHub 上的项目中找到对应方案所需使用的配置代码。以下可直接点击跳转。<br>
-【方案一】新手使用（重定向法） → Surge 4 配置<br>
-原版：<a href="https://github.com/Mornwind/BH3_Region_Selector#-surge-4--loon">Mornwind/BH3_Region_Selector</a><br>
+【方案一】入门方法——重定向法 → Surge 4 配置<br>
+原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E5%85%A5%E9%97%A8%E6%96%B9%E6%B3%95%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
 精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-surge-4--loon">FlintyLemming/BH3_Region_Selector</a></p>
 <figure data-type="image" tabindex="6"><img src="https://mornwind.github.io/post-images/1582788517307.png" alt="" loading="lazy"></figure>
-<p>【方案二】进阶使用（脚本法） → Surge 4 配置<br>
-原版：<a href="https://github.com/Mornwind/BH3_Region_Selector#-surge-4--loon-1">Mornwind/BH3_Region_Selector</a><br>
+<p>【方案二】进阶方法——脚本法 → Surge 4 配置<br>
+原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95%E8%84%9A%E6%9C%AC%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
 精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-surge-4--loon-1">FlintyLemming/BH3_Region_Selector</a></p>
 <figure data-type="image" tabindex="7"><img src="https://mornwind.github.io/post-images/1582788522770.png" alt="" loading="lazy"></figure>
 <h3 id="第三步">第三步</h3>
@@ -150,14 +153,14 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「崩坏3」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 官服服务器）]]></title>
-        <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/</id>
-        <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/">
+        <title type="html"><![CDATA[「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）]]></title>
+        <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Quantumult-X/</id>
+        <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Quantumult-X/">
         </link>
-        <updated>2020-02-17T08:36:32.000Z</updated>
+        <updated>2020-02-17T08:47:22.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
-<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector">BH3_Region_Selector</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Quantumult_X">BH3_Region_Selector/Quantumult_X</a></p>
 </blockquote>
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
@@ -170,18 +173,76 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
 <li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
 <li>**本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。**目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。</li>
-<li>&quot;进阶使用（脚本法）&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
+</ol>
+<h2 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h2>
+<ol>
+<li>&quot;进阶方法——脚本法&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list_preview.gif" alt="使用 Quantumult X 跨服" loading="lazy"></figure>
 <h2 id="配置信息">配置信息</h2>
 <h3 id="1-新手使用重定向法">⑴ 新手使用（重定向法）</h3>
 <blockquote>
 <p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
 <p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
 </blockquote>
-<h4 id="1-surge-4-loon">① Surge 4 / Loon</h4>
+<pre><code>[rewrite_remote]
+# 新手直接订阅使用，无需自行更动
+https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_rewrite.conf, tag=BH3 Region Rewrite, enabled=true
+</code></pre>
+<h3 id="2-进阶使用脚本法">⑵ 进阶使用（脚本法）</h3>
+<blockquote>
+<p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
+<p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
+</blockquote>
+<pre><code>[rewrite_local]
+# 自定义服务器列表
+^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* url script-response-body bh3_region_list.js
+
+# 改写连入服务器的客户端标识
+^http:\/\/(.*)\/query_gameserver\?version=.* url script-request-header bh3_region_selector.js
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「崩坏3」跨服配置（Surge 4 / Loon）（iOS客户端 → 官服服务器）]]></title>
+        <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Surge-4/</id>
+        <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Surge-4/">
+        </link>
+        <updated>2020-02-17T08:40:48.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Surge_4">BH3_Region_Selector/Surge_4</a></p>
+</blockquote>
+<h2 id="参考来源">参考来源</h2>
+<blockquote>
+<p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问。）</p>
+</blockquote>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
+<li>**本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。**目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。</li>
+</ol>
+<h2 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h2>
+<ol>
+<li>&quot;进阶使用（脚本法）&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
+</ol>
+<hr>
+<h2 id="效果预览">效果预览</h2>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/surge_4_preview.jpg" alt="使用 Surge 4 跨服" loading="lazy"></figure>
+<h2 id="配置信息">配置信息</h2>
+<h3 id="入门方法重定向法">入门方法——重定向法</h3>
+<blockquote>
+<p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
 <pre><code>[URL Rewrite]
 # 获取全平台服务器列表
 ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc 302
@@ -207,17 +268,11 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 [MITM]
 hostname = global*.bh3.com
 </code></pre>
-<h4 id="2-quantumult-x">② Quantumult X</h4>
-<pre><code>[rewrite_remote]
-# 新手直接订阅使用，无需自行更动
-https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_rewrite.conf, tag=BH3 Region Rewrite, enabled=true
-</code></pre>
-<h3 id="2-进阶使用脚本法">⑵ 进阶使用（脚本法）</h3>
+<h3 id="进阶方法脚本法">进阶方法——脚本法</h3>
 <blockquote>
 <p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
 <p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
 </blockquote>
-<h4 id="1-surge-4-loon-2">① Surge 4 / Loon</h4>
 <pre><code>[Script]
 # 自定义服务器列表
 http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list.js
@@ -228,17 +283,44 @@ http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-si
 [MITM]
 hostname = global*.bh3.com
 </code></pre>
-<h4 id="2-quantumult-x-2">② Quantumult X</h4>
-<pre><code>[rewrite_local]
-# 自定义服务器列表
-^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* url script-response-body bh3_region_list.js
-
-# 改写连入服务器的客户端标识
-^http:\/\/(.*)\/query_gameserver\?version=.* url script-request-header bh3_region_selector.js
-
-[MITM]
-hostname = *.bh3.com
-</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「崩坏3」跨服方式一览（iOS客户端 → 官服服务器）]]></title>
+        <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/</id>
+        <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/">
+        </link>
+        <updated>2020-02-17T08:36:32.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector">BH3_Region_Selector</a></p>
+</blockquote>
+<h2 id="参考来源">参考来源</h2>
+<blockquote>
+<p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问。）</p>
+</blockquote>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
+<li>**本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。**目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。</li>
+</ol>
+<hr>
+<h2 id="效果预览">效果预览</h2>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
+<h2 id="跨服工具与配置">跨服工具与配置</h2>
+<h3 id="1-shadowrocket">⑴ Shadowrocket</h3>
+<p><a href="/Shadowrocket/README.md">Shadowrocket 配置文档</a></p>
+<h3 id="2-surge-4-loon">⑵ Surge 4 / Loon</h3>
+<p><a href="/Surge_4/README.md">Surge 4 / Loon 配置文档</a></p>
+<h3 id="3-quantumult-x">⑶ Quantumult X</h3>
+<p><a href="/Quantumult_X/README.md">Quantumult X 配置文档</a></p>
+<h3 id="4-thor-http">⑷ Thor HTTP</h3>
+<p>略（见群内教程）</p>
+<h3 id="5-http-catcher">⑸ HTTP Catcher</h3>
+<p>略（见群内教程）</p>
 <hr>
 <h2 id="附录1app-商店链接">附录1：App 商店链接</h2>
 <ul>

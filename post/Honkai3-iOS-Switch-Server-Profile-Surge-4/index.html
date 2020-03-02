@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>我的阅读 | Mornwind</title>
+<title>「崩坏3」跨服配置（Surge 4 / Loon）（iOS客户端 → 官服服务器） | Mornwind</title>
 <meta name="description" content="晨风的个人小站" />
 <link rel="shortcut icon" href="https://mornwind.github.io/favicon.ico">
 <link rel="stylesheet" href="https://mornwind.github.io/styles/main.css">
@@ -15,13 +15,19 @@
 <script src="https://mornwind.github.io/media/js/jquery.magnific-popup.min.js"></script>
 <script src="https://mornwind.github.io/media/js/functions.js"></script>
     <meta name="referrer" content="never">
-    <link rel="stylesheet" href="https://mornwind.github.io/media/js/Bmdb.min.css">
-    <script type='text/javascript' src='https://mornwind.github.io/media/js/Bmdb.min.js'></script>
+    <meta name="description" content="
+By: Mornwind
+GitHub Link: BH3_Region_Selector/Surge_4
+
+参考来源
+
+① 霞ヶ丘詩羽x：B站专栏（cv3610324）
+② FlintyLemming：QX规则订阅（注：服务器维护中，暂..." />
+    <meta name="keywords" content="跨服,崩坏3" />
+    <script src="https://mornwind.github.io/media/js/waterfall.min.js"></script>
+    <script src="https://mornwind.github.io/media/js/prism.min.js"></script>
   </head>
   <body>
-    <!-- start: #wrapper -->
-    <div class="wrapper">
-      
             <header id="header" class="grid-container">
         <!-- start: .menu-wrapper -->
         <div class="menu-mobile"> 
@@ -82,14 +88,177 @@
         </div>
       </div>
 
-      <main id="friends" class="main fullcover no-sidebar content">
-        <div class="grid-container module-wrapper enable-masonry aos-init aos-animate" data-aos="fade-up">
+      <main id="single" class="main grid-container fullcover no-sidebar aos-init aos-animate" data-aos="fade">
+
+        <div class="center content">
+          <div class="featured-image cover" style="background-image: url('/media/images/gridea.jpg');">
+            <div class="meta top"> 
+              <time class="meta-info" style="float:left;" datetime="2020-02-17"><i class="fa fa-calendar"></i><span class="lately">14 天前</span></time>
+              
+              <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Surge-4/#comments" class="comments meta-info" title="">
+                <i class="fa fa-comment remixicon"></i><span class="comment-count valine-comment-count" data-xid="/Honkai3-iOS-Switch-Server-Profile-Surge-4/"> </span>
+              </a>
+              <span id="/Honkai3-iOS-Switch-Server-Profile-Surge-4/" class="leancloud_visitors views-counter meta-info" title=""><i class="fa fa-leancloud remixicon"></i><span class="leancloud-visitors-count"></span></span>
+              
+            </div>
+            <div class="info">
+              <div class="tags ">
+                
+                      <a href="https://mornwind.github.io/tag/SwitchServer/" class="ctag ctag-0 ctag-SwitchServer" aria-label="">跨服</a>
+                    
+                      <a href="https://mornwind.github.io/tag/Honkai3/" class="ctag ctag-1 ctag-Honkai3" aria-label="">崩坏3</a>
+                    
+              </div>
+              <h1 class="title ularge white bold">「崩坏3」跨服配置（Surge 4 / Loon）（iOS客户端 → 官服服务器）</h1>
+            </div>
+          </div>
+        </div>  
+
         <div class="epcl-page-wrapper">
-          <div class="section-content" style="margin-top:3em;"></div>
-        </div>
-        </div>
+          <div class="left-content grid-70 np-mobile">
+            <article class="main-article post">
+              <section class="post-content">
+                <div class="text">
+                  <blockquote>
+<p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Surge_4">BH3_Region_Selector/Surge_4</a></p>
+</blockquote>
+<h2 id="参考来源">参考来源</h2>
+<blockquote>
+<p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问。）</p>
+</blockquote>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
+<li>**本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。**目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。</li>
+</ol>
+<h2 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h2>
+<ol>
+<li>&quot;进阶使用（脚本法）&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
+</ol>
+<hr>
+<h2 id="效果预览">效果预览</h2>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/surge_4_preview.jpg" alt="使用 Surge 4 跨服" loading="lazy"></figure>
+<h2 id="配置信息">配置信息</h2>
+<h3 id="入门方法重定向法">入门方法——重定向法</h3>
+<blockquote>
+<p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
+<pre><code>[URL Rewrite]
+# 获取全平台服务器列表
+^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc 302
+
+# 改写连入服务器的客户端标识
+# &gt; 官服
+# &gt;&gt; 安卓国服
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; iOS国服
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 全平台（桌面）服
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt; 渠道服（详见说明文档最前面的&quot;注意事项&quot;部分）
+# &gt;&gt; Bilibili服
+^http:\/\/139\.196\.248\.220\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139&gt;.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 应用宝服
+^http:\/\/115\.159\.20\.29\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://115.159.20.29/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 渠道1服
+^http:\/\/139\.196\.248\.218\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 渠道2服
+^http:\/\/139\.196\.248\.219\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+
+[MITM]
+hostname = global*.bh3.com
+</code></pre>
+<h3 id="进阶方法脚本法">进阶方法——脚本法</h3>
+<blockquote>
+<p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
+<p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
+</blockquote>
+<pre><code>[Script]
+# 自定义服务器列表
+http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list.js
+
+# 改写连入服务器的客户端标识
+http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_selector.js
+
+[MITM]
+hostname = global*.bh3.com
+</code></pre>
+
+                </div>
+                <div class="clear"></div>
+              </section>
+            </article>
+            <div class="clear"></div>
+
+            <section class="related section">
+              
+              <article class="prev grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mornwind.github.io/media/images/SwitchServer.jpg');"></div>
+                 <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Quantumult-X/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2020-02-17">2020-02-17</time>
+                  <h4 class="title white no-margin">「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://mornwind.github.io/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
+                <div class="thumb cover lazy loaded" style="background-image: url('https://mornwind.github.io/media/images/SwitchServer.jpg');"></div>
+                 <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/" class="full-link"></a>
+                 <div class="info">
+                  <time datetime="2020-02-17">2020-02-17</time>
+                  <h4 class="title white no-margin">「崩坏3」跨服方式一览（iOS客户端 → 官服服务器）</h4>
+                </div>
+                 <span class="epcl-button red">
+                  <img src="https://mornwind.github.io/media/images/right-arrow.svg" width="15" alt="Left Arrow">
+                </span>
+                <div class="overlay"></div>
+              </article>
+              
+
+                <div class="clear"></div>
+            </section>
+
+              <div class="clear"></div>
+              
+            
+              <div id="comments" class="bg-white hosted ">
+                <div class="clear"></div>
+<script>
+jQuery(document).ready(function($){
+    $('.vemoji-btn').text('😀');
+    $("#comments").on('click', 'span.vat',function(){
+        $(this).parent('div.vmeta').next("div.vcontent").after($("div.vwrap"));
+        $('textarea#veditor').focus();
+    })
+    if(window.location.hash){
+        var checkExist = setInterval(function() {
+            if ($(window.location.hash).length) {
+                $('html, body').animate({scrollTop: $(window.location.hash).offset().top-200}, 600);
+                clearInterval(checkExist);
+            }
+        }, 100);
+    }
+})
+</script>
+
+              </div>
+            
+
+            </div>
+          </div>
       </main>
-        <footer id="footer" class="grid-container">
+
+          <footer id="footer" class="grid-container">
         <div class="widgets row gradient-effect">
             <div class="default-sidebar border-effect">
               <div class="grid-33 tablet-grid-50 mobile-grid-100">
@@ -235,15 +404,9 @@
 </script>
     
 
-    <script>
-    new Bmdb({
-      type: 'books',
-      selector: '.section-content',
-      secret: '0bba46738324c778ad2da662837c14d2c1e5bceb22e3729febc9fd3677bdcea5',
-      noMoreText: '没有更多数据了',
-      limit: 30
-    })
-    </script>
+      
+    <script src="https://mornwind.github.io/media/js/functions-post.js"></script>
+
     </div>
     <!-- end: #wrapper -->
   </body>
