@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-02T12:40:59.087Z</updated>
+    <updated>2020-03-02T12:51:48.644Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -10,6 +10,74 @@
     <logo>https://mornwind.github.io/images/avatar.png</logo>
     <icon>https://mornwind.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Mornwind</rights>
+    <entry>
+        <title type="html"><![CDATA[「崩坏3」跨服配置（Shadowrocket）（iOS客户端 → 官服服务器）]]></title>
+        <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Shadowrocket/</id>
+        <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Shadowrocket/">
+        </link>
+        <updated>2020-03-01T15:10:54.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Shadowrocket">BH3_Region_Selector/Shadowrocket</a></p>
+</blockquote>
+<h2 id="参考来源">参考来源</h2>
+<blockquote>
+<p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问）</p>
+</blockquote>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
+<li>**本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。**目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。</li>
+</ol>
+<h2 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h2>
+<ol>
+<li>一定要是 Shadowrocket 的 2.1.49 (964) 及以上 TF 或商店版本，因为旧版本中有一个“正则出错导致匹配结果越界”的 Bug，会使得 VPN 在触发规则时停止运行。</li>
+<li>新建的节点为本机地址（可以自行谷歌一下“localhost”及“127.0.0.1”的用途），并非自建服务器。</li>
+</ol>
+<hr>
+<h2 id="效果预览">效果预览</h2>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Shadowrocket/shadowrocket_preview.jpg" alt="使用 Shadowrocket 跨服" loading="lazy"></figure>
+<h2 id="配置信息重定向法">配置信息（重定向法）</h2>
+<blockquote>
+<p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
+<h3 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h3>
+<ol>
+<li>在首页，点击右上角“+”，添加一个类型为“HTTPS”、地址为“localhost”或“127.0.0.1”、端口为“1080”的节点，然后在首页的“服务器节点”中选中该节点；</li>
+<li>将“全局路由”改为“直连”；</li>
+<li>在&quot;配置文件&quot;页面，点击右上角“+”，输入以下 URL，下载简易跨服配置文件；</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Shadowrocket/bh3_region_selector.conf
+</code></pre>
+<ol start="4">
+<li>然后在“远程文件”中点击该 URL，在弹出的列表中选择“使用配置”；</li>
+<li>等待下载完毕后，即可看到“本地文件”中加载了本配置；</li>
+<li>前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；</li>
+<li>打开 Shadowrocket 的 VPN 开关，然后进入游戏，即可实现跨服；</li>
+<li>不玩游戏时，别忘了关闭 VPN 开关。</li>
+</ol>
+<h3 id="方法二手动添加进当前配置">方法二：手动添加进当前配置</h3>
+<pre><code>[URL Rewrite]
+# 获取全平台服务器列表
+^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4 HEADER
+# 改写连入服务器的客户端标识
+# &gt; 官服
+# &gt;&gt; 安卓国服
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 HEADER
+# &gt;&gt; iOS国服
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 HEADER
+# &gt;&gt; 全平台（桌面）服
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 安卓国服）]]></title>
         <id>https://mornwind.github.io/post/GirlsFrontline-iOS-Switch-Server-Profile/</id>
@@ -157,7 +225,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
         <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Quantumult-X/</id>
         <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile-Quantumult-X/">
         </link>
-        <updated>2020-02-17T13:47:22.000Z</updated>
+        <updated>2020-02-18T13:47:22.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
 <p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Quantumult_X">BH3_Region_Selector/Quantumult_X</a></p>
@@ -287,8 +355,8 @@ hostname = global*.bh3.com
     </entry>
     <entry>
         <title type="html"><![CDATA[「崩坏3」跨服方式一览（iOS客户端 → 官服服务器）]]></title>
-        <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/</id>
-        <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Profile/">
+        <id>https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Tools/</id>
+        <link href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Tools/">
         </link>
         <updated>2020-02-17T08:36:32.000Z</updated>
         <content type="html"><![CDATA[<blockquote>

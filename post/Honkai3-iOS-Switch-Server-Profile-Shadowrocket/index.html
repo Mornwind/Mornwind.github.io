@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>「崩坏3」跨服配置（Surge 4 / Loon）（iOS客户端 → 官服服务器） | Mornwind</title>
+<title>「崩坏3」跨服配置（Shadowrocket）（iOS客户端 → 官服服务器） | Mornwind</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -20,12 +20,12 @@
 
     <meta name="description" content="
 By: Mornwind
-GitHub Link: BH3_Region_Selector/Surge_4
+GitHub Link: BH3_Region_Selector/Shadowrocket
 
 参考来源
 
 ① 霞ヶ丘詩羽x：B站专栏（cv3610324）
-② FlintyLemming：QX规则订阅（注：服务器维护中，暂..." />
+② FlintyLemming：QX规则订阅（注：服务器..." />
     <meta name="keywords" content="跨服,崩坏3" />
   </head>
   <body>
@@ -99,18 +99,18 @@ GitHub Link: BH3_Region_Selector/Surge_4
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">「崩坏3」跨服配置（Surge 4 / Loon）（iOS客户端 → 官服服务器）</h2>
-            <div class="post-date">2020-02-17</div>
+            <h2 class="post-title">「崩坏3」跨服配置（Shadowrocket）（iOS客户端 → 官服服务器）</h2>
+            <div class="post-date">2020-03-01</div>
             
             <div class="post-content" v-pre>
               <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
-<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Surge_4">BH3_Region_Selector/Surge_4</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Shadowrocket">BH3_Region_Selector/Shadowrocket</a></p>
 </blockquote>
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问。）</p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问）</p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
@@ -121,56 +121,47 @@ GitHub Link: BH3_Region_Selector/Surge_4
 </ol>
 <h2 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h2>
 <ol>
-<li>&quot;进阶使用（脚本法）&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
+<li>一定要是 Shadowrocket 的 2.1.49 (964) 及以上 TF 或商店版本，因为旧版本中有一个“正则出错导致匹配结果越界”的 Bug，会使得 VPN 在触发规则时停止运行。</li>
+<li>新建的节点为本机地址（可以自行谷歌一下“localhost”及“127.0.0.1”的用途），并非自建服务器。</li>
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/surge_4_preview.jpg" alt="使用 Surge 4 跨服" loading="lazy"></figure>
-<h2 id="配置信息">配置信息</h2>
-<h3 id="入门方法重定向法">入门方法——重定向法</h3>
+<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Shadowrocket/shadowrocket_preview.jpg" alt="使用 Shadowrocket 跨服" loading="lazy"></figure>
+<h2 id="配置信息重定向法">配置信息（重定向法）</h2>
 <blockquote>
 <p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
 <p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
 </blockquote>
+<h3 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h3>
+<ol>
+<li>在首页，点击右上角“+”，添加一个类型为“HTTPS”、地址为“localhost”或“127.0.0.1”、端口为“1080”的节点，然后在首页的“服务器节点”中选中该节点；</li>
+<li>将“全局路由”改为“直连”；</li>
+<li>在&quot;配置文件&quot;页面，点击右上角“+”，输入以下 URL，下载简易跨服配置文件；</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Shadowrocket/bh3_region_selector.conf
+</code></pre>
+<ol start="4">
+<li>然后在“远程文件”中点击该 URL，在弹出的列表中选择“使用配置”；</li>
+<li>等待下载完毕后，即可看到“本地文件”中加载了本配置；</li>
+<li>前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；</li>
+<li>打开 Shadowrocket 的 VPN 开关，然后进入游戏，即可实现跨服；</li>
+<li>不玩游戏时，别忘了关闭 VPN 开关。</li>
+</ol>
+<h3 id="方法二手动添加进当前配置">方法二：手动添加进当前配置</h3>
 <pre><code>[URL Rewrite]
 # 获取全平台服务器列表
-^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc 302
-
+^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4 HEADER
 # 改写连入服务器的客户端标识
 # &gt; 官服
 # &gt;&gt; 安卓国服
-^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 header
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 HEADER
 # &gt;&gt; iOS国服
-^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 header
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 HEADER
 # &gt;&gt; 全平台（桌面）服
-^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-# &gt; 渠道服（详见说明文档最前面的&quot;注意事项&quot;部分）
-# &gt;&gt; Bilibili服
-^http:\/\/139\.196\.248\.220\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139&gt;.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-# &gt;&gt; 应用宝服
-^http:\/\/115\.159\.20\.29\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://115.159.20.29/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-# &gt;&gt; 渠道1服
-^http:\/\/139\.196\.248\.218\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
-# &gt;&gt; 渠道2服
-^http:\/\/139\.196\.248\.219\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
 
 [MITM]
-hostname = global*.bh3.com
-</code></pre>
-<h3 id="进阶方法脚本法">进阶方法——脚本法</h3>
-<blockquote>
-<p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
-<p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
-</blockquote>
-<pre><code>[Script]
-# 自定义服务器列表
-http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list.js
-
-# 改写连入服务器的客户端标识
-http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_selector.js
-
-[MITM]
-hostname = global*.bh3.com
+hostname = *.bh3.com
 </code></pre>
 
             </div>
@@ -190,9 +181,9 @@ hostname = global*.bh3.com
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://mornwind.github.io/post/Honkai3-iOS-Switch-Server-Tools/">
+                <a href="https://mornwind.github.io/post/GirlsFrontline-iOS-Switch-Server-Profile/">
                   <h3 class="post-title">
-                    「崩坏3」跨服方式一览（iOS客户端 → 官服服务器）
+                    「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 安卓国服）
                   </h3>
                 </a>
               </div>
