@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-02T15:00:02.714Z</updated>
+    <updated>2020-03-03T03:51:37.456Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -39,7 +39,7 @@
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Shadowrocket/shadowrocket_preview.jpg" alt="使用 Shadowrocket 跨服" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Profile-Shadowrocket/shadowrocket_preview.jpg" alt="使用 Shadowrocket 跨服" loading="lazy"></figure>
 <h2 id="配置信息重定向法">配置信息（重定向法）</h2>
 <blockquote>
 <p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
@@ -47,7 +47,7 @@
 </blockquote>
 <h3 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h3>
 <ol>
-<li>在首页，点击右上角“+”，添加一个类型为“HTTPS”、地址为“localhost”或“127.0.0.1”、端口为“1080”的节点，然后在首页的“服务器节点”中选中该节点；</li>
+<li>在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点；</li>
 <li>将“全局路由”改为“直连”；</li>
 <li>在&quot;配置文件&quot;页面，点击右上角“+”，输入以下 URL，下载简易跨服配置文件；</li>
 </ol>
@@ -148,13 +148,13 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <p>账号：安卓国服<br>
 系统：iOS 12+ / iPadOS 13+<br>
 工具：<a href="https://apps.apple.com/app/id1442620678">Surge 4</a> （注：<a href="https://apps.apple.com/app/id1443988620">Quantumult X</a>、<a href="https://apps.apple.com/app/id1373567447">Loon</a> 的方法大同小异）</p>
-<figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/1582788325727.jpg" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://mornwind.github.io/post-images/1582788348945.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788325727.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788348945.jpg" alt="" loading="lazy"></figure>
 <p>GitHub 项目链接：（可点击跳转）<br>
 原版：<a href="https://github.com/Mornwind/BH3_Region_Selector">Mornwind/BH3_Region_Selector</a><br>
 精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector">FlintyLemming/BH3_Region_Selector</a></p>
-<figure data-type="image" tabindex="3"><img src="https://mornwind.github.io/post-images/1582788481467.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="4"><img src="https://mornwind.github.io/post-images/1582788486793.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788481467.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788486793.png" alt="" loading="lazy"></figure>
 <h2 id="方案说明">方案说明</h2>
 <p>本项目包含两种方案，请选择适合自己的方案。（可点击跳转）</p>
 <h3 id="方案一入门方法重定向法">【方案一】入门方法——重定向法</h3>
@@ -174,20 +174,20 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <h2 id="操作步骤">操作步骤</h2>
 <h3 id="第一步">第一步</h3>
 <p>在你的 Surge 4 中配置好根证书，并在系统中启用并信任，然后回到 Surge 4 中启用 MitM 功能。（该步在本教程中不详细教）</p>
-<figure data-type="image" tabindex="5"><img src="https://mornwind.github.io/post-images/1582788507478.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788507478.jpg" alt="" loading="lazy"></figure>
 <h3 id="第二步">第二步</h3>
 <p>挑选好你想使用的方案，然后在 GitHub 上的项目中找到对应方案所需使用的配置代码。以下可直接点击跳转。<br>
 【方案一】入门方法——重定向法 → Surge 4 配置<br>
 原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E5%85%A5%E9%97%A8%E6%96%B9%E6%B3%95%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
 精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-surge-4--loon">FlintyLemming/BH3_Region_Selector</a></p>
-<figure data-type="image" tabindex="6"><img src="https://mornwind.github.io/post-images/1582788517307.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788517307.png" alt="" loading="lazy"></figure>
 <p>【方案二】进阶方法——脚本法 → Surge 4 配置<br>
 原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95%E8%84%9A%E6%9C%AC%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
 精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-surge-4--loon-1">FlintyLemming/BH3_Region_Selector</a></p>
-<figure data-type="image" tabindex="7"><img src="https://mornwind.github.io/post-images/1582788522770.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788522770.png" alt="" loading="lazy"></figure>
 <h3 id="第三步">第三步</h3>
 <p>使用任一款编辑器打开你的 Surge 配置文件（.conf），或是直接在 Surge 内点击主界面左上角配置名，打开“配置列表”→”在文本模式中编辑”。</p>
-<figure data-type="image" tabindex="8"><img src="https://mornwind.github.io/post-images/1582788529022.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788529022.jpg" alt="" loading="lazy"></figure>
 <h3 id="第四步">第四步</h3>
 <p>在配置文件中，将第二步中所获取到的配置代码，分为 <code>[URL Rewrite]</code>、<code>[Script]</code>、<code>[MITM]</code> 三个部分，分别拷贝到配置文件中的对应区域下。</p>
 <blockquote>
@@ -206,14 +206,14 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 </blockquote>
 <h3 id="第五步">第五步</h3>
 <p>保存配置，然后点击主界面右上角按钮将 Surge 4 停止，再点击按钮重新启动一次。</p>
-<figure data-type="image" tabindex="9"><img src="https://mornwind.github.io/post-images/1582788540510.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788540510.jpg" alt="" loading="lazy"></figure>
 <blockquote>
 <p>注：对于方案二，还需要更新一次“外部资源”，以保证从 GitHub 上获取到最新的脚本。</p>
 </blockquote>
-<figure data-type="image" tabindex="10"><img src="https://mornwind.github.io/post-images/1582788548821.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788548821.jpg" alt="" loading="lazy"></figure>
 <h3 id="第六步">第六步</h3>
 <p>保持 Surge 4 一直后台开启，打开崩坏3，登录米哈游账号，在服务器列表切换至“安卓国服”，即可在 iOS 端跨服登录安卓国服。</p>
-<figure data-type="image" tabindex="11"><img src="https://mornwind.github.io/post-images/1582788561502.jpg" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="11"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788561502.jpg" alt="" loading="lazy"></figure>
 <h2 id="结语">结语</h2>
 <p>最后，祝大家在崩坏3中玩老婆玩得愉快！</p>
 <p>来自八重樱的祝福：<br>
@@ -248,7 +248,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Quantumult_X/quantumult_x_preview.jpg" alt="使用 Quantumult X 跨服" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Profile-Quantumult-X/quantumult_x_preview.jpg" alt="使用 Quantumult X 跨服" loading="lazy"></figure>
 <h2 id="配置信息">配置信息</h2>
 <h3 id="1-新手使用重定向法">⑴ 新手使用（重定向法）</h3>
 <blockquote>
@@ -304,7 +304,7 @@ hostname = *.bh3.com
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/surge_4_preview.jpg" alt="使用 Surge 4 跨服" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Profile-Surge-4/surge_4_preview.jpg" alt="使用 Surge 4 跨服" loading="lazy"></figure>
 <h2 id="配置信息">配置信息</h2>
 <h3 id="入门方法重定向法">入门方法——重定向法</h3>
 <blockquote>
@@ -377,7 +377,7 @@ hostname = global*.bh3.com
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
-<figure data-type="image" tabindex="1"><img src="https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Tools/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
 <h2 id="跨服工具与配置">跨服工具与配置</h2>
 <h3 id="1-shadowrocket">⑴ Shadowrocket</h3>
 <p><a href="/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket">Shadowrocket 跨服配置</a></p>
