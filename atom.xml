@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-03T04:18:56.646Z</updated>
+    <updated>2020-03-03T04:19:49.827Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -88,7 +88,11 @@ hostname = *.bh3.com
         <link href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile/">
         </link>
         <updated>2020-02-23T10:28:12.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 / Quan X / Loon 进行「少女前线」iOS端跨安卓国服时，所需的配置。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 / Quan X / Loon 进行「少女前线」iOS端跨安卓国服时，所需的配置。</p>
+<!-- more -->
+<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
 <p>GitHub Link: <a href="https://github.com/Mornwind/GF_Region_Switcher">GF_Region_Switcher</a></p>
 </blockquote>
