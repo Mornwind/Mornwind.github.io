@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-03T04:00:54.167Z</updated>
+    <updated>2020-03-03T04:18:56.646Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -16,7 +16,11 @@
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket/">
         </link>
         <updated>2020-03-01T15:10:54.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Shadowrocket 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文主要提供了，使用 Shadowrocket 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+<!-- more -->
+<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
 <p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Shadowrocket">BH3_Region_Selector/Shadowrocket</a></p>
 </blockquote>
@@ -120,7 +124,11 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Guide-Surge-4/">
         </link>
         <updated>2020-02-21T11:49:51.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 进行「崩坏3」iOS端跨安卓国服时，操作的教程。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 进行「崩坏3」iOS端跨安卓国服时，操作的教程。</p>
+<!-- more -->
+<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
 <p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Surge_4">BH3_Region_Selector/Surge_4</a></p>
 </blockquote>
@@ -226,7 +234,11 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X/">
         </link>
         <updated>2020-02-18T13:47:22.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Quantumult X 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文主要提供了，使用 Quantumult X 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+<!-- more -->
+<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
 <p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Quantumult_X">BH3_Region_Selector/Quantumult_X</a></p>
 </blockquote>
@@ -282,7 +294,11 @@ hostname = *.bh3.com
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Surge-4/">
         </link>
         <updated>2020-02-17T08:40:48.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 / Loon 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 / Loon 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+<!-- more -->
+<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
 <p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Surge_4">BH3_Region_Selector/Surge_4</a></p>
 </blockquote>
@@ -359,7 +375,11 @@ hostname = global*.bh3.com
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Tools/">
         </link>
         <updated>2020-02-17T08:36:32.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
+        <summary type="html"><![CDATA[<p>目前，「崩坏3」iOS端跨安卓国服，可通过 Shadowrocket / Surge 4 / Quantumult X / Loon / Thor HTTP / HTTP Catcher 等代理&amp;抓包工具来进行，无需越狱或使用跨服包。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>目前，「崩坏3」iOS端跨安卓国服，可通过 Shadowrocket / Surge 4 / Quantumult X / Loon / Thor HTTP / HTTP Catcher 等代理&amp;抓包工具来进行，无需越狱或使用跨服包。</p>
+<!-- more -->
+<blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
 <p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector">BH3_Region_Selector</a></p>
 </blockquote>
@@ -382,7 +402,7 @@ hostname = global*.bh3.com
 <h3 id="1-shadowrocket">⑴ Shadowrocket</h3>
 <p><a href="/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket">Shadowrocket 跨服配置</a></p>
 <h3 id="2-surge-4-loon">⑵ Surge 4 / Loon</h3>
-<p><a href="/post/Honkai3-iOS-SwitchServer-Guide-Surge-4">Surge 4 / Loon 跨服教程</a><br>
+<p><a href="/post/Honkai3-iOS-SwitchServer-Guide-Surge-4">Surge 4 跨服教程</a><br>
 <a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">Surge 4 / Loon 配置文档</a></p>
 <h3 id="3-quantumult-x">⑶ Quantumult X</h3>
 <p><a href="/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X">Quantumult X 跨服配置</a></p>
