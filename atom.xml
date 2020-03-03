@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-03T04:19:49.827Z</updated>
+    <updated>2020-03-03T09:22:10.159Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -402,18 +402,55 @@ hostname = global*.bh3.com
 <hr>
 <h2 id="效果预览">效果预览</h2>
 <figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Tools/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
-<h2 id="跨服工具与配置">跨服工具与配置</h2>
-<h3 id="1-shadowrocket">⑴ Shadowrocket</h3>
-<p><a href="/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket">Shadowrocket 跨服配置</a></p>
-<h3 id="2-surge-4-loon">⑵ Surge 4 / Loon</h3>
-<p><a href="/post/Honkai3-iOS-SwitchServer-Guide-Surge-4">Surge 4 跨服教程</a><br>
-<a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">Surge 4 / Loon 配置文档</a></p>
-<h3 id="3-quantumult-x">⑶ Quantumult X</h3>
-<p><a href="/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X">Quantumult X 跨服配置</a></p>
-<h3 id="4-thor-http">⑷ Thor HTTP</h3>
-<p>略（见群内教程）</p>
-<h3 id="5-http-catcher">⑸ HTTP Catcher</h3>
-<p>略（见群内教程）</p>
+<h2 id="跨服工具一览">跨服工具一览</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">工具</th>
+<th style="text-align:center">跨服教程</th>
+<th style="text-align:center">跨服配置<br/>（重定向法）</th>
+<th style="text-align:center">跨服配置<br/>（脚本法）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Shadowrocket</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket">站内链接</a></td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Guide-Surge-4">站内链接</a></td>
+<td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">站内链接</a></td>
+<td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">站内链接</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Quantumult X</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X">站内链接</a></td>
+<td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X">站内链接</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Loon</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">站内链接</a></td>
+<td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">站内链接</a></td>
+</tr>
+<tr>
+<td style="text-align:center">Thor HTTP</td>
+<td style="text-align:center">略（见群内教程）</td>
+<td style="text-align:center">略（见群文件）</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">HTTP Catcher</td>
+<td style="text-align:center">略（见群内教程）</td>
+<td style="text-align:center">略（见群文件）</td>
+<td style="text-align:center">-</td>
+</tr>
+</tbody>
+</table>
 <hr>
 <h2 id="附录1app-商店链接">附录1：App 商店链接</h2>
 <ul>

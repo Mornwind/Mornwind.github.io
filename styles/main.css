@@ -1961,8 +1961,8 @@ body {
       background: #f9f9f9;
       color: rgba(0, 0, 0, 0.98);
     }.markdownIt-TOC a {
-      color: #ccc;
-      border-bottom-color: #ccc;
+      color: #aaa;
+      border-bottom-color: #aaa;
     }.markdownIt-TOC a:hover {
       color: #fff;
       border-bottom-color: #fff;
@@ -1986,13 +1986,13 @@ body {
       border-bottom-color: #fc6423;
     }
       .site-meta {
-        background: #5c7cfa !important;
+        background: #4263eb !important;
       }
       .head-top-line {
-        background: #5c7cfa !important;
+        background: #4263eb !important;
       }
     .brand {
-      background: #5c7cfa;
+      background: #4263eb;
     }
     .main-title {
       color: #FFF;
