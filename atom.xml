@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-03T10:45:41.326Z</updated>
+    <updated>2020-03-03T13:16:23.911Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -54,26 +54,31 @@
 <p>适合从未使用过的用户，或是曾用过但目前没有上外网需求的用户。</p>
 </blockquote>
 <ol>
-<li>在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点；</li>
-<li>将“全局路由”改为“直连”；</li>
-<li>在&quot;配置文件&quot;页面，点击右上角“+”，输入配置文件中所提供的订阅 URL，下载简易跨服配置文件；<br>
+<li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点；</li>
+<li><strong>设置路由模式</strong>：将“全局路由”改为“直连”；</li>
+<li><strong>填写远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入配置文件中所提供的远程订阅 URL，点击下载；<br>
 <img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Shadowrocket/1583230936761.png" alt="" loading="lazy"></li>
-<li>然后在“远程文件”中点击该 URL，在弹出的列表中选择“使用配置”；</li>
-<li>等待下载完毕后，即可看到“本地文件”中加载了本配置；</li>
-<li>前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；</li>
-<li>打开 Shadowrocket 的 VPN 开关，然后进入游戏，即可实现跨服；</li>
-<li>不玩游戏时，别忘了关闭 VPN 开关。</li>
+<li><strong>下载并使用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置；</li>
+<li><strong>配置 MitM 证书</strong>：前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；</li>
+<li><strong>启动 Shadowrocket</strong>：打开 Shadowrocket 的 VPN 开关，然后进入游戏，即可实现跨服；</li>
+<li><strong>停止 Shadowrocket</strong>：不玩游戏时，别忘了关闭 VPN 开关。</li>
 </ol>
 <h3 id="方法二手动添加进当前配置">方法二：手动添加进当前配置</h3>
 <blockquote>
 <p>适合目前仍有上外网需求的用户。</p>
 </blockquote>
 <ol>
-<li>在&quot;配置文件&quot;页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”；</li>
-<li>在弹出的编辑窗口中，将配置文件中提供的以下图中配置，分块复制进你的配置文件中；<br>
+<li><strong>进入编辑界面</strong>：在&quot;配置文件&quot;页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”；</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将配置文件中提供的以下图中配置，按对应位置复制进你的配置文件中，然后点击右上角的保存；<br>
 <img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Shadowrocket/1583230414145.png" alt="" loading="lazy"></li>
-<li>点击右上角的保存，返回主页；</li>
-<li>可以开关一次 VPN 开关，以保证修改生效。</li>
+<li><strong>配置 MitM 证书</strong>：</li>
+</ol>
+<ul>
+<li>若已配置过 MitM 证书，直接跳过该步；</li>
+<li>若未配置过 MitM 证书，则从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，打开“HTTPS 解密”的开关，然后点击下方“密码”右侧的小 i，选择“生成新的 CA 证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；保存“HTTPS 解密”设置，然后返回主页；</li>
+</ul>
+<ol start="4">
+<li><strong>重启 Shadowrocket</strong>：可以开关一次 VPN 开关，以确保修改生效。</li>
 </ol>
 ]]></content>
     </entry>
@@ -463,11 +468,11 @@ hostname = global*.bh3.com
 <hr>
 <h2 id="效果预览">效果预览</h2>
 <figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Tools/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
-<h2 id="跨服工具一览">跨服工具一览</h2>
+<h2 id="跨服方式一览">跨服方式一览</h2>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">工具</th>
+<th style="text-align:center">跨服方式</th>
 <th style="text-align:center">跨服教程</th>
 <th style="text-align:center">跨服配置<br/>（重定向法）</th>
 <th style="text-align:center">跨服配置<br/>（脚本法）</th>
@@ -500,14 +505,20 @@ hostname = global*.bh3.com
 </tr>
 <tr>
 <td style="text-align:center">Thor HTTP</td>
-<td style="text-align:center">略（见群内教程）</td>
-<td style="text-align:center">略（见群文件）</td>
+<td style="text-align:center">略（见跨服群内教程）</td>
+<td style="text-align:center">略（见跨服群文件）</td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
 <td style="text-align:center">HTTP Catcher</td>
-<td style="text-align:center">略（见群内教程）</td>
-<td style="text-align:center">略（见群文件）</td>
+<td style="text-align:center">略（见跨服群内教程）</td>
+<td style="text-align:center">略（见跨服群文件）</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">跨服包</td>
+<td style="text-align:center">略（见 ME 社公众号）</td>
+<td style="text-align:center">略（见 ME 社公众号）</td>
 <td style="text-align:center">-</td>
 </tr>
 </tbody>
@@ -522,6 +533,7 @@ hostname = global*.bh3.com
 </li>
 <li><strong>代理&amp;抓包工具</strong>
 <ul>
+<li><a href="https://apps.apple.com/app/id932747118">Shadowrocket</a></li>
 <li><a href="https://apps.apple.com/app/id1442620678">Surge 4</a></li>
 <li><a href="https://apps.apple.com/app/id1443988620">Quantumult X</a></li>
 <li><a href="https://apps.apple.com/app/id1373567447">Loon</a></li>
