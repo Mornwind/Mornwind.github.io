@@ -1961,11 +1961,11 @@ body {
       background: #f9f9f9;
       color: rgba(0, 0, 0, 0.98);
     }.markdownIt-TOC a {
-      color: #888;
-      border-bottom-color: #888;
+      color: #999;
+      border-bottom-color: #999;
     }.markdownIt-TOC a:hover {
-      color: #bbb;
-      border-bottom-color: #bbb;
+      color: #ccc;
+      border-bottom-color: #ccc;
     }.active-current > a {
       color: #fc6423 !important;
       border-bottom-color: #fc6423 !important;
@@ -1986,13 +1986,13 @@ body {
       border-bottom-color: #fc6423;
     }
       .site-meta {
-        background: #4263eb !important;
+        background: #364fc7 !important;
       }
       .head-top-line {
-        background: #4263eb !important;
+        background: #364fc7 !important;
       }
     .brand {
-      background: #4263eb;
+      background: #364fc7;
     }
     .main-title {
       color: #FFF;
