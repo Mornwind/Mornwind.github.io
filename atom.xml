@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-03T15:10:15.993Z</updated>
+    <updated>2020-03-04T11:12:42.194Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -474,7 +474,7 @@ hostname = global*.bh3.com
 <hr>
 <h2 id="效果预览">效果预览</h2>
 <figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Tools/bh3_region_list_preview.gif" alt="国服服务器列表预览" loading="lazy"></figure>
-<h2 id="跨服方式一览">跨服方式一览</h2>
+<h2 id="ios-端跨服方式一览">iOS 端跨服方式一览</h2>
 <table>
 <thead>
 <tr>
@@ -486,49 +486,60 @@ hostname = global*.bh3.com
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">Shadowrocket</td>
+<td style="text-align:center"><a href="https://apps.apple.com/app/id932747118">Shadowrocket</a></td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Guide-Shadowrocket">站内链接</a></td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket">站内链接</a></td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
-<td style="text-align:center">Surge 4</td>
+<td style="text-align:center"><a href="https://apps.apple.com/app/id1442620678">Surge 4</a></td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Guide-Surge-4">站内链接</a></td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">站内链接</a></td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">站内链接</a></td>
 </tr>
 <tr>
-<td style="text-align:center">Quantumult X</td>
+<td style="text-align:center"><a href="https://apps.apple.com/app/id1443988620">Quantumult X</a></td>
 <td style="text-align:center">-</td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X">站内链接</a></td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X">站内链接</a></td>
 </tr>
 <tr>
-<td style="text-align:center">Loon</td>
+<td style="text-align:center"><a href="https://apps.apple.com/app/id1373567447">Loon</a></td>
 <td style="text-align:center">-</td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">站内链接</a></td>
 <td style="text-align:center"><a href="/post/Honkai3-iOS-SwitchServer-Profile-Surge-4">站内链接</a></td>
 </tr>
 <tr>
-<td style="text-align:center">Thor HTTP</td>
-<td style="text-align:center">略（见跨服群内教程）</td>
-<td style="text-align:center">略（见跨服群文件）</td>
+<td style="text-align:center"><a href="https://apps.apple.com/app/id1210562295">Thor HTTP</a></td>
+<td style="text-align:center">略（见跨服群<sup>[1]</sup>群公告）</td>
+<td style="text-align:center">略（见跨服群群文件）</td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
-<td style="text-align:center">HTTP Catcher</td>
-<td style="text-align:center">略（见跨服群内教程）</td>
-<td style="text-align:center">略（见跨服群文件）</td>
+<td style="text-align:center"><a href="https://apps.apple.com/app/id1445874902">HTTP Catcher</a></td>
+<td style="text-align:center">略（见跨服群群公告）</td>
+<td style="text-align:center">略（见跨服群群文件）</td>
 <td style="text-align:center">-</td>
 </tr>
 <tr>
 <td style="text-align:center">跨服包</td>
-<td style="text-align:center">略（见 ME 社公众号）</td>
-<td style="text-align:center">略（见 ME 社公众号）</td>
+<td style="text-align:center">略（见 ME 社公众号<sup>[2]</sup>）</td>
+<td style="text-align:center">-</td>
 <td style="text-align:center">-</td>
 </tr>
 </tbody>
 </table>
+<p>注：</p>
+<p>[1] 崩坏3/少女前线跨服群：</p>
+<ul>
+<li>①群：<code>915089623</code> （已满）</li>
+<li>②群：<code>703492563</code></li>
+</ul>
+<p>[2] ME 社公众号：</p>
+<ul>
+<li>主：<code>me_shebao</code></li>
+<li>备：<code>me_dby</code></li>
+</ul>
 <hr>
 <h2 id="附录1app-商店链接">附录1：App 商店链接</h2>
 <ul>
