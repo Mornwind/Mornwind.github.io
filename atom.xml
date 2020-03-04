@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-04T13:17:11.642Z</updated>
+    <updated>2020-03-04T13:29:23.433Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -545,7 +545,7 @@ hostname = global*.bh3.com
 <thead>
 <tr>
 <th style="text-align:center">跨服方式</th>
-<th style="text-align:center">价格接受度</th>
+<th style="text-align:center">商店价格接受度</th>
 <th style="text-align:center">入门容易度</th>
 <th style="text-align:center">跨服操作方便度</th>
 <th style="text-align:center">自定义程度</th>
