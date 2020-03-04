@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-04T11:12:42.194Z</updated>
+    <updated>2020-03-04T11:34:14.220Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -16,9 +16,11 @@
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Guide-Shadowrocket/">
         </link>
         <updated>2020-03-02T14:47:23.000Z</updated>
-        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Shadowrocket 进行「崩坏3」iOS端跨安卓国服时，操作的教程。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+本教程就教你如何使用代理工具 Shadowrocket 实现这一目标。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>本文主要提供了，使用 Shadowrocket 进行「崩坏3」iOS端跨安卓国服时，操作的教程。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+本教程就教你如何使用代理工具 Shadowrocket 实现这一目标。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -94,9 +96,11 @@
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket/">
         </link>
         <updated>2020-03-01T15:10:54.000Z</updated>
-        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Shadowrocket 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+使用代理工具 Shadowrocket 时所需的配置文件就存储于此。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>本文主要提供了，使用 Shadowrocket 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+使用代理工具 Shadowrocket 时所需的配置文件就存储于此。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -160,9 +164,11 @@ hostname = *.bh3.com
         <link href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile/">
         </link>
         <updated>2020-02-23T10:28:12.000Z</updated>
-        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 / Quan X / Loon 进行「少女前线」iOS端跨安卓国服时，所需的配置。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+使用代理&amp;抓包工具 Surge 4 / Quan X / Loon 时所需的配置文件就存储于此。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 / Quan X / Loon 进行「少女前线」iOS端跨安卓国服时，所需的配置。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+使用代理&amp;抓包工具 Surge 4 / Quan X / Loon 时所需的配置文件就存储于此。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -200,9 +206,11 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Guide-Surge-4/">
         </link>
         <updated>2020-02-21T11:49:51.000Z</updated>
-        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 进行「崩坏3」iOS端跨安卓国服时，操作的教程。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+本教程就教你如何使用代理&amp;抓包工具 Surge 4 实现这一目标。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 进行「崩坏3」iOS端跨安卓国服时，操作的教程。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+本教程就教你如何使用代理&amp;抓包工具 Surge 4 实现这一目标。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -312,9 +320,11 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X/">
         </link>
         <updated>2020-02-18T13:47:22.000Z</updated>
-        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Quantumult X 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+使用代理&amp;抓包工具 Quantumult X 时所需的配置文件就存储于此。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>本文主要提供了，使用 Quantumult X 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+使用代理&amp;抓包工具 Quantumult X 时所需的配置文件就存储于此。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -372,9 +382,11 @@ hostname = *.bh3.com
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Surge-4/">
         </link>
         <updated>2020-02-17T08:40:48.000Z</updated>
-        <summary type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 / Loon 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+使用代理&amp;抓包工具 Surge 4 / Loon 时所需的配置文件就存储于此。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>本文主要提供了，使用 Surge 4 / Loon 进行「崩坏3」iOS端跨安卓国服时，所需的配置。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+使用代理&amp;抓包工具 Surge 4 / Loon 时所需的配置文件就存储于此。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -451,9 +463,9 @@ hostname = global*.bh3.com
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Tools/">
         </link>
         <updated>2020-02-17T08:36:32.000Z</updated>
-        <summary type="html"><![CDATA[<p>目前，「崩坏3」iOS端跨安卓国服，可通过 Shadowrocket / Surge 4 / Quantumult X / Loon / Thor HTTP / HTTP Catcher 等代理&amp;抓包工具来进行，无需越狱或使用跨服包。</p>
+        <summary type="html"><![CDATA[<p>目前，iOS端「崩坏3」跨服玩安卓国服，可通过 Shadowrocket / Surge 4 / Quantumult X / Loon / Thor HTTP / HTTP Catcher 等代理&amp;抓包工具来进行，无需越狱或使用跨服包。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>目前，「崩坏3」iOS端跨安卓国服，可通过 Shadowrocket / Surge 4 / Quantumult X / Loon / Thor HTTP / HTTP Catcher 等代理&amp;抓包工具来进行，无需越狱或使用跨服包。</p>
+        <content type="html"><![CDATA[<p>目前，iOS端「崩坏3」跨服玩安卓国服，可通过 Shadowrocket / Surge 4 / Quantumult X / Loon / Thor HTTP / HTTP Catcher 等代理&amp;抓包工具来进行，无需越狱或使用跨服包。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -548,9 +560,13 @@ hostname = global*.bh3.com
 <li><a href="https://apps.apple.com/app/id1143402987">崩坏3</a></li>
 </ul>
 </li>
-<li><strong>代理&amp;抓包工具</strong>
+<li><strong>代理工具</strong>
 <ul>
 <li><a href="https://apps.apple.com/app/id932747118">Shadowrocket</a></li>
+</ul>
+</li>
+<li><strong>代理&amp;抓包工具</strong>
+<ul>
 <li><a href="https://apps.apple.com/app/id1442620678">Surge 4</a></li>
 <li><a href="https://apps.apple.com/app/id1443988620">Quantumult X</a></li>
 <li><a href="https://apps.apple.com/app/id1373567447">Loon</a></li>
