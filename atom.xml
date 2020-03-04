@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-04T13:29:23.433Z</updated>
+    <updated>2020-03-04T14:02:08.908Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -438,7 +438,7 @@ hostname = *.bh3.com
 ^http:\/\/139\.196\.248\.219\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.196.248.220/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
 
 [MITM]
-hostname = global*.bh3.com
+hostname = *.bh3.com
 </code></pre>
 <h3 id="进阶方法脚本法">进阶方法——脚本法</h3>
 <blockquote>
@@ -453,7 +453,7 @@ http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requi
 http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_selector.js
 
 [MITM]
-hostname = global*.bh3.com
+hostname = *.bh3.com
 </code></pre>
 ]]></content>
     </entry>
