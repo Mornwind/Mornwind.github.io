@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-04T14:02:08.908Z</updated>
+    <updated>2020-03-05T03:29:17.165Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -357,7 +357,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 </blockquote>
 <pre><code>[rewrite_remote]
 # 新手直接订阅使用，无需自行更动
-https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_rewrite.conf, tag=BH3 Region Rewrite, enabled=true
+https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Quantumult_X/bh3_region_rewrite.conf, tag=BH3 Region Rewrite, enabled=true
 </code></pre>
 <h3 id="2-进阶使用脚本法">⑵ 进阶使用（脚本法）</h3>
 <blockquote>
@@ -447,10 +447,10 @@ hostname = *.bh3.com
 </blockquote>
 <pre><code>[Script]
 # 自定义服务器列表
-http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_list.js
+http-response ^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/bh3_region_list.js
 
 # 改写连入服务器的客户端标识
-http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/bh3_region_selector.js
+http-request ^http:\/\/(.*)\/query_gameserver\?version=.* requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/bh3_region_selector.js
 
 [MITM]
 hostname = *.bh3.com
@@ -686,8 +686,9 @@ hostname = *.bh3.com
 </ul>
 <h2 id="附录3崩坏3服务器状态标识">附录3：崩坏3服务器状态标识</h2>
 <ul>
-<li><strong>推荐</strong>：<code>&quot;server_state&quot;: &quot;Recommend&quot;</code></li>
-<li><strong>隐藏</strong>：<code>&quot;server_state&quot;: &quot;HIDE&quot;</code></li>
+<li><strong>推荐</strong>：<code>&quot;retcode&quot;: 0</code>、<code>&quot;server_state&quot;: &quot;Recommend&quot;</code></li>
+<li><strong>隐藏</strong>：<code>&quot;retcode&quot;: 0</code>、<code>&quot;server_state&quot;: &quot;HIDE&quot;</code></li>
+<li><strong>维护</strong>：<code>&quot;retcode&quot;: 2</code></li>
 </ul>
 ]]></content>
     </entry>
