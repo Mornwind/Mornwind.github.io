@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind</title>
-    <updated>2020-03-05T15:53:13.943Z</updated>
+    <updated>2020-03-06T05:35:36.162Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -29,7 +29,7 @@
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问）</p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QX规则订阅</a></p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
@@ -109,7 +109,7 @@
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问）</p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QX规则订阅</a></p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
@@ -246,7 +246,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <figure data-type="image" tabindex="3"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788348945.jpg" alt="" loading="lazy"></figure>
 <p>GitHub 项目链接：（可点击跳转）<br>
 原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/Surge_4">Mornwind/BH3_Region_Selector/Surge_4</a><br>
-精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector">FlintyLemming/BH3_Region_Selector</a></p>
+精简版：<a href="https://git.flinty.moe/root/BH3_Region_Selector">FlintyLemming/BH3_Region_Selector</a></p>
 <figure data-type="image" tabindex="4"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788481467.png" alt="" loading="lazy"></figure>
 <figure data-type="image" tabindex="5"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788486793.png" alt="" loading="lazy"></figure>
 <h2 id="方案说明">方案说明</h2>
@@ -257,14 +257,14 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <p>仅使用 URL 重定向（URL Rewrite） 功能实现。</p>
 </blockquote>
 <p>原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E5%85%A5%E9%97%A8%E6%96%B9%E6%B3%95%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
-精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-%E6%96%B0%E6%89%8B%E4%BD%BF%E7%94%A8%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">FlintyLemming/BH3_Region_Selector</a></p>
+精简版：<a href="https://git.flinty.moe/root/BH3_Region_Selector">FlintyLemming/BH3_Region_Selector</a></p>
 <h3 id="方案二进阶方法脚本法">【方案二】进阶方法——脚本法</h3>
 <blockquote>
 <p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
 <p>仅使用 脚本（Script） 功能实现。</p>
 </blockquote>
 <p>原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95%E8%84%9A%E6%9C%AC%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
-精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E8%84%9A%E6%9C%AC%E6%B3%95">FlintyLemming/BH3_Region_Selector</a></p>
+精简版：<a href="https://git.flinty.moe/root/BH3_Region_Selector">FlintyLemming/BH3_Region_Selector</a></p>
 <h2 id="操作步骤">操作步骤</h2>
 <h3 id="第一步">第一步</h3>
 <p>在你的 Surge 4 中配置好根证书，并在系统中启用并信任，然后回到 Surge 4 中启用 MitM 功能。（该步在本教程中不详细教）</p>
@@ -273,11 +273,11 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <p>挑选好你想使用的方案，然后在 GitHub 上的项目中找到对应方案所需使用的配置代码。以下可直接点击跳转。<br>
 【方案一】入门方法——重定向法 → Surge 4 配置<br>
 原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E5%85%A5%E9%97%A8%E6%96%B9%E6%B3%95%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
-精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-surge-4--loon">FlintyLemming/BH3_Region_Selector</a></p>
+精简版：<a href="https://git.flinty.moe/root/BH3_Region_Selector">FlintyLemming/BH3_Region_Selector</a></p>
 <figure data-type="image" tabindex="7"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788517307.png" alt="" loading="lazy"></figure>
 <p>【方案二】进阶方法——脚本法 → Surge 4 配置<br>
 原版：<a href="https://github.com/Mornwind/BH3_Region_Selector/blob/master/Surge_4/README.md#%E8%BF%9B%E9%98%B6%E6%96%B9%E6%B3%95%E8%84%9A%E6%9C%AC%E6%B3%95">Mornwind/BH3_Region_Selector/Surge_4</a><br>
-精简版：<a href="https://github.com/FlintyLemming/BH3_Region_Selector#-surge-4--loon-1">FlintyLemming/BH3_Region_Selector</a></p>
+精简版：<a href="https://git.flinty.moe/root/BH3_Region_Selector">FlintyLemming/BH3_Region_Selector</a></p>
 <figure data-type="image" tabindex="8"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Surge-4/1582788522770.png" alt="" loading="lazy"></figure>
 <h3 id="第三步">第三步</h3>
 <p>使用任一款编辑器打开你的 Surge 配置文件（.conf），或是直接在 Surge 内点击主界面左上角配置名，打开“配置列表”→”在文本模式中编辑”。</p>
@@ -333,7 +333,7 @@ http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php requires-body=1
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问。）</p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QX规则订阅</a></p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
@@ -395,7 +395,7 @@ hostname = *.bh3.com
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问。）</p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QX规则订阅</a></p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
@@ -474,7 +474,7 @@ hostname = *.bh3.com
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/bh3-switch">QX规则订阅</a>（注：服务器维护中，暂无法访问。）</p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QX规则订阅</a></p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
