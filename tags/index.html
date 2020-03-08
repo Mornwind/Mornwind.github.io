@@ -7,7 +7,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>Mornwind</title>
-<link rel="shortcut icon" href="https://mornwind.github.io/favicon.ico?v=1583667537944">
+<link rel="shortcut icon" href="https://mornwind.github.io/favicon.ico?v=1583674675203">
 <link rel="stylesheet" href="https://mornwind.github.io/styles/main.css">
 
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/github.css" rel="stylesheet">  
+<link href="/media/hljs/styles/github-gist.css" rel="stylesheet">  
 
 <script src="/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
@@ -57,7 +57,8 @@
           
             <li class="nav-item ">
               
-                <a href="/tag/Honkai3">
+              
+                <a href="/tag/Honkai3" target="_self">
                   <i class="fa fa-globe"></i> 「崩坏3」
                 </a>
               
@@ -65,7 +66,8 @@
           
             <li class="nav-item ">
               
-                <a href="/tag/GirlsFrontline">
+              
+                <a href="/tag/GirlsFrontline" target="_self">
                   <i class="fa fa-globe"></i> 「少女前线」
                 </a>
               
@@ -73,7 +75,8 @@
           
             <li class="nav-item nav-item-active">
               
-                <a href="/tags">
+              
+                <a href="/tags" target="_self">
                   <i class="fa fa-tags"></i> 标签
                 </a>
               
@@ -81,7 +84,8 @@
           
             <li class="nav-item ">
               
-                <a href="/archives">
+              
+                <a href="/archives" target="_self">
                   <i class="fa fa-archive"></i> 归档
                 </a>
               
@@ -124,7 +128,7 @@
       
       <div class="section-layout  gemini">
         <div class="section-layout-wrapper">
-          <div class="sidebar">
+          <div id="sidebarMeta" class="sidebar">
     
 <div class="sidebar-wrapper box-shadow-wrapper bg-color">
   <div class="sidebar-item">
@@ -182,6 +186,18 @@
           
         
         
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1583674674595-socialImg.png" />
+              <i class="fa fa-qq"></i> 崩坏3-/少女前线跨服
+            </a>
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1583674674602-socialImg.png" />
+              <i class="fa fa-qq"></i> 崩坏3-/少女前线跨服②群
+            </a>
+          
+        
       </div>
     </div>
   
@@ -208,6 +224,20 @@
 
 </div>
 </div>
+<script>
+  let sidebarMeta = document.querySelector('#sidebarMeta');
+  let scheme = 'gemini';
+  let sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
+    document.addEventListener('scroll', function(e) {
+      if (document.scrollingElement.scrollTop > parseInt(sidebarMeta.style.marginTop) + 10) {
+        sidebarWrapper.classList.add('home-sidebar-fixed')
+      } else {
+        sidebarWrapper.classList.remove('home-sidebar-fixed')
+      }
+    });
+  }
+  </script>
           <div class="section-box box-shadow-wrapper">
             <section class="section tags-section bg-color posts-expand">
               <div class="tags-box">
