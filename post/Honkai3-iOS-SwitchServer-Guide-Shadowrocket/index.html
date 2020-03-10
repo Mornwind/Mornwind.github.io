@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Shadowrocket）（iOS客户端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1583763289749">
+<link rel="shortcut icon" href="/favicon.ico?v=1583838982841">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -256,7 +256,7 @@
 <li><a href="#%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">配置方法（重定向法）</a>
 <ul>
 <li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E7%9B%B4%E6%8E%A5%E8%AE%A2%E9%98%85%E7%AE%80%E6%98%93%E8%B7%A8%E6%9C%8D%E9%85%8D%E7%BD%AE">方法一：直接订阅简易跨服配置</a></li>
-<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E8%BF%9B%E5%BD%93%E5%89%8D%E9%85%8D%E7%BD%AE">方法二：手动添加进当前配置</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E5%86%99%E5%85%A5%E5%BD%93%E5%89%8D%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%85%8D%E7%BD%AE">方法二：手动写入当前使用中配置</a></li>
 </ul>
 </li>
 </ul>
@@ -547,15 +547,19 @@ window.addEventListener('load', function() {
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>4分钟</span>
+      <span>5分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1082<span class="pc-show">字数</span></span>
+      <span>1170<span class="pc-show">字数</span></span>
     </span>
     
-      <span id="/post/Honkai3-iOS-SwitchServer-Guide-Shadowrocket/" class="meta-item pc-show leancloud_visitors">
+      
+      
+        
+      
+      <span id="/post/Honkai3-iOS-SwitchServer-Guide-Shadowrocket/" data-flag-title="「崩坏3」跨服教程（Shadowrocket）（iOS客户端 → 官服服务器）" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -565,7 +569,7 @@ window.addEventListener('load', function() {
 </header>
               <div class="post-body next-md-body" id="post_body">
                 <p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理工具 Shadowrocket 实现这一目标。</p>
+本教程就教你如何使用代理&amp;抓包工具 Shadowrocket 实现这一目标。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -604,34 +608,34 @@ window.addEventListener('load', function() {
 </blockquote>
 <h3 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h3>
 <blockquote>
-<p>适合从未使用过的用户，或是曾用过但目前没有上外网需求的用户。</p>
+<p>适合于：从未使用过 Shadowrocket 的新用户；曾用过 Shadowrocket 但目前没有上外网需求的老用户；折腾不来或不爱折腾的新、老用户。</p>
 </blockquote>
 <ol>
 <li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点；</li>
-<li><strong>设置路由模式</strong>：将“全局路由”改为“直连”；</li>
-<li><strong>填写远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入配置文件中所提供的远程订阅 URL，点击下载；<br>
+<li><strong>设置路由模式</strong>：将“全局路由”设置为“直连”；</li>
+<li><strong>设置远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入配置文件中所提供的远程订阅 URL，点击下载；<br>
 <img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Shadowrocket/1583230936761.png" alt="" loading="lazy"></li>
-<li><strong>下载并使用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置；</li>
+<li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置；</li>
 <li><strong>配置 MitM 证书</strong>：前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；</li>
-<li><strong>启动 Shadowrocket</strong>：打开 Shadowrocket 的 VPN 开关，然后进入游戏，即可实现跨服；</li>
+<li><strong>启动 Shadowrocket</strong>：打开 Shadowrocket 的 VPN 开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服；</li>
 <li><strong>停止 Shadowrocket</strong>：不玩游戏时，别忘了关闭 VPN 开关。</li>
 </ol>
-<h3 id="方法二手动添加进当前配置">方法二：手动添加进当前配置</h3>
+<h3 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h3>
 <blockquote>
-<p>适合目前仍有上外网需求的用户。</p>
+<p>适合于：目前仍在使用 Shadowrocket 上外网的老用户；爱折腾的新、老用户。</p>
 </blockquote>
 <ol>
-<li><strong>进入编辑界面</strong>：在&quot;配置文件&quot;页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”；</li>
+<li><strong>进入配置编辑界面</strong>：在&quot;配置文件&quot;页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”；</li>
 <li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将配置文件中提供的以下图中配置，按对应位置复制进你的配置文件中，然后点击右上角的保存；<br>
 <img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Guide-Shadowrocket/1583230414145.png" alt="" loading="lazy"></li>
-<li><strong>配置 MitM 证书</strong>：</li>
-</ol>
+<li><strong>启用 HTTPS 解密</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，打开最上面“HTTPS 解密”的开关；</li>
+<li><strong>配置 MitM 证书</strong>：
 <ul>
 <li>若已配置过 MitM 证书，直接跳过该步；</li>
-<li>若未配置过 MitM 证书，则从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，打开“HTTPS 解密”的开关，然后点击下方“密码”右侧的小 i，选择“生成新的 CA 证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；保存“HTTPS 解密”设置，然后返回主页；</li>
+<li>若未配置过 MitM 证书，则在“HTTPS 解密”的“证书授权”部分，点击“密码”右侧的小圈 i，选择“生成新的 CA 证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；保存“HTTPS 解密”设置，然后返回主页；</li>
 </ul>
-<ol start="4">
-<li><strong>重启 Shadowrocket</strong>：可以开关一次 VPN 开关，以确保修改生效。</li>
+</li>
+<li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以开关一次 VPN 开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
 </ol>
 
               </div>

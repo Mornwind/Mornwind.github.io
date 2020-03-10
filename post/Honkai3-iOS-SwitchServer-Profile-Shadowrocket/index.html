@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服配置（Shadowrocket）（iOS客户端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1583763289749">
+<link rel="shortcut icon" href="/favicon.ico?v=1583838982841">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -255,7 +255,7 @@
 <li><a href="#%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">配置信息（重定向法）</a>
 <ul>
 <li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E7%9B%B4%E6%8E%A5%E8%AE%A2%E9%98%85%E7%AE%80%E6%98%93%E8%B7%A8%E6%9C%8D%E9%85%8D%E7%BD%AE">方法一：直接订阅简易跨服配置</a></li>
-<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E6%B7%BB%E5%8A%A0%E8%BF%9B%E5%BD%93%E5%89%8D%E9%85%8D%E7%BD%AE">方法二：手动添加进当前配置</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E5%86%99%E5%85%A5%E5%BD%93%E5%89%8D%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%85%8D%E7%BD%AE">方法二：手动写入当前使用中配置</a></li>
 </ul>
 </li>
 </ul>
@@ -551,10 +551,14 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>675<span class="pc-show">字数</span></span>
+      <span>708<span class="pc-show">字数</span></span>
     </span>
     
-      <span id="/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket/" class="meta-item pc-show leancloud_visitors">
+      
+      
+        
+      
+      <span id="/post/Honkai3-iOS-SwitchServer-Profile-Shadowrocket/" data-flag-title="「崩坏3」跨服配置（Shadowrocket）（iOS客户端 → 官服服务器）" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -564,7 +568,7 @@ window.addEventListener('load', function() {
 </header>
               <div class="post-body next-md-body" id="post_body">
                 <p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-使用代理工具 Shadowrocket 时所需的配置文件就存储于此。</p>
+使用代理&amp;抓包工具 Shadowrocket 时所需的配置文件就存储于此。</p>
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://github.com/Mornwind">Mornwind</a></p>
@@ -597,13 +601,13 @@ window.addEventListener('load', function() {
 </blockquote>
 <h3 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h3>
 <blockquote>
-<p>适合从未使用过的用户，或是曾用过但目前没有上外网需求的用户。</p>
+<p>适合于：从未使用过 Shadowrocket 的新用户；曾用过 Shadowrocket 但目前没有上外网需求的老用户；折腾不来或不爱折腾的新、老用户。</p>
 </blockquote>
 <pre><code>https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Shadowrocket/bh3_region_selector.conf
 </code></pre>
-<h3 id="方法二手动添加进当前配置">方法二：手动添加进当前配置</h3>
+<h3 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h3>
 <blockquote>
-<p>适合目前仍有上外网需求的用户。</p>
+<p>适合于：目前仍在使用 Shadowrocket 上外网的老用户；爱折腾的新、老用户。</p>
 </blockquote>
 <pre><code>[URL Rewrite]
 # 获取全平台服务器列表
