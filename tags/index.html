@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1583937834022">
+<link rel="shortcut icon" href="/favicon.ico?v=1584546534862">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -620,7 +620,7 @@
 </div>
 <script>
 
-  let fontStart = 12, fontEnd = 30, colorStart = '#ccc', colorEnd = '#111';
+  let fontStart = 12, fontEnd = 30, colorStart = '#666', colorEnd = '#000';
   let tags = document.querySelector('#tags').children;
   let counts = [];
   for(let i = 0; i < tags.length; i++) {
@@ -646,12 +646,12 @@
         disCount = 1;
       }
       let val = (sColorArr[c] - eColorArr[c]) / range * disCount;
-      if (val >= 255) {
+      if (val >= 100) {
         val = eColorArr[c];
       } else if (val <= 0) {
         val = sColorArr[c];
       }
-      arr[c] = Math.floor(255 - val);
+      arr[c] = Math.floor(val);
     }
     style += 'color: ' + toHex(arr);
     tags[i].style = style;
