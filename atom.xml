@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind&apos;s Blog</title>
-    <updated>2020-03-23T15:36:07.462Z</updated>
+    <updated>2020-03-24T09:00:55.878Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://mornwind.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Mornwind&apos;s Blog</rights>
     <entry>
-        <title type="html"><![CDATA[「崩坏3」跨服配置（Pepi）（iOS客户端 → 官服服务器）]]></title>
+        <title type="html"><![CDATA[「崩坏3」跨服教程（Pepi）（iOS客户端 → 官服服务器）]]></title>
         <id>https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Pepi/</id>
         <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Pepi/">
         </link>
@@ -50,22 +50,9 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「崩坏3」跨服教程（Surge 4）（iOS客户端 → 官服服务器）]]></title>
-        <id>https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Guide-Surge-4/</id>
-        <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Guide-Surge-4/">
-        </link>
-        <updated>2020-02-21T11:49:51.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Surge 4 实现这一目标。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Surge 4 实现这一目标。</p>
-]]></content>
-    </entry>
-    <entry>
         <title type="html"><![CDATA[「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）]]></title>
-        <id>https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X/</id>
-        <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Quantumult-X/">
+        <id>https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Quantumult-X/</id>
+        <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Quantumult-X/">
         </link>
         <updated>2020-02-18T13:47:22.000Z</updated>
         <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
@@ -76,9 +63,9 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「崩坏3」跨服配置（Surge 4 / Loon）（iOS客户端 → 官服服务器）]]></title>
-        <id>https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Surge-4/</id>
-        <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Profile-Surge-4/">
+        <title type="html"><![CDATA[「崩坏3」跨服教程（Surge 4）（iOS客户端 → 官服服务器）]]></title>
+        <id>https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Surge-4/</id>
+        <link href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Surge-4/">
         </link>
         <updated>2020-02-17T08:40:48.000Z</updated>
         <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>

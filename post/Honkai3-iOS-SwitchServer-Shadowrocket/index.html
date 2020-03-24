@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Shadowrocket）（iOS客户端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1584977722540">
+<link rel="shortcut icon" href="/favicon.ico?v=1585040424425">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -192,7 +192,7 @@
     <div class="sidebar-item-box">
       <a href="/archives/">
         
-        <span class="site-item-stat-count">7</span>
+        <span class="site-item-stat-count">6</span>
         <span class="site-item-stat-name">文章</span>
       </a>
     </div>
@@ -570,7 +570,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1409<span class="pc-show">字数</span></span>
+      <span>1411<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -615,11 +615,12 @@ window.addEventListener('load', function() {
 <figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Shadowrocket/shadowrocket_preview.jpg" alt="使用 Shadowrocket 跨服" loading="lazy"></figure>
 <hr>
 <h2 id="前期准备">前期准备</h2>
-<p>账号：安卓国服<br>
-系统：iOS 12+ / iPadOS 13+<br>
-工具：<a href="https://apps.apple.com/app/id932747118">Shadowrocket</a></p>
-<p>GitHub 项目链接：（可点击跳转）<br>
-<a href="https://github.com/Mornwind/BH3_Region_Selector/Shadowrocket">Mornwind/BH3_Region_Selector/Shadowrocket</a></p>
+<ul>
+<li>账号：安卓国服</li>
+<li>系统：iOS 12+ / iPadOS 13+</li>
+<li>工具：<a href="https://apps.apple.com/app/id932747118">Shadowrocket</a></li>
+<li>GitHub 项目链接：<a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Shadowrocket">Mornwind/BH3_Region_Selector/Shadowrocket</a></li>
+</ul>
 <h2 id="配置方法重定向法">配置方法（重定向法）</h2>
 <blockquote>
 <p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
@@ -630,25 +631,25 @@ window.addEventListener('load', function() {
 <p>适合于：从未使用过 Shadowrocket 的新用户；曾用过 Shadowrocket 但目前没有上外网需求的老用户；折腾不来或不爱折腾的新、老用户。</p>
 </blockquote>
 <ol>
-<li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点；</li>
-<li><strong>设置路由模式</strong>：将“全局路由”设置为“直连”；</li>
-<li><strong>设置远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入下面的远程订阅 URL，点击下载；</li>
+<li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点。</li>
+<li><strong>设置路由模式</strong>：将“全局路由”设置为“直连”。</li>
+<li><strong>设置远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入下面的远程订阅 URL，点击下载。</li>
 </ol>
 <pre><code>https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Shadowrocket/bh3_region_selector.conf
 </code></pre>
 <ol start="4">
-<li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置；</li>
-<li><strong>配置 MitM 证书</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，点击“证书授权”部分的“密码”右侧的小圈 i，点击“安装证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；</li>
-<li><strong>启动 Shadowrocket</strong>：打开 Shadowrocket 的 VPN 开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服；</li>
-<li><strong>停止 Shadowrocket</strong>：不玩游戏时，别忘了关闭 VPN 开关。</li>
+<li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。</li>
+<li><strong>配置 MitM 证书</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，点击“证书授权”部分的“密码”右侧的小圈 i，点击“安装证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书，并在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书。</li>
+<li><strong>启动 Shadowrocket</strong>：打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+<li><strong>停止 Shadowrocket</strong>：不玩游戏时，别忘了停止 Shadowrocket 的连接。</li>
 </ol>
 <h3 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h3>
 <blockquote>
 <p>适合于：目前仍在使用 Shadowrocket 上外网的老用户；爱折腾的新、老用户。</p>
 </blockquote>
 <ol>
-<li><strong>进入配置编辑界面</strong>：在&quot;配置文件&quot;页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”；</li>
-<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置按对应位置复制进你的配置文件中，然后点击右上角的保存；</li>
+<li><strong>进入配置编辑界面</strong>：在“配置文件”页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[URL Rewrite]</code>、<code>[MITM]</code> 两处下方的代码，在配置文件中分别找到对应位置复制进去，然后点击右上角的“保存”。</li>
 </ol>
 <pre><code>[URL Rewrite]
 # 获取全平台服务器列表
@@ -666,11 +667,11 @@ window.addEventListener('load', function() {
 hostname = *.bh3.com
 </code></pre>
 <ol start="3">
-<li><strong>启用 HTTPS 解密</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，打开最上面“HTTPS 解密”的开关；</li>
+<li><strong>启用 HTTPS 解密</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，打开最上面“HTTPS 解密”的开关。</li>
 <li><strong>配置 MitM 证书</strong>：
 <ul>
-<li>若已配置过 MitM 证书，直接跳过该步；</li>
-<li>若未配置过 MitM 证书，则在“HTTPS 解密”的“证书授权”部分，点击“密码”右侧的小圈 i，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书，并在系统的&quot;设置&quot;→&quot;通用&quot;→“关于本机”→“证书信任设置”中信任该证书；保存“HTTPS 解密”设置，然后返回主页；</li>
+<li>若已配置过 MitM 证书，则直接跳过该步。</li>
+<li>若未配置过 MitM 证书，则在“HTTPS 解密”的“证书授权”部分，点击“密码”右侧的小圈 i，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书，并在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；保存“HTTPS 解密”设置，然后返回主页。</li>
 </ul>
 </li>
 <li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以开关一次 VPN 开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
@@ -705,8 +706,8 @@ hostname = *.bh3.com
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="「崩坏3」跨服配置（Pepi）（iOS客户端 → 官服服务器）" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Pepi/">「崩坏3」跨服配置（Pepi）（iOS客户端 → 官服服务器）</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="「崩坏3」跨服配置（Pepi）（iOS客户端 → 官服服务器）" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Pepi/">上一篇</a>
+        <a class="nav-pc-next" title="「崩坏3」跨服教程（Pepi）（iOS客户端 → 官服服务器）" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Pepi/">「崩坏3」跨服教程（Pepi）（iOS客户端 → 官服服务器）</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="「崩坏3」跨服教程（Pepi）（iOS客户端 → 官服服务器）" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Pepi/">上一篇</a>
       
     </div>
     <div class="nav-next">

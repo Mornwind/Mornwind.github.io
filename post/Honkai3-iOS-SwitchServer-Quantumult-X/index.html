@@ -7,7 +7,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
-<title>Hello Gridea | Mornwind&#39;s Blog</title>
+<title>「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器） | Mornwind&#39;s Blog</title>
 <link rel="shortcut icon" href="/favicon.ico?v=1585040424425">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
@@ -37,8 +37,8 @@
 </script>
 
 
-    <meta name="description" content="Hello Gridea" />
-    <meta name="keywords" content="Gridea" />
+    <meta name="description" content="「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）" />
+    <meta name="keywords" content="Quantumult X,跨服,崩坏3" />
   </head>
   <body>
     <div class="head-top-line"></div>
@@ -251,7 +251,16 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E7%89%B9%E6%80%A7">特性👇</a></li>
+<li><a href="#%E5%8F%82%E8%80%83%E6%9D%A5%E6%BA%90">参考来源</a></li>
+<li><a href="#%EF%B8%8F-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-%EF%B8%8F">⚠️ 注意事项 ⚠️</a></li>
+<li><a href="#%EF%B8%8F-%E7%89%B9%E5%88%AB%E8%AF%B4%E6%98%8E-%EF%B8%8F">⚠️ 特别说明 ⚠️</a></li>
+<li><a href="#%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88">效果预览</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF">配置信息</a>
+<ul>
+<li><a href="#1-%E6%96%B0%E6%89%8B%E4%BD%BF%E7%94%A8%E9%87%8D%E5%AE%9A%E5%90%91%E6%B3%95">⑴ 新手使用（重定向法）</a></li>
+<li><a href="#2-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E8%84%9A%E6%9C%AC%E6%B3%95">⑵ 进阶使用（脚本法）</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -515,8 +524,8 @@ window.addEventListener('load', function() {
             <div class="section bg-color post post-page">
               <header class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://mornwind.github.io/post/hello-gridea/">
-      Hello Gridea
+    <a class="post-title-link" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Quantumult-X/">
+      「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）
     </a>
   </h1>
   <div class="post-meta">
@@ -524,7 +533,7 @@ window.addEventListener('load', function() {
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span>发布于</span>
-      <span>2018-12-12</span>
+      <span>2020-02-18</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -533,8 +542,20 @@ window.addEventListener('load', function() {
         <span class="pc-show">分类于</span>
         
           
-            <a href="https://mornwind.github.io/tag/Gridea/">
-              <span>Gridea</span>
+            <a href="https://mornwind.github.io/tag/Quantumult_X/">
+              <span>Quantumult X</span>
+            </a>、
+          
+        
+          
+            <a href="https://mornwind.github.io/tag/SwitchServer/">
+              <span>跨服</span>
+            </a>、
+          
+        
+          
+            <a href="https://mornwind.github.io/tag/Honkai3/">
+              <span>崩坏3</span>
             </a>
           
         
@@ -543,19 +564,19 @@ window.addEventListener('load', function() {
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>2分钟</span>
+      <span>3分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>298<span class="pc-show">字数</span></span>
+      <span>568<span class="pc-show">字数</span></span>
     </span>
     
       
       
         
       
-      <span id="/post/hello-gridea/" data-flag-title="Hello Gridea" class="meta-item pc-show leancloud_visitors">
+      <span id="/post/Honkai3-iOS-SwitchServer-Quantumult-X/" data-flag-title="「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）" class="meta-item pc-show leancloud_visitors">
         <span class="post-meta-divider">|</span>
         <i class="fa fa-eye"></i>
         <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
@@ -564,27 +585,58 @@ window.addEventListener('load', function() {
   </div>
 </header>
               <div class="post-body next-md-body" id="post_body">
-                <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+                <p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
+来看看使用代理&amp;抓包工具 Quantumult X 时所需的配置文件吧。</p>
 <!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+<blockquote>
+<p>By: <a href="https://blog.mornwind.cc">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3_Region_Selector/tree/master/Quantumult_X">BH3_Region_Selector/Quantumult_X</a></p>
+</blockquote>
+<h2 id="参考来源">参考来源</h2>
+<blockquote>
+<p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QX规则订阅</a></p>
+</blockquote>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>目前跨服只可在官服之间跨。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在PC端上扫码进行登录这种方式，敬请见谅。</li>
+<li><strong>本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。</strong> 目前在PC端账号密码登录方式的服务器列表中，实际上是包含四个渠道服的，但是全都被官方隐藏了，目前应该是还没准备好（第2点里面已经说了原因）。所以就算手动解除了隐藏状态，也是登录不进去的。</li>
+</ol>
+<h2 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h2>
+<ol>
+<li>&quot;进阶方法——脚本法&quot;中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用&quot;新手使用（重定向法）&quot;，或者另寻他法。</li>
+</ol>
+<hr>
+<h2 id="效果预览">效果预览</h2>
+<figure data-type="image" tabindex="1"><img src="https://mornwind.github.io/post-images/Honkai3-iOS-SwitchServer-Quantumult-X/quantumult_x_preview.jpg" alt="使用 Quantumult X 跨服" loading="lazy"></figure>
+<hr>
+<h2 id="配置信息">配置信息</h2>
+<h3 id="1-新手使用重定向法">⑴ 新手使用（重定向法）</h3>
+<blockquote>
+<p>默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。</p>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
+<pre><code>[rewrite_remote]
+# 新手直接订阅使用，无需自行更动
+https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Quantumult_X/bh3_region_rewrite.conf, tag=BH3 Region Rewrite, enabled=true
+</code></pre>
+<h3 id="2-进阶使用脚本法">⑵ 进阶使用（脚本法）</h3>
+<blockquote>
+<p>自定义服务器列表，可调整顺序、删去多余服务器。</p>
+<p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
+</blockquote>
+<pre><code>[rewrite_local]
+# 自定义服务器列表
+^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* url script-response-body bh3_region_list.js
+
+# 改写连入服务器的客户端标识
+^http:\/\/(.*)\/query_gameserver\?version=.* url script-request-header bh3_region_selector.js
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
 
               </div>
               <div class="post-footer">
@@ -595,7 +647,7 @@ window.addEventListener('load', function() {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://mornwind.github.io/post/hello-gridea/" title="Hello Gridea">Hello Gridea</a>
+      <a href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Quantumult-X/" title="「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）">「崩坏3」跨服配置（Quantumult X）（iOS客户端 → 官服服务器）</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -604,14 +656,26 @@ window.addEventListener('load', function() {
   </ul>
   <div class="tags">
     
-      <a href="https://mornwind.github.io/tag/Gridea/"># Gridea</a>
+      <a href="https://mornwind.github.io/tag/Quantumult_X/"># Quantumult X</a>
+    
+      <a href="https://mornwind.github.io/tag/SwitchServer/"># 跨服</a>
+    
+      <a href="https://mornwind.github.io/tag/Honkai3/"># 崩坏3</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
+        <i class="fa fa-chevron-left"></i>
+        <a class="nav-pc-next" title="「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 安卓国服）" href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile/">「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 安卓国服）</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS客户端 → 安卓国服）" href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile/">上一篇</a>
+      
     </div>
     <div class="nav-next">
+      
+        <a class="nav-pc-next" title="「崩坏3」跨服教程（Surge 4）（iOS客户端 → 官服服务器）" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Surge-4/">「崩坏3」跨服教程（Surge 4）（iOS客户端 → 官服服务器）</a>
+        <a class="nav-mobile-next" title="「崩坏3」跨服教程（Surge 4）（iOS客户端 → 官服服务器）" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Surge-4/">下一篇</a>
+        <i class="fa fa-chevron-right"></i>
       
     </div>
   </div>
