@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Quantumult X）（iOS 端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1585230299291">
+<link rel="shortcut icon" href="/favicon.ico?v=1585661179038">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -571,7 +571,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>614<span class="pc-show">字数</span></span>
+      <span>650<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -597,7 +597,7 @@ window.addEventListener('load', function() {
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QX规则订阅</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QuanX跨服规则</a></p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
@@ -609,6 +609,7 @@ window.addEventListener('load', function() {
 <h2 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h2>
 <ol>
 <li>“进阶方法——脚本法”中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用“入门方法——重定向法”，或者另寻他法。</li>
+<li><strong>若使用的是“入门方法——重定向法”，则每个版本更新或资源更新后，需先进 iOS 国服下载资源。</strong></li>
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
@@ -871,6 +872,36 @@ new Valine({
   // 代码高亮
   hljs.initHighlightingOnLoad();
 
+</script>
+      <div class="light-box" id="light_box"></div>
+<script>
+  let imgs = document.querySelectorAll('.post-body img');
+  let lightBox = document.querySelector('#light_box');
+  lightBox.addEventListener('mousedown', (e) => {
+    e.preventDefault()
+  })
+  lightBox.addEventListener('mousewheel', (e) => {
+    e.preventDefault()
+  })
+  let width = window.innerWidth * 0.8;
+  lightBox.onclick= () => {
+    let img = lightBox.querySelector('img');
+    lightBox.style = '';
+    img && img.remove();
+  }
+  imgs.forEach(item => {
+    item.onclick = function(e) {
+      let lightImg = document.createElement('img');
+      lightImg.src = this.src;
+      lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
+      lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
+      lightImg.onclick = function() {
+        lightBox.style = '';
+        this.remove();
+      }
+      lightBox.append(lightImg);
+    }
+  })
 </script>
     </div>
   </body>

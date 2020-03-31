@@ -165,6 +165,26 @@ blockquote:before {
 .aplayer-list-title {
   color: #000;
 }
+.light-box {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  opacity: 0;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  transition: opacity 300ms ease-in-out 0s;
+  z-index: 99999;
+}
+.light-box img {
+  width: 0;
+  transition: width 1000ms ease-in-out 0s;
+}
+.post-body img {
+  cursor: zoom-in;
+}
 .head-top-line {
   height: 3px;
   background: #222;
@@ -2030,11 +2050,11 @@ body {
       }.nav-item a:hover {
         color: #222;
       }.nav-item-active {
-      background: ##f9f9f9fe;
+      background: #f9f9f9fe;
     }
 
     .nav-item:hover {
-      background: ##f9f9f9fe;
+      background: #f9f9f9fe;
       color: rgba(0, 0, 0, 0.98);
     }.site-author-image {
       border-radius: 50%;
@@ -2079,7 +2099,7 @@ body {
         background: #364fc7 !important;
       }
     .brand {
-      background: ##364fc7fe;
+      background: #364fc7fe;
     }
     .main-title {
       color: #FFF;
