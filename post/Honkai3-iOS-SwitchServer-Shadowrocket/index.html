@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Shadowrocket）（iOS 端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1585744488932">
+<link rel="shortcut icon" href="/favicon.ico?v=1585924773411">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -570,7 +570,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1433<span class="pc-show">字数</span></span>
+      <span>1417<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -596,7 +596,7 @@ window.addEventListener('load', function() {
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QuanX跨服规则</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QuanX 跨服规则</a></p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
@@ -640,7 +640,8 @@ window.addEventListener('load', function() {
 </code></pre>
 <ol start="4">
 <li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。</li>
-<li><strong>配置 MitM 证书</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，点击“证书授权”部分的“密码”右侧的小圈 i，点击“安装证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书，并在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书。</li>
+<li><strong>安装 MitM 证书</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，点击“证书授权”部分的“密码”右侧的小圈 i，点击“安装证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；保存“HTTPS 解密”设置，然后返回主页。</li>
 <li><strong>启动 Shadowrocket</strong>：打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
 <li><strong>停止 Shadowrocket</strong>：不玩游戏时，别忘了停止 Shadowrocket 的连接。</li>
 </ol>
@@ -654,27 +655,23 @@ window.addEventListener('load', function() {
 </ol>
 <pre><code>[URL Rewrite]
 # 获取全平台服务器列表
-^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4 HEADER
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) https://global$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4 HEADER
 # 改写连入服务器的客户端标识
 # &gt; 官服
 # &gt;&gt; 安卓国服
-^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 HEADER
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 HEADER
 # &gt;&gt; iOS国服
-^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 HEADER
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 HEADER
 # &gt;&gt; 全平台（桌面）服
-^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(\d*\.\d*\.\d*)_gf_(.*)&amp;t=(\d*)&amp;uid=(\d*) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
 
 [MITM]
 hostname = *.bh3.com
 </code></pre>
 <ol start="3">
 <li><strong>启用 HTTPS 解密</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，打开最上面“HTTPS 解密”的开关。</li>
-<li><strong>配置 MitM 证书</strong>：
-<ul>
-<li>若已配置过 MitM 证书，则直接跳过该步。</li>
-<li>若未配置过 MitM 证书，则在“HTTPS 解密”的“证书授权”部分，点击“密码”右侧的小圈 i，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书，并在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；保存“HTTPS 解密”设置，然后返回主页。</li>
-</ul>
-</li>
+<li><strong>安装 MitM 证书</strong>：在“HTTPS 解密”的“证书授权”部分，点击“密码”右侧的小圈 i，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装证书”，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；保存“HTTPS 解密”设置，然后返回主页。</li>
 <li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以开关一次 VPN 开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
 </ol>
 

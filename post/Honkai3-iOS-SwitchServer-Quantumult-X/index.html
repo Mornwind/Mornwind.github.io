@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Quantumult X）（iOS 端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1585744488932">
+<link rel="shortcut icon" href="/favicon.ico?v=1585924773411">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -571,7 +571,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>650<span class="pc-show">字数</span></span>
+      <span>660<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -597,7 +597,7 @@ window.addEventListener('load', function() {
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
 <p>① 霞ヶ丘詩羽x：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></p>
-<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QuanX跨服规则</a></p>
+<p>② FlintyLemming：<a href="https://git.flinty.moe/root/BH3_Region_Selector">QuanX 跨服规则</a></p>
 </blockquote>
 <hr>
 <h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
@@ -641,10 +641,10 @@ https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Quantumult
 </blockquote>
 <pre><code>[rewrite_local]
 # 自定义服务器列表
-^https:\/\/global(.+?)\.bh3\.com\/query_dispatch\?version=.* url script-response-body bh3_region_list.js
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) url script-response-body bh3_region_list.js
 
 # 改写连入服务器的客户端标识
-^http:\/\/(.*)\/query_gameserver\?version=.* url script-request-header bh3_region_selector.js
+^http:\/\/(.*)\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) url script-request-header bh3_region_selector.js
 
 [MITM]
 hostname = *.bh3.com
