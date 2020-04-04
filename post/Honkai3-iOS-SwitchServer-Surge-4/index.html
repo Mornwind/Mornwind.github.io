@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Surge 4）（iOS 端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586006306010">
+<link rel="shortcut icon" href="/favicon.ico?v=1586026478342">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -565,12 +565,12 @@ window.addEventListener('load', function() {
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>7分钟</span>
+      <span>8分钟</span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1702<span class="pc-show">字数</span></span>
+      <span>1767<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -678,14 +678,15 @@ hostname = *.bh3.com
 http-response ^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/bh3_region_list.js
 # 改写连入服务器的客户端标识
 http-request ^http:\/\/(.*)\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/bh3_vid_rewrite.js
-# 确保每个版本首次进入服务器时，提示下载资源（暂未成功）
-# http-response ^http:\/\/(.*)\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/bh3_resource_update.js
+# 确保每个版本首次进入服务器时，提示下载资源
+http-response ^http:\/\/(.*)\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Surge_4/bh3_resource_update.js
 
 [MITM]
 hostname = *.bh3.com
 </code></pre>
 <ol start="5">
 <li><strong>启用“脚本”和“MitM”功能</strong>：回到“首页”中，将“脚本”和“MitM”两个卡片的开关打开。</li>
+<li><strong>启用“Network framework”功能</strong>：点击“首页”最底端的“高级设置”，找到“实验性功能”→“使用 Network framework”，打开开关，然后点击右上角的“完成”保存设置。（之后若弹出的有关“Network framework”的“警告”弹窗，可选择“不再提示”）</li>
 <li><strong>启用“始终开启”功能</strong>：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。</li>
 <li><strong>启动 Surge 4</strong>：点击“首页”右上角“启动”按钮启动 Surge 4，即可完成跨服。</li>
 </ol>
