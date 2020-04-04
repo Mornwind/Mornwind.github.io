@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Quantumult）（iOS 端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1585924773411">
+<link rel="shortcut icon" href="/favicon.ico?v=1585993543408">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -570,7 +570,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1219<span class="pc-show">字数</span></span>
+      <span>1218<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -651,7 +651,7 @@ window.addEventListener('load', function() {
 </ol>
 <pre><code>[REWRITE]
 # 获取全平台服务器列表
-^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) url 302 https://global$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) url 302 https://$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4
 # 改写连入服务器的客户端标识
 # &gt; 官服
 # &gt;&gt; 安卓国服
