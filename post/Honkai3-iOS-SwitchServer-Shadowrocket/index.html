@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Shadowrocket）（iOS 端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586065678200">
+<link rel="shortcut icon" href="/favicon.ico?v=1586101385413">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -570,7 +570,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1416<span class="pc-show">字数</span></span>
+      <span>1411<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -609,7 +609,7 @@ window.addEventListener('load', function() {
 <ol>
 <li>一定要是 Shadowrocket 的 2.1.49 (964) 及以上 TF 或商店版本，因为旧版本中有一个“正则出错导致匹配结果越界”的 Bug，会使得 VPN 在触发规则时停止运行。</li>
 <li>新建的节点为本机地址（可以自行谷歌一下“localhost”及“127.0.0.1”的用途），并非自建服务器。</li>
-<li><strong>每个版本更新或资源更新后，需先进 iOS 国服下载资源。</strong></li>
+<li><strong>若出现资源缺失，需先进 iOS 国服下载资源。</strong></li>
 </ol>
 <hr>
 <h2 id="效果预览">效果预览</h2>
@@ -659,9 +659,9 @@ window.addEventListener('load', function() {
 # 改写连入服务器的客户端标识
 # &gt; 官服
 # &gt;&gt; 安卓国服
-^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.14.51.73/query_gameserver?version=$1_gf_android&amp;t=$3&amp;uid=$4 HEADER
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.14.51.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
 # &gt;&gt; iOS国服
-^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://139.224.7.27/query_gameserver?version=$1_gf_ios&amp;t=$3&amp;uid=$4 HEADER
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://139.224.7.27/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
 # &gt;&gt; 全平台（桌面）服
 ^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
 
