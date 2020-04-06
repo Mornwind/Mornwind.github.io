@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服教程（Quantumult X）（iOS 端 → 官服服务器） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586101385413">
+<link rel="shortcut icon" href="/favicon.ico?v=1586141033936">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -571,7 +571,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>642<span class="pc-show">字数</span></span>
+      <span>654<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -632,7 +632,7 @@ window.addEventListener('load', function() {
 <p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
 </blockquote>
 <pre><code>[rewrite_remote]
-# 新手直接订阅使用，无需自行更动
+# 崩坏3 跨服（新手直接订阅使用，无需自行更动）
 https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Quantumult_X/bh3_region_rewrite.conf, tag=BH3 Region Rewrite, enabled=true
 </code></pre>
 <h3 id="方法二进阶方法脚本法">方法二：进阶方法——脚本法</h3>
@@ -641,10 +641,10 @@ https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Quantumult
 <p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
 </blockquote>
 <pre><code>[rewrite_local]
-# 自定义服务器列表
+# 崩坏3 跨服
+# &gt; 自定义服务器列表
 ^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) url script-response-body bh3_region_list.js
-
-# 改写连入服务器的客户端标识
+# &gt; 改写连入服务器的客户端标识
 ^http:\/\/(.*)\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) url script-request-header bh3_region_selector.js
 
 [MITM]
