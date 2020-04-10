@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586176326067">
+<link rel="shortcut icon" href="/favicon.ico?v=1586499047673">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -247,7 +247,7 @@
                 <h1 class="firends-title" itemprop="name headline">友情链接</h1>
                 
                   
-                    <a href="https://fakec0de.github.io">
+                    <a href="https://fakec0de.github.io" target="_blank">
                       <div class="firends-item">
                         <img src=""/>
                         <div class="right">
@@ -261,7 +261,7 @@
                       </div>
                     </a>
                   
-                    <a href="https://space.bilibili.com/455501">
+                    <a href="https://space.bilibili.com/455501" target="_blank">
                       <div class="firends-item">
                         <img src="https://i1.hdslb.com/bfs/face/b14b5e0e011b6299784da6459892fd1a16380401.jpg_64x64.jpg"/>
                         <div class="right">
@@ -275,7 +275,7 @@
                       </div>
                     </a>
                   
-                    <a href="https://git.flinty.moe/root/BH3_Region_Selector">
+                    <a href="https://git.flinty.moe/root/BH3_Region_Selector" target="_blank">
                       <div class="firends-item">
                         <img src=""/>
                         <div class="right">
@@ -488,6 +488,16 @@ new Valine({
     }
   }
 
+  // 链接跳转
+  let newWindow = 'true'
+  if (newWindow === 'true') {
+    let links = document.querySelectorAll('.post-body a')
+    links.forEach(item => {
+      if (!item.classList.contains('btn')) {
+        item.setAttribute("target","_blank");
+      }
+    })
+  }
   // 代码高亮
   hljs.initHighlightingOnLoad();
 
