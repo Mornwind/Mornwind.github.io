@@ -8,7 +8,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1586754646828">
+<link rel="shortcut icon" href="/favicon.ico?v=1586765593155">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -252,11 +252,15 @@
 <li>
 <ul>
 <li><a href="#%E5%8F%82%E8%80%83%E6%9D%A5%E6%BA%90">参考来源</a></li>
-<li><a href="#%EF%B8%8F-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-%EF%B8%8F">⚠️ 注意事项 ⚠️</a></li>
-<li><a href="#%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF">配置信息</a>
+<li><a href="#%EF%B8%8F-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-%EF%B8%8F">⚠️ 注意事项 ⚠️</a>
 <ul>
-<li><a href="#1-surge-4-loon">① Surge 4 / Loon</a></li>
-<li><a href="#2-quantumult-x">② Quantumult X</a></li>
+<li><a href="#1-surge-4-loon">⑴ Surge 4 / Loon</a>
+<ul>
+<li><a href="#1-%E8%AE%A2%E9%98%85%E6%A8%A1%E5%9D%97%E5%8C%96%E9%85%8D%E7%BD%AE">① 订阅模块化配置</a></li>
+<li><a href="#2-%E6%89%8B%E5%8A%A8%E7%BC%96%E8%BE%91%E9%85%8D%E7%BD%AE">② 手动编辑配置</a></li>
+</ul>
+</li>
+<li><a href="#2-quantumult-x">⑵ Quantumult X</a></li>
 </ul>
 </li>
 </ul>
@@ -582,7 +586,7 @@ window.addEventListener('load', function() {
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>293<span class="pc-show">字数</span></span>
+      <span>322<span class="pc-show">字数</span></span>
     </span>
     
       
@@ -615,18 +619,21 @@ window.addEventListener('load', function() {
 <li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
 <li>目前本人尚未研究渠道服的跨服，故本项目暂时只支持官服跨服。日后若有时间研究且能写得出来，会尽量加进本项目。</li>
 <li>跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请另寻他法。</li>
-<li>不可跨服充值，否则会充错服，切记。</li>
+<li><strong>不可跨服充值</strong>，否则会充错服，切记。</li>
 </ol>
 <hr>
-<h2 id="配置信息">配置信息</h2>
-<h3 id="1-surge-4-loon">① Surge 4 / Loon</h3>
-<pre><code>[Script]
-# 少女前线 跨服
-http-request ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher.js
+<h3 id="1-surge-4-loon">⑴ Surge 4 / Loon</h3>
+<h4 id="1-订阅模块化配置">① 订阅模块化配置</h4>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher.sgmodule
 </code></pre>
-<h3 id="2-quantumult-x">② Quantumult X</h3>
+<h4 id="2-手动编辑配置">② 手动编辑配置</h4>
+<pre><code>[Script]
+# 少女前线 官服跨服
+gf_region_switcher.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher.js,requires-body=1
+</code></pre>
+<h3 id="2-quantumult-x">⑵ Quantumult X</h3>
 <pre><code>[rewrite_local]
-# 少女前线 跨服
+# 少女前线 官服跨服
 ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url script-request-body gf_region_switcher.js
 </code></pre>
 
