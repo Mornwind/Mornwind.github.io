@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8"/>
+
+<head>
+  <meta charset="UTF-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <meta name="keywords" content="Mornwind">
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1587480725483">
+<link rel="shortcut icon" href="/favicon.ico?v=1587548013640">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
-<link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link
+  href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
+  rel="stylesheet" type="text/css">
 
-<link href="/media/hljs/styles/github-gist.css" rel="stylesheet">  
+<link href="/media/hljs/styles/github-gist.css"
+  rel="stylesheet">
 
 <script src="/media/hljs/highlight.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.0/velocity.min.js"></script>
@@ -28,20 +32,21 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160036109-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'UA-160036109-1');
 </script>
 
 
-    <meta name="description" content="「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）" />
-    <meta name="keywords" content="Loon,Quantumult X,Surge 4,跨服,少女前线" />
-  </head>
-  <body>
-    <div class="head-top-line"></div>
-    <div class="header-box">
-      
+  <meta name="description" content="「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）" />
+  <meta name="keywords" content="Loon,Quantumult X,Surge 4,跨服,少女前线" />
+</head>
+
+<body>
+  <div class="head-top-line"></div>
+  <div class="header-box">
+    
 <div class=" gemini">
   <header class="header  ">
     <div class="blog-header box-shadow-wrapper bg-color " id="header">
@@ -157,12 +162,13 @@
 
   navToggle.addEventListener('click',navClick);  
 </script>
-    </div>
-    <div class="main-continer">
-      
-      <div class="section-layout gemini ">
-        <div class="section-layout-wrapper">
-          
+  </div>
+  <div class="main-continer">
+    
+    <div
+      class="section-layout gemini ">
+      <div class="section-layout-wrapper">
+        
 
 <div class="sidebar">
   
@@ -245,7 +251,8 @@
             </div>
             <div class="post-toc sidebar-body-active" id="post_toc" style="opacity: 1;">
               <div class="toc-box right-motion">
-  <div class="toc-wrapper auto-number no_compress" id="toc_wrapper">
+  <div class="toc-wrapper auto-number no_compress"
+    id="toc_wrapper">
     <ul class="markdownIt-TOC">
 <li>
 <ul>
@@ -270,173 +277,174 @@
 
 <script>
 
-let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1; 
-let active = 'active-show', activeClass = 'active-current';
-let tocWrapper = document.querySelector('#toc_wrapper');
-let tocContent = tocWrapper.children[0];
-let autoNumber = tocWrapper&&tocWrapper.classList.contains('auto-number');
+  let lastTop = 0, lList = [], hList = [], postBody, lastIndex = -1;
+  let active = 'active-show', activeClass = 'active-current';
+  let tocWrapper = document.querySelector('#toc_wrapper');
+  let tocContent = tocWrapper.children[0];
+  let autoNumber = tocWrapper && tocWrapper.classList.contains('auto-number');
 
-function addTocNumber(elem, deep) {
-  if (!elem) {
-    return;
-  }
-  let prop = elem.__proto__;
+  function addTocNumber(elem, deep) {
+    if (!elem) {
+      return;
+    }
+    let prop = elem.__proto__;
 
-  if (prop === HTMLUListElement.prototype) {
-    for (let i = 0; i < elem.children.length; i++) {
-      addTocNumber(elem.children[i], deep + (i + 1) + '.');
-    }
-  } else if (prop === HTMLLIElement.prototype) {
-    // 保存li元素
-    if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
-      lList.push(elem);
-    }
-    for (let i = 0; i < elem.children.length; i++) {
-      let cur = elem.children[i];
-      if (cur.__proto__ === HTMLAnchorElement.prototype) {
-        if (autoNumber) {
-          cur.text =  deep + ' ' + cur.text;
+    if (prop === HTMLUListElement.prototype) {
+      for (let i = 0; i < elem.children.length; i++) {
+        addTocNumber(elem.children[i], deep + (i + 1) + '.');
+      }
+    } else if (prop === HTMLLIElement.prototype) {
+      // 保存li元素
+      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+        lList.push(elem);
+      }
+      for (let i = 0; i < elem.children.length; i++) {
+        let cur = elem.children[i];
+        if (cur.__proto__ === HTMLAnchorElement.prototype) {
+          if (autoNumber) {
+            cur.text = deep + ' ' + cur.text;
+          }
+        } else if (cur.__proto__ === HTMLUListElement.prototype) {
+          addTocNumber(cur, deep);
         }
-      } else if (cur.__proto__ === HTMLUListElement.prototype) {
-        addTocNumber(cur, deep);
       }
     }
   }
-}
 
-function removeParentActiveClass() {
-  let parents = tocContent.querySelectorAll('.'+active)
-  parents.forEach(function(elem) {
-    elem.classList.remove(active);
-  });
-}
-
-function addActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.add(activeClass);
+  function removeParentActiveClass() {
+    let parents = tocContent.querySelectorAll('.' + active)
+    parents.forEach(function (elem) {
+      elem.classList.remove(active);
+    });
   }
-}
 
-function removeActiveClass(index) {
-  if (index >= 0 && index < hList.length) {
-    lList[index].classList.remove(activeClass);
-  }
-}
-
-function addActiveLiElemment(elem, parent) {
-  if (!elem || elem === parent) {
-    return;
-  } else {
-    if (elem.__proto__ === HTMLLIElement.prototype) {
-      elem.classList.add(active);
+  function addActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.add(activeClass);
     }
-    addActiveLiElemment(elem.parentElement, parent);
   }
-}
 
-function showToc() {
-  if (tocWrapper) {
-    postBody = document.querySelector('#post_body');
-    for (let i = 0; i < postBody.children.length; i++) {
-      if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
-        hList.push(postBody.children[i]);
-      }
+  function removeActiveClass(index) {
+    if (index >= 0 && index < hList.length) {
+      lList[index].classList.remove(activeClass);
     }
-    if (tocWrapper.classList.contains('compress')) {
-        tocContent.classList.add('closed');
-    } else if (tocWrapper.classList.contains('no_compress')){
-      tocContent.classList.add('expanded');
+  }
+
+  function addActiveLiElemment(elem, parent) {
+    if (!elem || elem === parent) {
+      return;
     } else {
-      if (hList.length > 10) {
-        active = 'active-hidden'
+      if (elem.__proto__ === HTMLLIElement.prototype) {
+        elem.classList.add(active);
+      }
+      addActiveLiElemment(elem.parentElement, parent);
+    }
+  }
+
+  function showToc() {
+    if (tocWrapper) {
+      postBody = document.querySelector('#post_body');
+      for (let i = 0; i < postBody.children.length; i++) {
+        if (postBody.children[i].__proto__ === HTMLHeadingElement.prototype) {
+          hList.push(postBody.children[i]);
+        }
+      }
+      if (tocWrapper.classList.contains('compress')) {
         tocContent.classList.add('closed');
-      } else {
+      } else if (tocWrapper.classList.contains('no_compress')) {
         tocContent.classList.add('expanded');
+      } else {
+        if (hList.length > 10) {
+          active = 'active-hidden'
+          tocContent.classList.add('closed');
+        } else {
+          tocContent.classList.add('expanded');
+        }
       }
     }
   }
-}
 
-(function() {
-  // 处理不是从#一级标题开始目录
-  if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
-    let con = tocContent.children[0].children[0];
-    tocContent.innerHTML = con.innerHTML;
-  }
-  let markdownItTOC = document.querySelector('.markdownIt-TOC');
-  let innerHeight = window.innerHeight;
-  markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
-  addTocNumber(tocContent, '');
-})();
+  (function () {
+    // 处理不是从#一级标题开始目录
+    if (tocContent.children.length === 1 && tocContent.children[0].__proto__ === HTMLLIElement.prototype) {
+      let con = tocContent.children[0].children[0];
+      tocContent.innerHTML = con.innerHTML;
+    }
+    let markdownItTOC = document.querySelector('.markdownIt-TOC');
+    let innerHeight = window.innerHeight;
+    markdownItTOC.style = `max-height: ${innerHeight - 80 > 0 ? innerHeight - 80 : innerHeight}px`
+    addTocNumber(tocContent, '');
+  })();
 
-document.addEventListener('scroll', function(e) {
-  if (lList.length <= 0) {
-    return;
-  }
-  let scrollTop = document.scrollingElement.scrollTop + 10;
-  let dir;
+  document.addEventListener('scroll', function (e) {
+    if (lList.length <= 0) {
+      return;
+    }
+    let scrollTop = document.scrollingElement.scrollTop + 10;
+    let dir;
 
-  if (lastTop - scrollTop > 0) {
-    dir = 'up';
-  } else {
-    dir = 'down';
-  }
+    if (lastTop - scrollTop > 0) {
+      dir = 'up';
+    } else {
+      dir = 'down';
+    }
 
-  lastTop = scrollTop;
-  if (scrollTop <= 0) {
-    if (lastIndex >= 0 && lastIndex < hList.length) {
-      lList[lastIndex].classList.remove(activeClass);
+    lastTop = scrollTop;
+    if (scrollTop <= 0) {
+      if (lastIndex >= 0 && lastIndex < hList.length) {
+        lList[lastIndex].classList.remove(activeClass);
+      }
+      return;
     }
-    return;
-  }
 
-  let current = 0, hasFind = false;
-  for (let i = 0; i < hList.length; i++) {
-    if (hList[i].offsetTop > scrollTop) {
-      current = i;
-      hasFind = true;
-      break;
+    let current = 0, hasFind = false;
+    for (let i = 0; i < hList.length; i++) {
+      if (hList[i].offsetTop > scrollTop) {
+        current = i;
+        hasFind = true;
+        break;
+      }
     }
-  }
-  if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
-    current = hList.length - 1;
-  } else {
-    current--;
-  }
-  if (dir === 'down') {
-    if (current > lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex) 
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    if (!hasFind && scrollTop > lList[lList.length - 1].offsetTop) {
+      current = hList.length - 1;
+    } else {
+      current--;
     }
-  } else {
-    if (current < lastIndex) {
-      addActiveClass(current);
-      removeActiveClass(lastIndex);
-      lastIndex = current;
-      removeParentActiveClass();
-      lList[current] && addActiveLiElemment(lList[current].parentElement,tocContent);
+    if (dir === 'down') {
+      if (current > lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex)
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
+    } else {
+      if (current < lastIndex) {
+        addActiveClass(current);
+        removeActiveClass(lastIndex);
+        lastIndex = current;
+        removeParentActiveClass();
+        lList[current] && addActiveLiElemment(lList[current].parentElement, tocContent);
+      }
     }
-  }
-});
+  });
 
-window.addEventListener('load', function() {
-  showToc();
-  document.querySelector('#sidebar').style='display: block;';
-  tocWrapper.classList.add('toc-active');
-  setTimeout(function() {
-    if ("createEvent" in document) {
-      let evt = document.createEvent("HTMLEvents");
-      evt.initEvent("scroll", false, true);
-      document.dispatchEvent(evt);
-    }
-    else {
-      document.fireEvent("scroll");
-    }
-  }, 500)
-})
+
+  window.addEventListener('load', function () {
+    showToc();
+    document.querySelector('#sidebar').style = 'display: block;';
+    tocWrapper.classList.add('toc-active');
+    setTimeout(function () {
+      if ("createEvent" in document) {
+        let evt = document.createEvent("HTMLEvents");
+        evt.initEvent("scroll", false, true);
+        document.dispatchEvent(evt);
+      }
+      else {
+        document.fireEvent("scroll");
+      }
+    }, 500)
+  })
 
 </script>
             </div>
@@ -523,9 +531,9 @@ window.addEventListener('load', function() {
   }
   
 </script>
-          <div class="section-box box-shadow-wrapper">
-            <div class="section bg-color post post-page">
-              <header class="post-header">
+        <div class="section-box box-shadow-wrapper">
+          <div class="section bg-color post post-page">
+            <header class="post-header">
   <h1 class="post-title">
     <a class="post-title-link" href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile/">
       「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）
@@ -540,42 +548,42 @@ window.addEventListener('load', function() {
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
-      <span class="meta-item">
-        <i class="fa fa-folder-o"></i>
-        <span class="pc-show">分类于</span>
-        
-          
-            <a href="https://mornwind.github.io/tag/Loon/">
-              <span>Loon</span>
-            </a>、
-          
-        
-          
-            <a href="https://mornwind.github.io/tag/Quantumult_X/">
-              <span>Quantumult X</span>
-            </a>、
-          
-        
-          
-            <a href="https://mornwind.github.io/tag/Surge_4/">
-              <span>Surge 4</span>
-            </a>、
-          
-        
-          
-            <a href="https://mornwind.github.io/tag/SwitchServer/">
-              <span>跨服</span>
-            </a>、
-          
-        
-          
-            <a href="https://mornwind.github.io/tag/GirlsFrontline/">
-              <span>少女前线</span>
-            </a>
-          
-        
-      </span>
-      <span class="post-meta-divider">|</span>
+    <span class="meta-item">
+      <i class="fa fa-folder-o"></i>
+      <span class="pc-show">分类于</span>
+      
+      
+      <a href="https://mornwind.github.io/tag/Loon/">
+        <span>Loon</span>
+      </a>、
+      
+      
+      
+      <a href="https://mornwind.github.io/tag/Quantumult_X/">
+        <span>Quantumult X</span>
+      </a>、
+      
+      
+      
+      <a href="https://mornwind.github.io/tag/Surge_4/">
+        <span>Surge 4</span>
+      </a>、
+      
+      
+      
+      <a href="https://mornwind.github.io/tag/SwitchServer/">
+        <span>跨服</span>
+      </a>、
+      
+      
+      
+      <a href="https://mornwind.github.io/tag/GirlsFrontline/">
+        <span>少女前线</span>
+      </a>
+      
+      
+    </span>
+    <span class="post-meta-divider">|</span>
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
@@ -587,20 +595,18 @@ window.addEventListener('load', function() {
       <span>318<span class="pc-show">字数</span></span>
     </span>
     
-      
-      
-        
-      
-      <span id="/post/GirlsFrontline-iOS-SwitchServer-Profile/" data-flag-title="「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）" class="meta-item pc-show leancloud_visitors">
-        <span class="post-meta-divider">|</span>
-        <i class="fa fa-eye"></i>
-        <span>浏览量：<span class="leancloud-visitors-count" ></span></span>
-      </span>
+    
+    
+    <span id="/post/GirlsFrontline-iOS-SwitchServer-Profile/" data-flag-title="「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）" class="meta-item pc-show leancloud_visitors">
+      <span class="post-meta-divider">|</span>
+      <i class="fa fa-eye"></i>
+      <span>浏览量：<span class="leancloud-visitors-count"></span></span>
+    </span>
     
   </div>
 </header>
-              <div class="post-body next-md-body" id="post_body">
-                <p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+            <div class="post-body next-md-body" id="post_body">
+              <p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
 来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
 <!-- more -->
 <blockquote>
@@ -635,8 +641,8 @@ gf_region_switcher.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.pp
 ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url script-request-body gf_region_switcher.js
 </code></pre>
 
-              </div>
-              <div class="post-footer">
+            </div>
+            <div class="post-footer">
   <ul class="post-copyright">
     <li class="post-copyright-author">
       <strong>本文作者：</strong>
@@ -681,54 +687,60 @@ gf_region_switcher.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.pp
     </div>
   </div>
 </div>
-              
+            
   <script src="https://cdn.jsdelivr.net/npm/valine@1.4.4/dist/Valine.min.js"></script>
 <div id="vcomments" style="padding: 10px 0px 0px 0px"></div>
 
 <style>
- .v .veditor{min-height: 10rem;
-     background-image: url(https://upimage.alexhchu.com/2020/04/21/47eda59424daa.gif);
-     background-size: contain;
-     background-repeat: no-repeat;
-     background-position: right;
-     background-color: rgba(255,255,255,0);
-     resize: none;}
-     .v .vwrap {
-    border: 1px solid #000!important;}
-    .v .vbtn {
-    padding: .4rem 1.2rem!important;
-    border-color: #fff!important;
-    background-color: #49b1f5!important;
-    color: #fff!important;
-    font-size: .7rem!important;
-}
-.v .vcards .vcard .vh .vmeta .vat {
-    padding: 0 .8rem!important;
-    border: 1px solid #00c4b6!important;
-    border-radius: 5px!important;
-    color: #00c4b6!important;
-}
+  .v .veditor {
+    min-height: 10rem;
+    background-image: url('https://upimage.alexhchu.com/2020/04/21/47eda59424daa.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgba(255, 255, 255, 0);
+    resize: none;
+  }
+
+  .v .vwrap {
+    border: 1px solid #000 !important;
+  }
+
+  .v .vbtn {
+    padding: .4rem 1.2rem !important;
+    border-color: #fff !important;
+    background-color: #49b1f5 !important;
+    color: #fff !important;
+    font-size: .7rem !important;
+  }
+
+  .v .vcards .vcard .vh .vmeta .vat {
+    padding: 0 .8rem !important;
+    border: 1px solid #00c4b6 !important;
+    border-radius: 5px !important;
+    color: #00c4b6 !important;
+  }
 </style>
 <script>
-new Valine({
-    el: '#vcomments' ,
+  new Valine({
+    el: '#vcomments',
     appId: 'SOKlxjkuVppHBFUo3nKRknNt-gzGzoHsz',
     appKey: 'wEXu8J50C9E3ppG8YCMsHAjU',
-    avatar:'', 
+    avatar: '',
     placeholder: '有问题请在此处留言',
     pageSize: '',
     lang: 'zh-cn',
     visitor: 'true' === 'true',
     highlight: 'true' === 'true',
     avatarForce: 'true' === 'true',
-});
+  });
 </script>
 
-            </div>
           </div>
         </div>
       </div>
-      <div class="footer-box">
+    </div>
+    <div class="footer-box">
   <footer class="footer">
     <div class="copyright">
       Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | © 2019-2020 Theme By <a href="https://github.com/hsxyhao/gridea-theme-next" target="_blank">HsxyHao</a>
@@ -895,7 +907,7 @@ new Valine({
   hljs.initHighlightingOnLoad();
 
 </script>
-      <div class="light-box" id="light_box"></div>
+    <div class="light-box" id="light_box"></div>
 <script>
   let imgs = document.querySelectorAll('.post-body img');
   let lightBox = document.querySelector('#light_box');
@@ -906,18 +918,18 @@ new Valine({
     e.preventDefault()
   })
   let width = window.innerWidth * 0.8;
-  lightBox.onclick= () => {
+  lightBox.onclick = () => {
     let img = lightBox.querySelector('img');
     lightBox.style = '';
     img && img.remove();
   }
   imgs.forEach(item => {
-    item.onclick = function(e) {
+    item.onclick = function (e) {
       let lightImg = document.createElement('img');
       lightImg.src = this.src;
       lightBox.style = `height: 100%; opacity: 1; background-color: rgba(0, 0, 0, 0.5);cursor: zoom-out;`;
       lightImg.style = `width: ${width}px; border: 1px solid #fff; border-radius: 2px;`;
-      lightImg.onclick = function() {
+      lightImg.onclick = function () {
         lightBox.style = '';
         this.remove();
       }
@@ -925,98 +937,106 @@ new Valine({
     }
   })
 </script>
-    </div>
-  </body>
-  <input hidden id="copy" />
+  </div>
+</body>
+<input hidden id="copy" />
 <script>
-//拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
-window.Clipboard = (function(window, document, navigator) {
-  var textArea,
+  //拿来主义(真香)^_^，Clipboard 实现摘自掘金 https://juejin.im/post/5aefeb6e6fb9a07aa43c20af
+  window.Clipboard = (function (window, document, navigator) {
+    var textArea,
       copy;
 
-  // 判断是不是ios端
-  function isOS() {
-    return navigator.userAgent.match(/ipad|iphone/i);
-  }
-  //创建文本元素
-  function createTextArea(text) {
-    textArea = document.createElement('textArea');
-    textArea.value = text;
-    textArea.style.width = 0;
-    textArea.style.height = 0;
-    textArea.clientHeight = 0;
-    textArea.clientWidth = 0;
-    document.body.appendChild(textArea);
-  }
-  //选择内容
-  function selectText() {
-    var range,
+    // 判断是不是ios端
+    function isOS() {
+      return navigator.userAgent.match(/ipad|iphone/i);
+    }
+    //创建文本元素
+    function createTextArea(text) {
+      textArea = document.createElement('textArea');
+      textArea.value = text;
+      textArea.style.width = 0;
+      textArea.style.height = 0;
+      textArea.clientHeight = 0;
+      textArea.clientWidth = 0;
+      document.body.appendChild(textArea);
+    }
+    //选择内容
+    function selectText() {
+      var range,
         selection;
 
-    if (isOS()) {
-      range = document.createRange();
-      range.selectNodeContents(textArea);
-      selection = window.getSelection();
-      selection.removeAllRanges();
-      selection.addRange(range);
-      textArea.setSelectionRange(0, 999999);
-    } else {
-      textArea.select();
+      if (isOS()) {
+        range = document.createRange();
+        range.selectNodeContents(textArea);
+        selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+        textArea.setSelectionRange(0, 999999);
+      } else {
+        textArea.select();
+      }
+    }
+
+    //复制到剪贴板
+    function copyToClipboard() {
+      try {
+        document.execCommand("Copy")
+      } catch (err) {
+        alert("复制错误！请手动复制！")
+      }
+      document.body.removeChild(textArea);
+    }
+
+    copy = function (text) {
+      createTextArea(text);
+      selectText();
+      copyToClipboard();
+    };
+
+    return {
+      copy: copy
+    };
+  })(window, document, navigator);
+
+  function copyCode(e) {
+    if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
+      let code = e.currentTarget.querySelector('code');
+      var text = code.innerText;
+      if (e.srcElement.textContent === '复制成功') {
+        console.log('复制操作频率过高');
+        return;
+      }
+      e.srcElement.textContent = '复制成功';
+      (function (elem) {
+        setTimeout(() => {
+          if (elem.textContent === '复制成功') {
+            elem.textContent = '复制代码'
+          }
+        }, 1000);
+      })(e.srcElement)
+      Clipboard.copy(text);
     }
   }
 
-//复制到剪贴板
-  function copyToClipboard() {        
-    try{
-      document.execCommand("Copy")
-    }catch(err){
-      alert("复制错误！请手动复制！")
-    }
-    document.body.removeChild(textArea);
-  }
-
-  copy = function(text) {
-    createTextArea(text);
-    selectText();
-    copyToClipboard();
-  };
-
-  return {
-    copy: copy
-  };
-})(window, document, navigator);
-
-function copyCode (e) {
-  if (e.srcElement.tagName === 'SPAN' && e.srcElement.classList.contains('copy-code')) {
-    let code = e.currentTarget.querySelector('code');
-    var text = code.innerText;
-    if (e.srcElement.textContent === '复制成功') {
-      console.log('复制操作频率过高');
-      return;
-    }
-    e.srcElement.textContent = '复制成功';
-    (function(elem){
-      setTimeout(() => {
-        if (elem.textContent === '复制成功') {
-          elem.textContent = '复制代码'
-        }
-      }, 1000);
-    })(e.srcElement)
-    Clipboard.copy(text);
-  }
-}
-
- let pres = document.querySelectorAll('pre');
- pres.forEach(pre => {
-  let code = pre.querySelector('code');
-  let copyElem = document.createElement('span');
-  copyElem.classList.add('copy-code');
-  copyElem.textContent = '复制代码';
-  pre.appendChild(copyElem);
-  pre.onclick = copyCode
- })
+  let pres = document.querySelectorAll('pre');
+  pres.forEach(pre => {
+    let code = pre.querySelector('code');
+    let copyElem = document.createElement('span');
+    copyElem.classList.add('copy-code');
+    copyElem.textContent = '复制代码';
+    pre.appendChild(copyElem);
+    pre.onclick = copyCode
+  })
 </script>
 <script src="/media/js/motion.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 500
+  });
+</script>
+
 <!-- <div class="search-mask" id="search_mask">
   <div class="search-box">
     <div class="search-title">
@@ -1028,8 +1048,9 @@ function copyCode (e) {
     </div>
     <div class="result">
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Quantumult/"" data-c="&lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Quantumult/"" data-c="
+          &lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
 本教程就教你如何使用代理&amp;amp;抓包工具 Quantumult 实现这一目标。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
@@ -1116,10 +1137,11 @@ hostname = *.bh3.com
 &lt;li&gt;&lt;strong&gt;重启 Quantumult&lt;/strong&gt;：为确保修改生效，可以开关一次 Quantumult 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。&lt;/li&gt;
 &lt;/ol&gt;
 ">「崩坏3」跨服教程（Quantumult）（iOS 端 → 官服服务器）</a>
-        </div>
+      </div>
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Pepi/"" data-c="&lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Pepi/"" data-c="
+          &lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
 本教程就教你如何使用代理&amp;amp;抓包工具 Pepi 实现这一目标。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
@@ -1205,10 +1227,11 @@ hostname = *.bh3.com
 &lt;li&gt;&lt;strong&gt;停止 Pepi&lt;/strong&gt;：不玩游戏时，别忘了停止 Pepi。&lt;/li&gt;
 &lt;/ol&gt;
 ">「崩坏3」跨服教程（Pepi）（iOS 端 → 官服服务器）</a>
-        </div>
+      </div>
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Shadowrocket/"" data-c="&lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Shadowrocket/"" data-c="
+          &lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
 本教程就教你如何使用代理&amp;amp;抓包工具 Shadowrocket 实现这一目标。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
@@ -1297,10 +1320,11 @@ hostname = *.bh3.com
 &lt;li&gt;&lt;strong&gt;重启 Shadowrocket&lt;/strong&gt;：为确保修改生效，可以开关一次 VPN 开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。&lt;/li&gt;
 &lt;/ol&gt;
 ">「崩坏3」跨服教程（Shadowrocket）（iOS 端 → 官服服务器）</a>
-        </div>
+      </div>
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile/"" data-c="&lt;p&gt;想在 iOS 端「少女前线」上跨服玩安卓国服？&lt;br&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile/"" data-c="
+          &lt;p&gt;想在 iOS 端「少女前线」上跨服玩安卓国服？&lt;br&gt;
 来看看使用代理&amp;amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
@@ -1335,10 +1359,11 @@ gf_region_switcher.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.pp
 ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url script-request-body gf_region_switcher.js
 &lt;/code&gt;&lt;/pre&gt;
 ">「少女前线」跨服配置（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）</a>
-        </div>
+      </div>
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Quantumult-X/"" data-c="&lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Quantumult-X/"" data-c="
+          &lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
 本教程就教你如何使用代理&amp;amp;抓包工具 Quantumult X 实现这一目标。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
@@ -1402,10 +1427,11 @@ https://raw.githubusercontent.com/Mornwind/BH3_Region_Selector/master/Quantumult
 hostname = *.bh3.com
 &lt;/code&gt;&lt;/pre&gt;
 ">「崩坏3」跨服教程（Quantumult X）（iOS 端 → 官服服务器）</a>
-        </div>
+      </div>
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Surge-4/"" data-c="&lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-Surge-4/"" data-c="
+          &lt;p&gt;想在 iOS 端「崩坏3」上跨服玩安卓国服？&lt;br&gt;
 本教程就教你如何使用代理&amp;amp;抓包工具 Surge 4 实现这一目标。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
@@ -1526,10 +1552,11 @@ hostname = *.bh3.com
 &lt;li&gt;&lt;strong&gt;启动 Surge 4&lt;/strong&gt;：点击“首页”右上角“启动”按钮启动 Surge 4，即可完成跨服。&lt;/li&gt;
 &lt;/ol&gt;
 ">「崩坏3」跨服教程（Surge 4）（iOS 端 → 官服服务器）</a>
-        </div>
+      </div>
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-ToolList/"" data-c="&lt;p&gt;目前，iOS 端「崩坏3」跨服玩安卓国服，可通过 HTTP Catcher / Thor / Shadowrocket / Pepi / Quantumult / Quantumult X / Surge 4 / Loon 等代理&amp;amp;抓包工具来进行，无需越狱或使用跨服包。&lt;/p&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/Honkai3-iOS-SwitchServer-ToolList/"" data-c="
+          &lt;p&gt;目前，iOS 端「崩坏3」跨服玩安卓国服，可通过 HTTP Catcher / Thor / Shadowrocket / Pepi / Quantumult / Quantumult X / Surge 4 / Loon 等代理&amp;amp;抓包工具来进行，无需越狱或使用跨服包。&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;By: &lt;a href=&#34;https://blog.mornwind.cc&#34;&gt;Mornwind&lt;/a&gt;&lt;/p&gt;
@@ -1826,10 +1853,11 @@ hostname = *.bh3.com
 &lt;li&gt;&lt;strong&gt;维护&lt;/strong&gt;：&lt;code&gt;&amp;quot;retcode&amp;quot;: 2&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 ">「崩坏3」跨服方式一览（iOS 端 → 官服服务器）</a>
-        </div>
+      </div>
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/about/"" data-c="&lt;blockquote&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/about/"" data-c="
+          &lt;blockquote&gt;
 &lt;p&gt;欢迎来到我的小站呀，很高兴遇见你！🤝&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;关于本站&#34;&gt;🏠 关于本站&lt;/h2&gt;
@@ -1837,10 +1865,11 @@ hostname = *.bh3.com
 &lt;h2 id=&#34;兴趣爱好&#34;&gt;⛹ 兴趣爱好&lt;/h2&gt;
 &lt;h2 id=&#34;联系我呀&#34;&gt;📬 联系我呀&lt;/h2&gt;
 ">关于</a>
-        </div>
+      </div>
       
-        <div class="item">
-          <a class="result-title" href="https://mornwind.github.io/post/hello-gridea/"" data-c="&lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
+      <div class="item">
+        <a class="result-title" href="https://mornwind.github.io/post/hello-gridea/"" data-c="
+          &lt;p&gt;👏  欢迎使用 &lt;strong&gt;Gridea&lt;/strong&gt; ！&lt;br&gt;
 ✍️  &lt;strong&gt;Gridea&lt;/strong&gt; 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...&lt;/p&gt;
 &lt;!-- more --&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/getgridea/gridea&#34;&gt;Github&lt;/a&gt;&lt;br&gt;
@@ -1862,7 +1891,7 @@ hostname = *.bh3.com
 &lt;p&gt;尽情发挥你的才华吧！&lt;/p&gt;
 &lt;p&gt;😘 Enjoy~&lt;/p&gt;
 ">Hello Gridea</a>
-        </div>
+      </div>
       
     </div>
   </div>
