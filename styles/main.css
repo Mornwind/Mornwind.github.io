@@ -175,6 +175,9 @@ blockquote {
   width: 0;
   transition: width 1000ms ease-in-out 0s;
 }
+.post-body {
+  overflow: hidden;
+}
 .post-body img {
   cursor: zoom-in;
 }
@@ -1734,7 +1737,6 @@ pre > span.copy-code:hover {
   font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
-  color: #A10;
 }
 .next-md-body pre {
   word-wrap: normal;
@@ -2187,8 +2189,8 @@ body {
     .brand {
       background: #364fc7fe;
     }
-    .main-title {
-      color: #FFF;
+    .main-title, .brand {
+      color: #FFF !important;
     }
     .mist .site-title i {
       background: #FFFFFFfe;
