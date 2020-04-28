@@ -197,6 +197,10 @@ pre > span.copy-code {
 pre > span.copy-code:hover {
   color: #FFF;
 }
+.nav-item .fa {
+  width: 16px;
+  text-align: center;
+}
 .head-top-line {
   height: 3px;
   background: #222;
