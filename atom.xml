@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mornwind.github.io</id>
     <title>Mornwind&apos;s Blog</title>
-    <updated>2020-05-08T15:25:55.405Z</updated>
+    <updated>2020-05-08T15:28:11.527Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mornwind.github.io"/>
     <link rel="self" href="https://mornwind.github.io/atom.xml"/>
@@ -44,28 +44,28 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「少女前线」跨服配置（散爆版）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）]]></title>
+        <title type="html"><![CDATA[「少女前线」跨服配置（散爆版）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服）]]></title>
         <id>https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile-SunbornGame/</id>
         <link href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile-SunbornGame/">
         </link>
         <updated>2020-05-06T12:02:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
 来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
 来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「少女前线」跨服配置（迁移期临时版，已失效）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）]]></title>
+        <title type="html"><![CDATA[「少女前线」跨服配置（迁移期临时版，已失效）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服）]]></title>
         <id>https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile-Temp/</id>
         <link href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile-Temp/">
         </link>
         <updated>2020-04-30T10:20:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
 来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
 来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
 ]]></content>
     </entry>
@@ -109,15 +109,15 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「少女前线」跨服配置（数天版，已失效）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓国服）]]></title>
+        <title type="html"><![CDATA[「少女前线」跨服配置（数天版，已失效）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服）]]></title>
         <id>https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile-PPGame/</id>
         <link href="https://mornwind.github.io/post/GirlsFrontline-iOS-SwitchServer-Profile-PPGame/">
         </link>
         <updated>2020-02-23T10:28:12.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
 来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓国服？<br>
+        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
 来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
 ]]></content>
     </entry>
