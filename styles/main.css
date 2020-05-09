@@ -209,8 +209,7 @@ pre > span.copy-code:hover {
   overflow-y: hidden !important;
 }
 .head-top-line {
-  height: 3px;
-  background: #222;
+  height: 2px;
 }
 .header-box {
   position: relative;
@@ -2229,12 +2228,12 @@ body {
     .pisces .blog-header, .pisces .sidebar-wrapper, .pisces .article-wrapper, .pisces .section, .pisces .sidebar-box, .pisces .friends-section {
       border-radius: 20px;
     }
-      .site-meta {
-        background: #364fc7 !important;
-      }
-      .head-top-line {
-        background: #364fc7 !important;
-      }
+    .site-meta {
+      background: #364fc7 !important;
+    }
+    .head-top-line {
+      background: #364fc7;
+    }
     .brand {
       background: #364fc7fe;
     }
