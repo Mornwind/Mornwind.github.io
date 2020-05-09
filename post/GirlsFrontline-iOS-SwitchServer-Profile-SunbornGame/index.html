@@ -9,7 +9,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「少女前线」跨服配置（散爆版）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1589003255021">
+<link rel="shortcut icon" href="/favicon.ico?v=1589005138123">
 <link rel="stylesheet" href="/styles/main.css">
 <link rel="stylesheet" href="/media/css/gemini.css">
 
@@ -304,7 +304,12 @@
 <li><a href="#2-%E6%89%8B%E5%8A%A8%E7%BC%96%E8%BE%91%E9%85%8D%E7%BD%AE">② 手动编辑配置</a></li>
 </ul>
 </li>
-<li><a href="#2-quantumult-x">⑵ Quantumult X</a></li>
+<li><a href="#2-quantumult-x">⑵ Quantumult X</a>
+<ul>
+<li><a href="#%E6%9C%AC%E5%9C%B0%E8%84%9A%E6%9C%AC%E5%95%86%E5%BA%97%E7%89%88-tf-%E7%89%88%E5%9D%87%E5%8F%AF%E7%94%A8">本地脚本（商店版、TF 版均可用）</a></li>
+<li><a href="#%E8%BF%9C%E7%A8%8B%E8%84%9A%E6%9C%AC%E4%BB%85-tf-%E7%89%88%E5%8F%AF%E7%94%A8">远程脚本（仅 TF 版可用）</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -631,7 +636,7 @@
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>322<span class="pc-show">字数</span></span>
+      <span>371<span class="pc-show">字数</span></span>
     </span>
     
     
@@ -650,7 +655,7 @@
 <!-- more -->
 <blockquote>
 <p>By: <a href="https://blog.mornwind.cc">Mornwind</a></p>
-<p>GitHub Link: <a href="https://github.com/Mornwind/GF_Region_Switcher">GF_Region_Switcher</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/GFCN_SwitchServer">GFCN_SwitchServer</a></p>
 </blockquote>
 <h2 id="参考来源">参考来源</h2>
 <blockquote>
@@ -668,17 +673,23 @@
 <h2 id="配置信息">配置信息</h2>
 <h3 id="1-surge-4-loon">⑴ Surge 4 / Loon</h3>
 <h4 id="1-订阅模块化配置">① 订阅模块化配置</h4>
-<pre><code>https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher_gw.sgmodule
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.sgmodule
 </code></pre>
 <h4 id="2-手动编辑配置">② 手动编辑配置</h4>
 <pre><code>[Script]
 # 少女前线 跨服
-gf_region_switcher_gw.js = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher_gw.js,requires-body=1
+gfcn_switchserver_gw.js = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js,requires-body=1
 </code></pre>
 <h3 id="2-quantumult-x">⑵ Quantumult X</h3>
+<h4 id="本地脚本商店版-tf-版均可用">本地脚本（商店版、TF 版均可用）</h4>
 <pre><code>[rewrite_local]
 # 少女前线 跨服
-^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body gf_region_switcher_gw.js
+^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body gfcn_switchserver_gw.js
+</code></pre>
+<h4 id="远程脚本仅-tf-版可用">远程脚本（仅 TF 版可用）</h4>
+<pre><code>[rewrite_local]
+# 少女前线 跨服
+^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js
 </code></pre>
 
             </div>
@@ -1792,7 +1803,7 @@ gf_region_switcher_gw.js = type=http-request,pattern=^http:\/\/gfcn-transit\.ios
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;By: &lt;a href=&#34;https://blog.mornwind.cc&#34;&gt;Mornwind&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;GitHub Link: &lt;a href=&#34;https://github.com/Mornwind/GF_Region_Switcher&#34;&gt;GF_Region_Switcher&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub Link: &lt;a href=&#34;https://github.com/Mornwind/GFCN_SwitchServer&#34;&gt;GFCN_SwitchServer&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -1810,17 +1821,23 @@ gf_region_switcher_gw.js = type=http-request,pattern=^http:\/\/gfcn-transit\.ios
 &lt;h2 id=&#34;配置信息&#34;&gt;配置信息&lt;/h2&gt;
 &lt;h3 id=&#34;1-surge-4-loon&#34;&gt;⑴ Surge 4 / Loon&lt;/h3&gt;
 &lt;h4 id=&#34;1-订阅模块化配置&#34;&gt;① 订阅模块化配置&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher_gw.sgmodule
+&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.sgmodule
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;2-手动编辑配置&#34;&gt;② 手动编辑配置&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;[Script]
 # 少女前线 跨服
-gf_region_switcher_gw.js = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher_gw.js,requires-body=1
+gfcn_switchserver_gw.js = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js,requires-body=1
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;2-quantumult-x&#34;&gt;⑵ Quantumult X&lt;/h3&gt;
+&lt;h4 id=&#34;本地脚本商店版-tf-版均可用&#34;&gt;本地脚本（商店版、TF 版均可用）&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;[rewrite_local]
 # 少女前线 跨服
-^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body gf_region_switcher_gw.js
+^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body gfcn_switchserver_gw.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;远程脚本仅-tf-版可用&#34;&gt;远程脚本（仅 TF 版可用）&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;[rewrite_local]
+# 少女前线 跨服
+^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js
 &lt;/code&gt;&lt;/pre&gt;
 ">「少女前线」跨服配置（散爆版）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服）</a>
       </div>
@@ -1832,7 +1849,7 @@ gf_region_switcher_gw.js = type=http-request,pattern=^http:\/\/gfcn-transit\.ios
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;By: &lt;a href=&#34;https://blog.mornwind.cc&#34;&gt;Mornwind&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;GitHub Link: &lt;a href=&#34;https://github.com/Mornwind/GF_Region_Switcher&#34;&gt;GF_Region_Switcher&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub Link: &lt;a href=&#34;https://github.com/Mornwind/GFCN_SwitchServer&#34;&gt;GFCN_SwitchServer&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -1850,22 +1867,31 @@ gf_region_switcher_gw.js = type=http-request,pattern=^http:\/\/gfcn-transit\.ios
 &lt;h2 id=&#34;配置信息&#34;&gt;配置信息&lt;/h2&gt;
 &lt;h3 id=&#34;1-surge-4-loon&#34;&gt;⑴ Surge 4 / Loon&lt;/h3&gt;
 &lt;h4 id=&#34;1-订阅模块化配置&#34;&gt;① 订阅模块化配置&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/Temp/gf_region_switcher_gw_temp.sgmodule
+&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Temp/gfcn_switchserver_gw_temp.sgmodule
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;2-手动编辑配置&#34;&gt;② 手动编辑配置&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;[Script]
 # 少女前线 跨服
-gf_region_switcher_gw_temp_A.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/Temp/gf_region_switcher_gw_temp_A.js,requires-body=1
-gf_region_switcher_gw_temp_B.js = type=http-response,pattern=^http:\/\/gfcn-transit\.gw\.sunborngame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/Temp/gf_region_switcher_gw_temp_B.js,requires-body=1
-gf_region_switcher_gw_temp_C.js = type=http-response,pattern=^http:\/\/gfcn-game\.gw(.*)\.sunborngame\.com\/index\.php\/(.+?)\/Index\/version,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/Temp/gf_region_switcher_gw_temp_C.js,requires-body=1
+gfcn_switchserver_gw_temp_A.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Temp/gfcn_switchserver_gw_temp_A.js,requires-body=1
+gfcn_switchserver_gw_temp_B.js = type=http-response,pattern=^http:\/\/gfcn-transit\.gw\.sunborngame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Temp/gfcn_switchserver_gw_temp_B.js,requires-body=1
+gfcn_switchserver_gw_temp_C.js = type=http-response,pattern=^http:\/\/gfcn-game\.gw(.*)\.sunborngame\.com\/index\.php\/(.+?)\/Index\/version,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Temp/gfcn_switchserver_gw_temp_C.js,requires-body=1
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;2-quantumult-x&#34;&gt;⑵ Quantumult X&lt;/h3&gt;
+&lt;h4 id=&#34;本地脚本商店版-tf-版均可用&#34;&gt;本地脚本（商店版、TF 版均可用）&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;[rewrite_local]
 # 少女前线 跨服
 ^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url 307 http://gfcn-transit.gw.sunborngame.com/index.php
-^http:\/\/gfcn-transit\.gw\.sunborngame\.com\/index\.php url script-request-body gf_region_switcher_gw_temp_A.js
-^http:\/\/gfcn-transit\.gw\.sunborngame\.com\/index\.php url script-response-body gf_region_switcher_gw_temp_B.js
-^http:\/\/gfcn-game\.gw(.*)\.sunborngame\.com\/index\.php\/(.+?)\/Index\/version url script-response-body gf_region_switcher_gw_temp_C.js
+^http:\/\/gfcn-transit\.gw\.sunborngame\.com\/index\.php url script-request-body gfcn_switchserver_gw_temp_A.js
+^http:\/\/gfcn-transit\.gw\.sunborngame\.com\/index\.php url script-response-body gfcn_switchserver_gw_temp_B.js
+^http:\/\/gfcn-game\.gw(.*)\.sunborngame\.com\/index\.php\/(.+?)\/Index\/version url script-response-body gfcn_switchserver_gw_temp_C.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;远程脚本仅-tf-版可用&#34;&gt;远程脚本（仅 TF 版可用）&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;[rewrite_local]
+# 少女前线 跨服
+^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url 307 http://gfcn-transit.gw.sunborngame.com/index.php
+^http:\/\/gfcn-transit\.gw\.sunborngame\.com\/index\.php url script-request-body https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Temp/gfcn_switchserver_gw_temp_A.js
+^http:\/\/gfcn-transit\.gw\.sunborngame\.com\/index\.php url script-response-body https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Temp/gfcn_switchserver_gw_temp_B.js
+^http:\/\/gfcn-game\.gw(.*)\.sunborngame\.com\/index\.php\/(.+?)\/Index\/version url script-response-body https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Temp/gfcn_switchserver_gw_temp_C.js
 &lt;/code&gt;&lt;/pre&gt;
 ">「少女前线」跨服配置（迁移期临时版，已失效）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服）</a>
       </div>
@@ -2153,7 +2179,7 @@ hostname = *.bh3.com
 &lt;!-- more --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;By: &lt;a href=&#34;https://blog.mornwind.cc&#34;&gt;Mornwind&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;GitHub Link: &lt;a href=&#34;https://github.com/Mornwind/GF_Region_Switcher&#34;&gt;GF_Region_Switcher&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GitHub Link: &lt;a href=&#34;https://github.com/Mornwind/GFCN_SwitchServer&#34;&gt;GFCN_SwitchServer&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;参考来源&#34;&gt;参考来源&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -2171,17 +2197,23 @@ hostname = *.bh3.com
 &lt;h2 id=&#34;配置信息&#34;&gt;配置信息&lt;/h2&gt;
 &lt;h3 id=&#34;1-surge-4-loon&#34;&gt;⑴ Surge 4 / Loon&lt;/h3&gt;
 &lt;h4 id=&#34;1-订阅模块化配置&#34;&gt;① 订阅模块化配置&lt;/h4&gt;
-&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher_gw.sgmodule
+&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.sgmodule
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h4 id=&#34;2-手动编辑配置&#34;&gt;② 手动编辑配置&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;[Script]
 # 少女前线 跨服
-gf_region_switcher_gw.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GF_Region_Switcher/master/gf_region_switcher_gw.js,requires-body=1
+gfcn_switchserver_gw.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js,requires-body=1
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&#34;2-quantumult-x&#34;&gt;⑵ Quantumult X&lt;/h3&gt;
+&lt;h4 id=&#34;本地脚本商店版-tf-版均可用&#34;&gt;本地脚本（商店版、TF 版均可用）&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;[rewrite_local]
 # 少女前线 跨服
-^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url script-request-body gf_region_switcher_gw.js
+^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url script-request-body gfcn_switchserver_gw.js
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;远程脚本仅-tf-版可用&#34;&gt;远程脚本（仅 TF 版可用）&lt;/h4&gt;
+&lt;pre&gt;&lt;code&gt;[rewrite_local]
+# 少女前线 跨服
+^http:\/\/ios\.transit\.gf\.ppgame\.com\/index\.php url script-request-body https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js
 &lt;/code&gt;&lt;/pre&gt;
 ">「少女前线」跨服配置（数天版，已失效）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服）</a>
       </div>
