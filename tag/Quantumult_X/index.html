@@ -9,7 +9,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1589020990558">
+<link rel="shortcut icon" href="/favicon.ico?v=1589074749182">
 <link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
@@ -1257,7 +1257,11 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;配置方法&#34;&gt;配置方法&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;下载并导入跨服配置文件&lt;/strong&gt;：找到并下载“.iRW”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘iHTTP Tracker’”；在 iHTTP Tracker 中弹出的“检测到导入重写规则”对话框中选择“导入”，即可成功导入。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;下载并导入跨服配置文件&lt;/strong&gt;：下载下面的“.iRW”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘iHTTP Tracker’”；在 iHTTP Tracker 中弹出的“检测到导入重写规则”对话框中选择“导入”，即可成功导入。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/iHTTP_Tracker/bh3cn_switchserver_v3.9.0.iRW
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;strong&gt;启用跨服配置&lt;/strong&gt;：进入“设置”→“规则列表”，在“重写”页面中，确保刚刚导入的跨服配置的开关已打开；然后返回“设置”页面。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;安装 MitM 证书&lt;/strong&gt;：进入“设置”→“HTTPS 证书管理”，在“HTTPS 证书管理”页面中点击“前往安装证书”，在跳转的浏览器页面中点击“rootCA.pem”按钮，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;信任 MitM 证书&lt;/strong&gt;：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Thor 的“设置”页面。&lt;/li&gt;
@@ -1291,7 +1295,8 @@
 &lt;h2 id=&#34;️-特别说明-️&#34;&gt;⚠️ 特别说明 ⚠️&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;需及时清理抓包记录，避免长时间使用后占用太多存储空间。&lt;/li&gt;
-&lt;li&gt;请勿使用共享或盗版，否则会触发防御机制，导致 Thor 的关键功能永久失效。&lt;/li&gt;
+&lt;li&gt;请勿从共享 Apple ID 或盗版来源下载 Thor，否则会在 Thor &lt;strong&gt;验证收据时触发保护机制&lt;/strong&gt;，导致 Thor 的&lt;strong&gt;关键功能永久失效&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;请及时更新 Thor 版本，因为&lt;strong&gt;新版本 Thor 上生成的跨服配置（过滤器）文件无法在旧版本上正常使用&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;效果预览&#34;&gt;效果预览&lt;/h2&gt;
@@ -1306,7 +1311,11 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;配置方法&#34;&gt;配置方法&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;下载并导入跨服配置文件&lt;/strong&gt;：找到并下载“.f4thor”类型的跨服配置（过滤器）文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘Thor’”；在弹出的跨服配置（过滤器）预览页面中，点击右上角导出图标，在弹出的菜单中选择“装载”，在弹出的“安全提醒”对话框中选择“继续”，即可成功导入；然后点击左上角的“✗”，回到首页。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;下载并导入跨服配置文件&lt;/strong&gt;：下载下面的“.f4thor”类型的跨服配置（过滤器）文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘Thor’”；在弹出的跨服配置（过滤器）预览页面中，点击右上角导出图标，在弹出的菜单中选择“装载”，在弹出的“安全提醒”对话框中选择“继续”，即可成功导入；然后点击左上角的“✗”，回到首页。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Thor/bh3cn_switchserver.f4thor
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;strong&gt;选中跨服所用过滤器&lt;/strong&gt;：点击闪电按钮上方显示的过滤器名称，在弹出的“过滤器”列表中，点击刚刚导入的跨服所用过滤器，然后会自动返回首页。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;安装 MitM 证书&lt;/strong&gt;：进入“更多”→“HTTPS 解析设置”，在“HTTPS 证书管理”页面中点击“安装证书到系统”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;信任 MitM 证书&lt;/strong&gt;：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Thor 的“HTTPS 证书管理”页面。&lt;/li&gt;
@@ -1354,7 +1363,11 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;配置方法&#34;&gt;配置方法&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;下载并导入跨服配置文件&lt;/strong&gt;：找到并下载“.hcc”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘HTTP Catcher’”；在 HTTP Catcher 中弹出的“导入”对话框中选择“好的”，即可成功导入。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;下载并导入跨服配置文件&lt;/strong&gt;：下载下面的“.hcc”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘HTTP Catcher’”；在 HTTP Catcher 中弹出的“导入”对话框中选择“好的”，即可成功导入。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/HTTP_Catcher/bh3cn_switchserver_v3.9.0.hcc
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;&lt;strong&gt;启用跨服配置&lt;/strong&gt;：进入“更多”→“重写”，在弹出的“重写列表”界面中，点击下面的跨服配置使其前面出现“✓”。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;启用重写功能&lt;/strong&gt;：在“重写列表”界面中，打开上面的“重写列表”开关；然后回到“更多”页面。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;启用 HTTPS 解密功能&lt;/strong&gt;：在“更多”页面，打开最上面的“解密 HTTPS 流量”开关。&lt;/li&gt;
@@ -1814,7 +1827,8 @@ gfcn_switchserver_gw.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.
 &lt;/ol&gt;
 &lt;h2 id=&#34;️-特别说明-️&#34;&gt;⚠️ 特别说明 ⚠️&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;“进阶方法——脚本法”中，跨服脚本中&lt;strong&gt;并未含有&lt;/strong&gt;用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码&lt;strong&gt;公开透明&lt;/strong&gt;地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用“入门方法——重定向法”，或者另寻他法。&lt;/li&gt;
+&lt;li&gt;“脚本法”中，跨服脚本中&lt;strong&gt;并未含有&lt;/strong&gt;用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码&lt;strong&gt;公开透明&lt;/strong&gt;地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用“重定向法”，或者另寻他法。&lt;/li&gt;
+&lt;li&gt;请勿从共享 Apple ID 或盗版来源下载 Quantumult X，否则会在 Quantumult X &lt;strong&gt;验证收据时触发保护机制&lt;/strong&gt;，导致 Quantumult X 的&lt;strong&gt;关键功能永久失效&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;效果预览&#34;&gt;效果预览&lt;/h2&gt;
