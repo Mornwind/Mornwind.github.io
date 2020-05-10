@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.mornwind.cc</id>
     <title>Mornwind&apos;s Blog</title>
-    <updated>2020-05-10T12:31:26.274Z</updated>
+    <updated>2020-05-10T13:06:33.057Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.mornwind.cc"/>
     <link rel="self" href="https://blog.mornwind.cc/atom.xml"/>
@@ -16,9 +16,11 @@
         <link href="https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-iHTTP-Tracker/">
         </link>
         <updated>2020-05-08T14:34:37.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？ 本教程就教你如何使用抓包工具 iHTTP Tracker 实现这一目标。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 iHTTP Tracker 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？ 本教程就教你如何使用抓包工具 iHTTP Tracker 实现这一目标。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 iHTTP Tracker 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
@@ -27,9 +29,11 @@
         <link href="https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-Thor/">
         </link>
         <updated>2020-05-08T13:22:05.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？ 本教程就教你如何使用抓包工具 Thor 实现这一目标。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Thor 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？ 本教程就教你如何使用抓包工具 Thor 实现这一目标。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Thor 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
@@ -38,22 +42,24 @@
         <link href="https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-HTTP-Catcher/">
         </link>
         <updated>2020-05-08T12:41:18.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？ 本教程就教你如何使用抓包工具 HTTP Catcher 实现这一目标。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 HTTP Catcher 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？ 本教程就教你如何使用抓包工具 HTTP Catcher 实现这一目标。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 HTTP Catcher 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[「少女前线」跨服配置（散爆版）（Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服）]]></title>
+        <title type="html"><![CDATA[「少女前线」跨服配置（散爆版）（HTTP Catcher / Thor / Surge 4 / Quan X / Loon）（iOS 端 → 安卓官服）]]></title>
         <id>https://blog.mornwind.cc/post/GirlsFrontline-iOS-SwitchServer-Profile-SunbornGame/</id>
         <link href="https://blog.mornwind.cc/post/GirlsFrontline-iOS-SwitchServer-Profile-SunbornGame/">
         </link>
         <updated>2020-05-06T12:02:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
-来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上玩安卓官服？</p>
+<p>本文就教你如何使用网络调试工具 HTTP Catcher / Thor / Surge 4 / Quantumult X / Loon 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
-来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上玩安卓官服？</p>
+<p>本文就教你如何使用网络调试工具 HTTP Catcher / Thor / Surge 4 / Quantumult X / Loon 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
@@ -62,11 +68,11 @@
         <link href="https://blog.mornwind.cc/post/GirlsFrontline-iOS-SwitchServer-Profile-Temp/">
         </link>
         <updated>2020-04-30T10:20:36.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
-来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上玩安卓官服？</p>
+<p>本文就教你如何使用网络调试工具 Surge 4 / Quantumult X / Loon 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
-来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上玩安卓官服？</p>
+<p>本文就教你如何使用网络调试工具 Surge 4 / Quantumult X / Loon 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
@@ -75,11 +81,11 @@
         <link href="https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-Quantumult/">
         </link>
         <updated>2020-03-25T14:17:31.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Quantumult 实现这一目标。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Quantumult 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Quantumult 实现这一目标。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Quantumult 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
@@ -88,11 +94,11 @@
         <link href="https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-Pepi/">
         </link>
         <updated>2020-03-22T17:51:24.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Pepi 实现这一目标。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Pepi 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Pepi 实现这一目标。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Pepi 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
@@ -101,11 +107,11 @@
         <link href="https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-Shadowrocket/">
         </link>
         <updated>2020-03-02T14:47:23.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Shadowrocket 实现这一目标。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Shadowrocket 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Shadowrocket 实现这一目标。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Shadowrocket 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
@@ -114,11 +120,11 @@
         <link href="https://blog.mornwind.cc/post/GirlsFrontline-iOS-SwitchServer-Profile-PPGame/">
         </link>
         <updated>2020-02-23T10:28:12.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
-来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「少女前线」上玩安卓官服？</p>
+<p>本文就教你如何使用网络调试工具 Surge 4 / Quantumult X / Loon 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上跨服玩安卓官服？<br>
-来看看使用代理&amp;抓包工具 Surge 4 / Quantumult X / Loon 时所需的配置文件吧。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上玩安卓官服？</p>
+<p>本文就教你如何使用网络调试工具 Surge 4 / Quantumult X / Loon 实现跨服。</p>
 ]]></content>
     </entry>
     <entry>
@@ -127,11 +133,11 @@
         <link href="https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-Quantumult-X/">
         </link>
         <updated>2020-02-18T13:47:22.000Z</updated>
-        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Quantumult X 实现这一目标。</p>
+        <summary type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Quantumult X 实现跨服。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上跨服玩安卓国服？<br>
-本教程就教你如何使用代理&amp;抓包工具 Quantumult X 实现这一目标。</p>
+        <content type="html"><![CDATA[<p>想在 iOS 端「崩坏3」上玩安卓国服？</p>
+<p>本教程就教你如何使用网络调试工具 Quantumult X 实现跨服。</p>
 ]]></content>
     </entry>
 </feed>
