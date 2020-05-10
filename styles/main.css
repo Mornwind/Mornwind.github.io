@@ -2223,17 +2223,23 @@ body {
       background-color: #fffffffe;
     }
     .gemini .blog-header, .gemini .sidebar-wrapper, .gemini .article-wrapper, .gemini .post, .gemini .page, .gemini .section, .gemini .section-box, .gemini .sidebar-box, .gemini .friends-section {
-      border-radius: 20px;
+      border-radius: 15px;
     }
     .pisces .blog-header, .pisces .sidebar-wrapper, .pisces .article-wrapper, .pisces .section, .pisces .sidebar-box, .pisces .friends-section {
-      border-radius: 20px;
+      border-radius: 15px;
     }
     .site-meta {
       background: #364fc7 !important;
     }
     .head-top-line {
       background: #364fc7;
-    }
+    }.pace .pace-activity {
+        box-shadow: inset 0 0 0 2px #364fc7, inset 0 0 0 7px #FFF !important;
+      }
+      .pace .pace-progress {
+        background: #364fc7 !important;
+        color: #364fc7 !important;
+      }
     .brand {
       background: #364fc7fe;
     }
