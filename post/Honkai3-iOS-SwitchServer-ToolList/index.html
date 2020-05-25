@@ -9,7 +9,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「崩坏3」跨服方式一览（iOS 端 → 安卓国服） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1589975353545">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1590417542968">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -348,7 +348,7 @@
       }
     } else if (prop === HTMLLIElement.prototype) {
       // 保存li元素
-      if (elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
+      if (elem.children[0] && elem.children[0].__proto__ === HTMLAnchorElement.prototype) {
         lList.push(elem);
       }
       for (let i = 0; i < elem.children.length; i++) {
