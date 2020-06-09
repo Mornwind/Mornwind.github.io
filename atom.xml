@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blog.mornwind.cc</id>
     <title>Mornwind&apos;s Blog</title>
-    <updated>2020-06-03T12:12:37.928Z</updated>
+    <updated>2020-06-09T08:31:46.325Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blog.mornwind.cc"/>
     <link rel="self" href="https://blog.mornwind.cc/atom.xml"/>
@@ -21,6 +21,17 @@
 ]]></summary>
         <content type="html"><![CDATA[<p>想在 iOS 端「少女前线」上玩安卓官服？</p>
 <p>本文就教你如何使用网络调试工具 HTTP Catcher / Thor / Surge 4 / Quantumult X / Loon 实现跨服。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「崩坏3」跨服方式一览（iOS 端 → 安卓国服）]]></title>
+        <id>https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-ToolList/</id>
+        <link href="https://blog.mornwind.cc/post/Honkai3-iOS-SwitchServer-ToolList/">
+        </link>
+        <updated>2020-02-17T08:36:32.000Z</updated>
+        <summary type="html"><![CDATA[<p>目前，iOS 端「崩坏3」玩安卓国服，可通过 HTTP Catcher / iHTTP Tracker / Thor / Shadowrocket / Pepi / Quantumult / Quantumult X / Surge 4 / Loon 等 9 款网络调试工具来进行跨服，无需越狱或使用跨服包。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>目前，iOS 端「崩坏3」玩安卓国服，可通过 HTTP Catcher / iHTTP Tracker / Thor / Shadowrocket / Pepi / Quantumult / Quantumult X / Surge 4 / Loon 等 9 款网络调试工具来进行跨服，无需越狱或使用跨服包。</p>
 ]]></content>
     </entry>
 </feed>
