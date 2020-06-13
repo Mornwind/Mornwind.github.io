@@ -9,7 +9,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1591940661103">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1592016004478">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -1415,12 +1415,12 @@
 &lt;h3 id=&#34;4-quantumult-x&#34;&gt;⑷ Quantumult X&lt;/h3&gt;
 &lt;details&gt;
 &lt;summary&gt;点击查看：配置方法&lt;/summary&gt;
-&lt;h4 id=&#34;1-本地脚本商店版-tf-版均可用&#34;&gt;① 本地脚本（商店版、TF 版均可用）&lt;/h4&gt;
+&lt;h4 id=&#34;方法一本地脚本商店版-tf-版均可用&#34;&gt;方法一：本地脚本（商店版、TF 版均可用）&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;[rewrite_local]
 # 少女前线 跨服
 ^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body gfcn_switchserver_gw.js
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h4 id=&#34;2-远程脚本仅-tf-版可用&#34;&gt;② 远程脚本（仅 TF 版可用）&lt;/h4&gt;
+&lt;h4 id=&#34;方法二远程脚本仅-tf-版可用&#34;&gt;方法二：远程脚本（仅 TF 版可用）&lt;/h4&gt;
 &lt;pre&gt;&lt;code&gt;[rewrite_local]
 # 少女前线 跨服
 ^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js
@@ -1429,7 +1429,7 @@
 &lt;h3 id=&#34;5-surge-4&#34;&gt;⑸ Surge 4&lt;/h3&gt;
 &lt;details&gt;
 &lt;summary&gt;点击查看：配置方法&lt;/summary&gt;
-&lt;h4 id=&#34;1-订阅模块化配置&#34;&gt;① 订阅模块化配置&lt;/h4&gt;
+&lt;h4 id=&#34;方法一订阅模块化配置&#34;&gt;方法一：订阅模块化配置&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;安装并启用跨服配置模块&lt;/strong&gt;：在“首页”中找到“模块”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“模块”，在弹出的“模块”界面中，找到“安装的模块”部分，点击“安装新模块...”，然后在弹出的“安装模块”对话框中输入下面的 URL 地址，点“好的”下载模块文件。然后在弹出的配置预览窗口中，&lt;strong&gt;检查有无恶意内容并仔细阅读最下方的“警告”&lt;/strong&gt;，在确认无误后，点击最下方的“安装”。回到“模块”界面，即可看到跨服配置模块已成功安装，左侧有“✓”表示该模块已启用。&lt;/li&gt;
 &lt;/ol&gt;
@@ -1440,7 +1440,7 @@
 &lt;li&gt;&lt;strong&gt;启用“始终开启”功能&lt;/strong&gt;：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;启动 Surge 4&lt;/strong&gt;：点击“首页”右上角“启动”按钮启动 Surge 4，即可在 iOS 端跨服登录安卓国服。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h4 id=&#34;2-手动编辑配置&#34;&gt;② 手动编辑配置&lt;/h4&gt;
+&lt;h4 id=&#34;方法二手动编辑配置&#34;&gt;方法二：手动编辑配置&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;手动添加跨服配置&lt;/strong&gt;：点击“首页”左上角配置名，在弹出的“配置列表”窗口中，点击“在文本模式中编辑”（或是使用任一款编辑器打开你的 Surge 配置文件（.conf）直接进行编辑）。在编辑窗口中，将以下配置中 &lt;code&gt;[Script]&lt;/code&gt; 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角“完成”保存修改。&lt;/li&gt;
 &lt;/ol&gt;
@@ -1456,7 +1456,7 @@ gfcn_switchserver_gw = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.su
 &lt;/details&gt;
 &lt;h3 id=&#34;6-loon&#34;&gt;⑹ Loon&lt;/h3&gt;
 &lt;blockquote&gt;
-&lt;p&gt;参考方法 &lt;a href=&#34;#-surge-4&#34;&gt;⑸ Surge 4&lt;/a&gt;，此处略去。&lt;/p&gt;
+&lt;p&gt;参考方法 &lt;a href=&#34;#5-surge-4&#34;&gt;⑸ Surge 4&lt;/a&gt;，此处略去。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;a-2-类型未提供&#34;&gt;A-2 类型（未提供）&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -1992,7 +1992,6 @@ gfcn_switchserver_gw.js = type=http-request,pattern=^http:\/\/ios\.transit\.gf\.
 &lt;/ol&gt;
 &lt;h4 id=&#34;配置方法重定向法&#34;&gt;配置方法（重定向法）&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。&lt;/p&gt;
 &lt;p&gt;仅使用 &lt;strong&gt;URL 重定向（URL Rewrite）&lt;/strong&gt; 功能实现。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h5 id=&#34;方法一直接订阅简易跨服配置&#34;&gt;方法一：直接订阅简易跨服配置&lt;/h5&gt;
@@ -2052,7 +2051,6 @@ hostname = *.bh3.com
 &lt;/ol&gt;
 &lt;h4 id=&#34;配置方法重定向法-2&#34;&gt;配置方法（重定向法）&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。&lt;/p&gt;
 &lt;p&gt;仅使用 &lt;strong&gt;URL 重定向（URL Rewrite）&lt;/strong&gt; 功能实现。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h5 id=&#34;方法一直接下载简易跨服配置&#34;&gt;方法一：直接下载简易跨服配置&lt;/h5&gt;
@@ -2108,7 +2106,6 @@ hostname = *.bh3.com
 &lt;/ol&gt;
 &lt;h4 id=&#34;配置方法重定向法-3&#34;&gt;配置方法（重定向法）&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。&lt;/p&gt;
 &lt;p&gt;仅使用 &lt;strong&gt;URL 重定向（URL Rewrite）&lt;/strong&gt; 功能实现。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h5 id=&#34;方法一直接下载简易跨服配置-2&#34;&gt;方法一：直接下载简易跨服配置&lt;/h5&gt;
@@ -2170,21 +2167,19 @@ hostname = *.bh3.com
 &lt;h4 id=&#34;配置教程&#34;&gt;配置教程&lt;/h4&gt;
 &lt;p&gt;详见 FlintyLemming 的 &lt;a href=&#34;https://bitbucket.flinty.moe/projects/PER/repos/bh3_server_switch/browse/README.md&#34;&gt;Quantumult X 跨服教程&lt;/a&gt;。&lt;/p&gt;
 &lt;h4 id=&#34;配置方法-4&#34;&gt;配置方法&lt;/h4&gt;
-&lt;h5 id=&#34;方法-a重定向法&#34;&gt;方法 A：重定向法&lt;/h5&gt;
+&lt;h5 id=&#34;方法一重定向法&#34;&gt;方法一：重定向法&lt;/h5&gt;
 &lt;blockquote&gt;
-&lt;p&gt;默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。&lt;/p&gt;
 &lt;p&gt;仅使用 &lt;strong&gt;URL 重定向（URL Rewrite）&lt;/strong&gt; 功能实现。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;pre&gt;&lt;code&gt;[rewrite_remote]
 # 崩坏3 跨服（新手直接订阅使用，无需自行更动）
 https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Quantumult_X/bh3cn_switchserver.conf, tag=BH3CN_SwitchServer, enabled=true
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h5 id=&#34;方法-b脚本法&#34;&gt;方法 B：脚本法&lt;/h5&gt;
+&lt;h5 id=&#34;方法二脚本法&#34;&gt;方法二：脚本法&lt;/h5&gt;
 &lt;blockquote&gt;
-&lt;p&gt;默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。&lt;/p&gt;
 &lt;p&gt;仅使用 &lt;strong&gt;脚本（Script）&lt;/strong&gt; 功能实现。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h6 id=&#34;本地脚本商店版-tf-版均可用&#34;&gt;本地脚本（商店版、TF 版均可用）&lt;/h6&gt;
+&lt;h6 id=&#34;方法一本地脚本商店版-tf-版均可用&#34;&gt;方法㈠：本地脚本（商店版、TF 版均可用）&lt;/h6&gt;
 &lt;pre&gt;&lt;code&gt;[rewrite_local]
 # 崩坏3 跨服
 # &amp;gt; 获取全平台服务器列表
@@ -2195,7 +2190,7 @@ https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Quantumult_
 [MITM]
 hostname = *.bh3.com
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h6 id=&#34;远程脚本仅-tf-版可用&#34;&gt;远程脚本（仅 TF 版可用）&lt;/h6&gt;
+&lt;h6 id=&#34;方法二远程脚本仅-tf-版可用&#34;&gt;方法㈡：远程脚本（仅 TF 版可用）&lt;/h6&gt;
 &lt;pre&gt;&lt;code&gt;[rewrite_local]
 # 崩坏3 跨服
 # &amp;gt; 获取全平台服务器列表
@@ -2215,12 +2210,11 @@ hostname = *.bh3.com
 &lt;li&gt;“脚本法”中，跨服脚本中&lt;strong&gt;并未含有&lt;/strong&gt;用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码&lt;strong&gt;公开透明&lt;/strong&gt;地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用“重定向法”，或者另寻他法。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h4 id=&#34;跨服方法&#34;&gt;跨服方法&lt;/h4&gt;
-&lt;h5 id=&#34;方法-a重定向法-2&#34;&gt;方法 A：重定向法&lt;/h5&gt;
+&lt;h5 id=&#34;方法一重定向法-2&#34;&gt;方法一：重定向法&lt;/h5&gt;
 &lt;blockquote&gt;
-&lt;p&gt;默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。&lt;/p&gt;
 &lt;p&gt;基于 &lt;strong&gt;URL 重定向（URL Rewrite）&lt;/strong&gt; 功能实现跨服，并可通过 &lt;strong&gt;模块（Module）&lt;/strong&gt; 功能实现配置订阅。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h6 id=&#34;操作方法一添加模块化跨服配置无需手动编辑推荐&#34;&gt;操作方法一：添加模块化跨服配置，无需手动编辑（推荐）&lt;/h6&gt;
+&lt;h6 id=&#34;方法一添加模块化跨服配置无需手动编辑推荐&#34;&gt;方法㈠：添加模块化跨服配置，无需手动编辑（推荐）&lt;/h6&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;安装 MitM 证书&lt;/strong&gt;：在“首页”中找到“MitM”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“配置根证书”，在弹出的“HTTPS 解密”窗口中，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;信任 MitM 证书&lt;/strong&gt;：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Surge 4 的“首页”。&lt;/li&gt;
@@ -2233,7 +2227,7 @@ hostname = *.bh3.com
 &lt;li&gt;&lt;strong&gt;启用“始终开启”功能&lt;/strong&gt;：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;启动 Surge 4&lt;/strong&gt;：点击“首页”右上角“启动”按钮启动 Surge 4，即可在 iOS 端跨服登录安卓国服。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h6 id=&#34;操作方法二手动将跨服配置写入配置文件&#34;&gt;操作方法二：手动将跨服配置写入配置文件&lt;/h6&gt;
+&lt;h6 id=&#34;方法二手动将跨服配置写入配置文件&#34;&gt;方法㈡：手动将跨服配置写入配置文件&lt;/h6&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;安装 MitM 证书&lt;/strong&gt;：在“首页”中找到“MitM”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“配置根证书”，在弹出的“HTTPS 解密”窗口中，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;信任 MitM 证书&lt;/strong&gt;：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Surge 4 的“首页”。&lt;/li&gt;
@@ -2259,12 +2253,11 @@ hostname = *.bh3.com
 &lt;li&gt;&lt;strong&gt;启用“始终开启”功能&lt;/strong&gt;：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;启动 Surge 4&lt;/strong&gt;：点击“首页”右上角“启动”按钮启动 Surge 4，即可在 iOS 端跨服登录安卓国服。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id=&#34;方法-b脚本法-2&#34;&gt;方法 B：脚本法&lt;/h5&gt;
+&lt;h5 id=&#34;方法二脚本法-2&#34;&gt;方法二：脚本法&lt;/h5&gt;
 &lt;blockquote&gt;
-&lt;p&gt;默认全平台列表（本身就是完整列表，由官方云端控制，只不过账号密码登录方式中隐藏了渠道服入口）。&lt;/p&gt;
 &lt;p&gt;基于 &lt;strong&gt;脚本（Script）&lt;/strong&gt; 功能实现跨服，并可通过 &lt;strong&gt;模块（Module）&lt;/strong&gt; 功能实现配置订阅。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h6 id=&#34;操作方法一添加模块化跨服配置无需手动编辑推荐-2&#34;&gt;操作方法一：添加模块化跨服配置，无需手动编辑（推荐）&lt;/h6&gt;
+&lt;h6 id=&#34;方法一添加模块化跨服配置无需手动编辑推荐-2&#34;&gt;方法㈠：添加模块化跨服配置，无需手动编辑（推荐）&lt;/h6&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;安装 MitM 证书&lt;/strong&gt;：在“首页”中找到“MitM”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“配置根证书”，在弹出的“HTTPS 解密”窗口中，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;信任 MitM 证书&lt;/strong&gt;：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Surge 4 的“首页”。&lt;/li&gt;
@@ -2277,7 +2270,7 @@ hostname = *.bh3.com
 &lt;li&gt;&lt;strong&gt;启用“始终开启”功能&lt;/strong&gt;：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;启动 Surge 4&lt;/strong&gt;：点击“首页”右上角“启动”按钮启动 Surge 4，即可在 iOS 端跨服登录安卓国服。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h6 id=&#34;操作方法二手动将跨服配置写入配置文件-2&#34;&gt;操作方法二：手动将跨服配置写入配置文件&lt;/h6&gt;
+&lt;h6 id=&#34;方法二手动将跨服配置写入配置文件-2&#34;&gt;方法㈡：手动将跨服配置写入配置文件&lt;/h6&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;安装MitM 证书&lt;/strong&gt;：在“首页”中找到“MitM”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“配置根证书”，在弹出的“HTTPS 解密”窗口中，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;信任 MitM 证书&lt;/strong&gt;：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Surge 4 的“首页”。&lt;/li&gt;
