@@ -9,7 +9,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1592631703966">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1592918205087">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -1043,7 +1043,7 @@
   hljs.initHighlightingOnLoad();
   
   // 离开当前页title变化
-  var leaveTitle = '';
+  var leaveTitle = "";
   if (leaveTitle) {
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState == 'hidden') {
@@ -2781,7 +2781,6 @@ hostname = *.bh3.com
       let code = e.currentTarget.querySelector('code');
       var text = code.innerText;
       if (e.srcElement.textContent === '复制成功') {
-        console.log('复制操作频率过高');
         return;
       }
       e.srcElement.textContent = '复制成功';
