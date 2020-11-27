@@ -9,7 +9,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>「少女前线」跨服手册（散爆版）（iOS 端 → 安卓官服） | Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1604867614214">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1606485639926">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -318,11 +318,12 @@
 <li><a href="#1-http-catcher">⑴ HTTP Catcher</a></li>
 <li><a href="#2-ihttp-tracker">⑵ iHTTP Tracker</a></li>
 <li><a href="#3-thor">⑶ Thor</a></li>
-<li><a href="#4-shadowrocket">⑷ Shadowrocket</a><br>
-*
+<li><a href="#4-shadowrocket">⑷ Shadowrocket</a>
 <ul>
 <li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E7%9B%B4%E6%8E%A5%E8%AE%A2%E9%98%85%E7%AE%80%E6%98%93%E8%B7%A8%E6%9C%8D%E9%85%8D%E7%BD%AE">方法一：直接订阅简易跨服配置</a></li>
 <li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E5%86%99%E5%85%A5%E5%BD%93%E5%89%8D%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%85%8D%E7%BD%AE">方法二：手动写入当前使用中配置</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E7%9B%B4%E6%8E%A5%E8%AE%A2%E9%98%85%E7%AE%80%E6%98%93%E8%B7%A8%E6%9C%8D%E9%85%8D%E7%BD%AE-2">方法一：直接订阅简易跨服配置</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E5%86%99%E5%85%A5%E5%BD%93%E5%89%8D%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%85%8D%E7%BD%AE-2">方法二：手动写入当前使用中配置</a></li>
 </ul>
 </li>
 <li><a href="#5-quantumult-x">⑸ Quantumult X</a>
@@ -658,12 +659,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>13<span class="language" data-lan="minute">分钟</span></span>
+      <span>15<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>3430<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>3962<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
@@ -930,10 +931,11 @@
 <h3 id="4-shadowrocket">⑷ Shadowrocket</h3>
 <blockquote>
 <p>一定要是 Shadowrocket 的 2.1.62 (1118) 及以上 TF 或商店版本，因为新版本中才有跨服所需的脚本功能。</p>
+<p>另外，因为 2.1.67 (1156) 版本修复了一个 Bug，使得跨服以此版本为界，分为新旧两种。强烈建议更新到 2.1.67 (1156) 版本以上。</p>
 </blockquote>
 <details>
-<summary>点击查看：配置方法</summary>
-<h5 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h5>
+<summary>点击查看：新配置方法（适用于 2.1.67 (1156) 及以上版本）</summary>
+<h4 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h4>
 <ol>
 <li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点。</li>
 <li><strong>设置路由模式</strong>：将“全局路由”设置为“直连”。</li>
@@ -945,7 +947,7 @@
 <li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。</li>
 <li><strong>启动 Shadowrocket</strong>：返回 Shadowrocket 的首页，打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）</li>
 </ol>
-<h5 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h5>
+<h4 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h4>
 <ol>
 <li><strong>进入配置编辑界面</strong>：在“配置文件”页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”。</li>
 <li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“保存”，返回 Shadowrocket 的首页。</li>
@@ -953,6 +955,33 @@
 <pre><code>[Script]
 # 少女前线 跨服
 gfcn_switchserver_gw = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
+</code></pre>
+<ol start="3">
+<li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<details>
+<summary>点击查看：旧配置方法（适用于 2.1.62 (1118) ～ 2.1.67 (1155) 版本）</summary>
+<h4 id="方法一直接订阅简易跨服配置-2">方法一：直接订阅简易跨服配置</h4>
+<ol>
+<li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点。</li>
+<li><strong>设置路由模式</strong>：将“全局路由”设置为“直连”。</li>
+<li><strong>设置远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入下面的远程订阅 URL，点击下载。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw_old.conf
+</code></pre>
+<ol start="4">
+<li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。</li>
+<li><strong>启动 Shadowrocket</strong>：返回 Shadowrocket 的首页，打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）</li>
+</ol>
+<h4 id="方法二手动写入当前使用中配置-2">方法二：手动写入当前使用中配置</h4>
+<ol>
+<li><strong>进入配置编辑界面</strong>：在“配置文件”页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“保存”，返回 Shadowrocket 的首页。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨服
+gfcn_switchserver_gw_old = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw_old.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
 </code></pre>
 <ol start="3">
 <li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
@@ -2466,10 +2495,11 @@ gfcn_switchserver_gw = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.su
 &lt;h3 id=&#34;4-shadowrocket&#34;&gt;⑷ Shadowrocket&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;一定要是 Shadowrocket 的 2.1.62 (1118) 及以上 TF 或商店版本，因为新版本中才有跨服所需的脚本功能。&lt;/p&gt;
+&lt;p&gt;另外，因为 2.1.67 (1156) 版本修复了一个 Bug，使得跨服以此版本为界，分为新旧两种。强烈建议更新到 2.1.67 (1156) 版本以上。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;details&gt;
-&lt;summary&gt;点击查看：配置方法&lt;/summary&gt;
-&lt;h5 id=&#34;方法一直接订阅简易跨服配置&#34;&gt;方法一：直接订阅简易跨服配置&lt;/h5&gt;
+&lt;summary&gt;点击查看：新配置方法（适用于 2.1.67 (1156) 及以上版本）&lt;/summary&gt;
+&lt;h4 id=&#34;方法一直接订阅简易跨服配置&#34;&gt;方法一：直接订阅简易跨服配置&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;新建本机节点&lt;/strong&gt;：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;设置路由模式&lt;/strong&gt;：将“全局路由”设置为“直连”。&lt;/li&gt;
@@ -2481,7 +2511,7 @@ gfcn_switchserver_gw = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.su
 &lt;li&gt;&lt;strong&gt;下载并应用简易跨服配置&lt;/strong&gt;：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;启动 Shadowrocket&lt;/strong&gt;：返回 Shadowrocket 的首页，打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h5 id=&#34;方法二手动写入当前使用中配置&#34;&gt;方法二：手动写入当前使用中配置&lt;/h5&gt;
+&lt;h4 id=&#34;方法二手动写入当前使用中配置&#34;&gt;方法二：手动写入当前使用中配置&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;进入配置编辑界面&lt;/strong&gt;：在“配置文件”页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;添加跨服配置&lt;/strong&gt;：在弹出的编辑窗口中，将以下配置中 &lt;code&gt;[Script]&lt;/code&gt; 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“保存”，返回 Shadowrocket 的首页。&lt;/li&gt;
@@ -2489,6 +2519,33 @@ gfcn_switchserver_gw = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.su
 &lt;pre&gt;&lt;code&gt;[Script]
 # 少女前线 跨服
 gfcn_switchserver_gw = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;重启 Shadowrocket&lt;/strong&gt;：为确保修改生效，可以开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/details&gt;
+&lt;details&gt;
+&lt;summary&gt;点击查看：旧配置方法（适用于 2.1.62 (1118) ～ 2.1.67 (1155) 版本）&lt;/summary&gt;
+&lt;h4 id=&#34;方法一直接订阅简易跨服配置-2&#34;&gt;方法一：直接订阅简易跨服配置&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;新建本机节点&lt;/strong&gt;：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设置路由模式&lt;/strong&gt;：将“全局路由”设置为“直连”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;设置远程订阅 URL&lt;/strong&gt;：在“配置文件”页面，点击右上角“+”，输入下面的远程订阅 URL，点击下载。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw_old.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;&lt;strong&gt;下载并应用简易跨服配置&lt;/strong&gt;：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;启动 Shadowrocket&lt;/strong&gt;：返回 Shadowrocket 的首页，打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方法二手动写入当前使用中配置-2&#34;&gt;方法二：手动写入当前使用中配置&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;进入配置编辑界面&lt;/strong&gt;：在“配置文件”页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;添加跨服配置&lt;/strong&gt;：在弹出的编辑窗口中，将以下配置中 &lt;code&gt;[Script]&lt;/code&gt; 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“保存”，返回 Shadowrocket 的首页。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;[Script]
+# 少女前线 跨服
+gfcn_switchserver_gw_old = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/gfcn_switchserver_gw_old.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
 &lt;/code&gt;&lt;/pre&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;&lt;strong&gt;重启 Shadowrocket&lt;/strong&gt;：为确保修改生效，可以开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。&lt;/li&gt;
