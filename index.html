@@ -9,7 +9,7 @@
 <meta name="description" content="Cozy wind, clear dews.">
 <meta name="theme-color" content="#364fc7">
 <title>Mornwind&#39;s Blog</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1608132558532">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/favicon.ico?v=1608139241819">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/css/gemini.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mornwind/Mornwind.github.io@master/media/fonts/font-awesome.css">
 <link
@@ -346,12 +346,12 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>15<span class="language" data-lan="minute">分钟</span></span>
+      <span>17<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>3969<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>4432<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
   </div>
@@ -1571,6 +1571,29 @@ gfcn_switchserver_gw = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.su
 &lt;h3 id=&#34;7-loon&#34;&gt;⑺ Loon&lt;/h3&gt;
 &lt;details&gt;
 &lt;summary&gt;点击查看：配置方法&lt;/summary&gt;
+&lt;h4 id=&#34;方法一直接下载简易跨服配置&#34;&gt;方法一：直接下载简易跨服配置&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;进入“从 URL 下载”页面&lt;/strong&gt;：点击下方的“配置”，然后翻到最下面“编辑”部分，点击“从 URL 下载”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;从 URL 下载配置&lt;/strong&gt;：在弹出的“从 URL 下载”页面中，点击最上方的“添加”。然后在弹出的对话框中，将下方的 URL 复制进去，并点击“确定”。接下来弹出的两个提示对话框“发现一个配置文件，是否解析并替换当前配置？”及“解析配置文件成功”，都选择“确定”。然后返回 Loon 的首页“仪表”页。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Loon/gfcn_switchserver_gw.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;启动 Loon&lt;/strong&gt;：点击 Loon 首页”仪表“页右上角的“启动“开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Loon 的连接。）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方法二手动写入当前使用中配置-3&#34;&gt;方法二：手动写入当前使用中配置&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;进入配置编辑界面&lt;/strong&gt;：点击下方的“配置”，然后翻到最下面“编辑”部分，点击“文本编辑”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;添加跨服配置&lt;/strong&gt;：在弹出的编辑窗口中，将以下配置中 &lt;code&gt;[Script]&lt;/code&gt; 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“完成”，然后返回首页“仪表”页。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;[Script]
+# 少女前线 跨服
+http-request ^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Loon/gfcn_switchserver_gw.js, requires-body=true, tag=gfcn_switchserver_gw
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;strong&gt;启用“脚本”功能&lt;/strong&gt;：在“仪表”页面中，找到“脚本”卡片，打开“脚本”功能的开关。（若未找到，点击功能卡片下方的“快捷方式”，将“脚本”设置为可见即可）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重启 Loon&lt;/strong&gt;：为确保修改生效，可以开关一次 Loon 右上角的“启动”开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;/details&gt;
 &lt;h2 id=&#34;a-2-类型未提供&#34;&gt;A-2 类型（未提供）&lt;/h2&gt;
 &lt;blockquote&gt;
