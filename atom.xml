@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>blog.mornwind.cc</id>
+    <title>Mornwind's Blog</title>
+    <updated>2021-05-23T07:57:56.537Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="blog.mornwind.cc"/>
+    <link rel="self" href="blog.mornwind.cc/atom.xml"/>
+    <subtitle>Cozy wind, clear dews.</subtitle>
+    <logo>https://static.gridea.dev/280337189156422152/XASIcJdP6.ico</logo>
+    <icon>https://static.gridea.dev/280337189156422152/XASIcJdP6.ico</icon>
+    <rights>All rights reserved 2021, Mornwind's Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[「少女前线」跨服手册（散爆版）（iOS 端 → Bilibili 服）]]></title>
+        <id>https://blog.mornwind.cc/GFCN-SwitchServer-iOS2Bili</id>
+        <link href="https://blog.mornwind.cc/GFCN-SwitchServer-iOS2Bili"/>
+        <updated>2021-05-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+By: Mornwind
+GitHub Link: Mornwind/GFCN_SwitchServer
+霞之丘 · 少前跨服 - 加入 QQ 群：915089623
+
+致谢
+
+参考&amp;协助
+
+霞ヶ丘詩羽x：B站专栏（cv36307...]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>By: <a href="https://blog.mornwind.cc">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/GFCN_SwitchServer">Mornwind/GFCN_SwitchServer</a></p>
+<p>霞之丘 · 少前跨服 - 加入 QQ 群：<a href="https://jq.qq.com/?_wv=1027&amp;k=5rnvPAT"><code>915089623</code></a></p>
+</blockquote>
+<h2 id="致谢">致谢</h2>
+<ul>
+<li><strong>参考&amp;协助</strong>
+<ul>
+<li><a href="https://space.bilibili.com/455501">霞ヶ丘詩羽x</a>：<a href="https://www.bilibili.com/read/cv3630717">B站专栏（cv3630717）</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请另寻他法。</li>
+<li><strong>无法在 iOS 端进行跨服充值，否则 1000% 会错充进 iOS 官服，切记！</strong></li>
+<li>iOS 端跨渠道混服，可参照跨 Bilibili 服的方法。</li>
+</ol>
+<hr>
+<h2 id="ios-端常见跨服方式">iOS 端常见跨服方式</h2>
+<p>在 iOS 端上，常见的游戏跨服方式主要可分为以下三大类六小类：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">方式</th>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#a-1-%E7%B1%BB%E5%9E%8B">A-1</a></td>
+<td style="text-align:center">通过<strong>使用网络调试工具</strong>，<br/><strong>在本地重写客户端请求</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">本地修改无需依赖他人<br/>基本不受游戏版本更新影响</td>
+<td style="text-align:center">需要会亿点操作<br/>部分工具价格较高<br/>部分工具在国区无法下载</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#a-2-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">A-2</a></td>
+<td style="text-align:center">通过<strong>使用他人提供的代理服务器</strong>，<br/><strong>在远端重写客户端请求</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">操作较少</td>
+<td style="text-align:center">依赖代理服务器的稳定性<br/>安全性无法保证</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#b-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">B-1</a></td>
+<td style="text-align:center">通过<strong>对游戏客户端修改后重新打包</strong>，<br/><strong>由他人统一签名后在线下载安装</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">几乎无需操作</td>
+<td style="text-align:center">签名所需证书费较贵<br/>更新后需等待新跨服包发布</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#b-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">B-2</a></td>
+<td style="text-align:center">通过<strong>对游戏客户端修改后重新打包</strong>，<br/><strong>自行签名然后越狱安装或侧载</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">无需花钱</td>
+<td style="text-align:center">需要会亿点操作<br/>越狱影响系统安全性<br/>每 7 天需重新签名<br/>更新后需等待新跨服包发布</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#c-1-%E7%B1%BB%E5%9E%8B">C-1</a></td>
+<td style="text-align:center">通过<strong>使用云游戏平台</strong>，<br/><strong>将游戏画面实时传输至移动设备</strong>，<br/><strong>间接</strong>实现跨服</td>
+<td style="text-align:center">操作较少<br/>能跨部分渠道服</td>
+<td style="text-align:center">可选渠道服受制于云平台<br/>严重依赖网络质量<br/>安全性无法保证<br/>非会员每日游戏时长受限<br/>非会员每次进入需排队等候</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#c-2-%E7%B1%BB%E5%9E%8B">C-2</a></td>
+<td style="text-align:center">通过<strong>使用云主机</strong>，<br/><strong>将游戏画面实时传输至移动设备</strong>，<br/><strong>间接</strong>实现跨服</td>
+<td style="text-align:center">能跨渠道服</td>
+<td style="text-align:center">需要会亿点操作<br/>云主机普遍价格很高<br/>严重依赖网络质量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-1-类型">A-1 类型</h2>
+<blockquote>
+<p>A-1：通过<strong>使用网络调试工具</strong>，<strong>在本地重写客户端请求</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/hlY95SGGX.png" alt="" loading="lazy"></td>
+<td style="text-align:center">HTTP Catcher</td>
+<td style="text-align:center">网球</td>
+<td style="text-align:center"><a href="#1-http-catcher">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/dhqszfu3i.png" alt="" loading="lazy"></td>
+<td style="text-align:center">iHTTP Tracker</td>
+<td style="text-align:center">猫头鹰</td>
+<td style="text-align:center"><a href="#2-ihttp-tracker">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/IPvBZ-6Yf.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Thor</td>
+<td style="text-align:center">锤子</td>
+<td style="text-align:center"><a href="#3-thor">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/P0iV_ZRJh.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Shadowrocket</td>
+<td style="text-align:center">小火箭</td>
+<td style="text-align:center"><a href="#4-shadowrocket">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/Q4RR6-gvS.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Quantumult X</td>
+<td style="text-align:center">圈叉</td>
+<td style="text-align:center"><a href="#5-quantumult-x">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/stNyUVg9x.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="#6-surge-4">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/HnS4fzJOE.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Loon</td>
+<td style="text-align:center">气球</td>
+<td style="text-align:center"><a href="#7-loon">文字教程</a></td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>点击查看：常用网络调试工具对比</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HTTP Catcher<br/>（网球）</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">¥28.00（内购）<br/>$3.99（内购）</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">iHTTP Tracker<br/>（猫头鹰）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">¥18.00<br/>$2.99</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">有 Bug 尚未解决，<br/>暂不可用</td>
+</tr>
+<tr>
+<td style="text-align:center">Thor<br/>（锤子）</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">¥88.00<br/>$12.99</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Shadowrocket<br/>（小火箭）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$2.99</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Quantumult X<br/>（圈叉）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$7.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">TF 名额已满</td>
+</tr>
+<tr>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$49.99（首次内购）<br/>+ $14.99/y（订阅）</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">是真的贵</td>
+</tr>
+<tr>
+<td style="text-align:center">Loon<br/>（气球）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$2.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">Bug 较多</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr>
+<h3 id="1-http-catcher">⑴ HTTP Catcher</h3>
+<details>
+<summary>点击查看：第一部分 获取账号登录信息</summary>
+<p><strong>注意事项</strong>：只有<strong>首次跨服</strong>、<strong>账号登录数据失效</strong>两种情况下才需要完整执行一次第一部分的操作。<strong>不需要每次跨服前都去执行一次！</strong></p>
+<ol>
+<li><strong>【iOS】启用 Wi-Fi 访问</strong>：进入“更多”→“Wi-Fi 访问”，打开“允许 Wi-Fi 访问”开关，并记住下方的“IP 地址”及“端口”；下滑返回“更多”界面。</li>
+<li><strong>【iOS】禁用 HTTPS 解密</strong>：在“更多”界面中，关闭“解密 HTTPS 流量”开关。</li>
+<li><strong>【iOS】禁用仅记录消息头</strong>：进入“更多”→“高级设置”，关闭“仅记录消息头”开关；然后回到“历史”页面。</li>
+<li><strong>【iOS】启动 HTTP Catcher 进行数据抓取</strong>：点击下方的开关按钮启动 HTTP Catcher，即可开始对相同 Wi-Fi 下的 Android 设备进行数据抓取。</li>
+<li><strong>【Android】配置安卓机的 Wi-Fi 代理（不同机型设置方法略有区别）</strong>：<strong>首先保证你的两个设备在同个 Wi-Fi 下</strong>；然后在“系统设置”→“无线网络”中，找到当前连接的 Wi-Fi，点击进入详细设置，找到“代理设置”，将其改为“手动”，并在“服务器”和“端口”中依次填入第 1 步中记下的内容；点击“保存”返回。</li>
+<li><strong>【Android】抓取账号登录数据</strong>：在清除了游戏后台的情况下进入游戏，完整进行一次登录操作，直到看到自己的用户名及等级，即可退出游戏。</li>
+<li><strong>还原第 1～5 步所做操作至修改前</strong>：即：停止 HTTP Catcher；禁用“Wi-Fi 访问”；取消安卓机的 Wi-Fi 代理；开启“仅记录消息头”；启用 HTTPS 解密（此项非必需，视个人使用情况）。</li>
+<li><strong>【iOS】提取账号登录数据（重要！）</strong>：在“历史”界面上方的搜索栏中输入“/third”，即可搜出一条显示为“/third/channelLogin”的记录，点击进入；在弹出的界面中，点击上方的“响应”选项卡，在下方“Preview”中即可找到“open_id”和“token”，将各自后面所跟双引号内的内容复制保存好（复制时不包括双引号本身），在后面的第二部分配置过程中需要用到。</li>
+</ol>
+</details>
+<details>
+<summary>点击查看：第二部分 配置跨服</summary>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.hcc”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘HTTP Catcher’”；在 HTTP Catcher 中弹出的“导入”对话框中选择“好的”，即可成功导入。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/HTTP_Catcher/gfcn_switchserver_bili.hcc
+</code></pre>
+<ol start="2">
+<li><strong>填入账号信息（重要！）</strong>：进入“更多”→“重写”，在弹出的“重写列表”界面中，找到有“写入账号数据”的一条，点击右侧的ⓘ进入“编辑重写”界面；在“规则”中，先点进第一项（含“openid=”），进入“编辑规则”界面，找到最下方的“替换”部分，将已获取到账号数据中的“open_id”值替换掉其中的“abc”（千万不要删改其前后的“$1”及“&amp;”；粘贴后如出现空格需删除），点击右上角的“存储”回到“编辑重写”界面；再点进第二项（含“sid=”），进入“编辑规则”界面，找到最下方的“替换”部分，将已获取到账号数据中的“token”值替换掉其中的“xyz”（千万不要删改其前后的“$1”及“&amp;”；粘贴后如出现空格需删除），点击右上角的“存储”回到“编辑重写”界面；再点击右上角的“存储”回到“重写列表”界面。</li>
+<li><strong>启用跨服配置</strong>：在“重写列表”界面中，依次点击关于跨服的“切换服务器P1”、“切换服务器P2”、“写入账号数据”这三条跨服配置，使其前面全都出现“✓”。</li>
+<li><strong>启用重写功能</strong>：在“重写列表”界面中，打开上面的“重写列表”开关；然后回到“更多”页面。</li>
+<li><strong>启用仅记录消息头</strong>：进入“高级设置”，打开“仅记录消息头”开关；然后回到“历史”页面。</li>
+<li><strong>启动 HTTP Catcher</strong>：点击下方的开关按钮，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 HTTP Catcher。）</li>
+</ol>
+</details>
+<hr>
+<h3 id="2-ihttp-tracker">⑵ iHTTP Tracker</h3>
+<blockquote>
+<p>有 Bug 尚未解决，暂不可用。</p>
+</blockquote>
+<hr>
+<h3 id="3-thor">⑶ Thor</h3>
+<details>
+<summary>点击查看：第一部分 获取账号登录信息</summary>
+<p><strong>注意事项</strong>：只有<strong>首次跨服</strong>、<strong>账号登录数据失效</strong>两种情况下才需要完整执行一次第一部分的操作。<strong>不需要每次跨服前都去执行一次！</strong></p>
+<ol>
+<li><strong>【iOS】设置抓取数据的过滤器</strong>：在“过滤器”主界面中，点击闪电按钮上方显示的漏斗图标或过滤器名称，在弹出的“过滤器”列表中，找到“全局抓包”，点击选中并自动返回主界面。</li>
+<li><strong>【iOS】禁用 HTTPS 解密</strong>：在“更多”界面中，点击“HTTPS 解析设置”进入“HTTPS 证书管理”界面，将“CA 证书”中已启用的证书停用；然后返回主界面。</li>
+<li><strong>【iOS】启用 Wi-Fi 监听</strong>：在“过滤器”主界面中，点击闪电按钮启动 Thor；然后翻到界面最下方，先关闭“本机监听”的开关，再打开“Wi-Fi 监听”的开关，并记住“Wi-Fi 监听”下方的“服务器”及“端口”。</li>
+<li><strong>【Android】配置安卓机的 Wi-Fi 代理（不同机型设置方法略有区别）</strong>：<strong>首先保证你的两个设备在同个 Wi-Fi 下</strong>；然后在“系统设置”→“无线网络”中，找到当前连接的 Wi-Fi，点击进入详细设置，找到“代理设置”，将其改为“手动”，并在“服务器”和“端口”中依次填入第 1 步中记下的内容；点击“保存”返回。</li>
+<li><strong>【Android】抓取账号登录数据</strong>：在清除了游戏后台的情况下进入游戏，完整进行一次登录操作，直到看到自己的用户名及等级，即可退出游戏。</li>
+<li><strong>还原第 2～4 步所做操作至修改前</strong>：即：停止 Thor（会自动重置“本机监听”与“Wi-Fi 监听”的开关为默认状态，无需手改）；取消安卓机的 Wi-Fi 代理；启用 HTTPS 解密（此项非必需，视个人使用情况）。</li>
+<li><strong>【iOS】提取账号登录数据（重要！）</strong>：在“会话记录”界面中，点击进入找到刚才生成的“全局抓包”记录；在弹出的界面上方的“关键字”搜索栏中输入“/third”并点击“搜索”，即可搜出一条显示为“/third/channelLogin”的记录，点击进入；在弹出的界面中，点击上方的“响应”选项卡，再点击“消息体”部分中的“text/html”，在弹出的“消息体”内容界面中即可找到“open_id”和“token”，将各自后面所跟双引号内的内容复制保存好（复制时不包括双引号本身），在后面的第二部分配置过程中需要用到。</li>
+</ol>
+</details>
+<details>
+<summary>点击查看：第二部分 配置跨服</summary>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.f4thor”类型的跨服配置（过滤器）文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘Thor’”；在弹出的跨服配置（过滤器）预览页面中，点击右上角导出图标，在弹出的菜单中选择“装载”，在弹出的“安全提醒”对话框中选择“继续”，即可成功导入；然后点击左上角的“✗”，回到主界面。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Thor/gfcn_switchserver_bili.f4thor
+</code></pre>
+<ol start="2">
+<li><strong>填入账号信息（重要！）</strong>：在“过滤器”主界面中，点击闪电按钮上方显示的漏斗图标或过滤器名称，在弹出的“过滤器”列表中，找到刚导入的跨服过滤器，点击右侧的ⓘ并选择“编辑”；在弹出的过滤器详细设置界面中，找到第二项“挂载断点”并点击下方进入；在“编辑断点”界面中，找到第二项“写入账号数据”并点击其下方的“变量绑定”；在“变量绑定”界面中，进入“${open_id}”下的“当前值”，填入已获取到账号数据中的“open_id”值，返回“变量绑定”界面；再进入“${token}”下的“当前值”，填入已获取到账号数据中的“token”值，返回“变量绑定”界面；点击两次左上角“返回”，然后再点击右上角“存储”，即可保存更改并返回“过滤器”列表。</li>
+<li><strong>选中跨服过滤器</strong>：在“过滤器”列表中，点击选中跨服过滤器，然后就会自动返回主界面。</li>
+<li><strong>启动 Thor</strong>：在“过滤器”主界面中，点击闪电按钮启动 Thor，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 Thor。）</li>
+</ol>
+</details>
+<hr>
+<h3 id="4-shadowrocket">⑷ Shadowrocket</h3>
+<blockquote>
+<p>需 Shadowrocket 为 2.1.67 (1156) 及以上的 TF 或商店版本。</p>
+</blockquote>
+<details>
+<summary>点击查看：第一部分 获取账号登录信息</summary>
+<p><strong>注意事项</strong>：只有<strong>首次跨服</strong>、<strong>账号登录数据失效</strong>两种情况下才需要完整执行一次第一部分的操作。<strong>不需要每次跨服前都去执行一次！</strong></p>
+<h4 id="方法一直接订阅简易配置">方法一：直接订阅简易配置</h4>
+<ol>
+<li><strong>【iOS】新建本机节点</strong>：在首页，点击右上角”+“，添加一个类型为”HTTP“（或”HTTPS“）、地址为”localhost“（或”127.0.0.1“）、端口为”1080“（或其他在 1-65535 之间的端口）的节点，然后在首页的”服务器节点“中选中该节点。</li>
+<li><strong>【iOS】设置路由模式</strong>：将”全局路由“设置为”直连“（或”配置“）。</li>
+<li><strong>【iOS】设置远程订阅 URL</strong>：在”配置文件“页面，点击右上角”+“，输入下面的远程订阅 URL，点击下载。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili.conf
+</code></pre>
+<ol start="4">
+<li><strong>【iOS】下载并应用简易配置</strong>：在”远程文件“中点击该 URL，选择”使用配置“，等待下载完毕后，即可看到”本地文件“中加载了本配置。</li>
+<li><strong>【iOS】启用调试日志记录</strong>：在”设置“界面，点击进入”高级“部分中的”诊断“，然后打开”启用日志记录“开关；返回首页。</li>
+<li><strong>【iOS】设置代理共享</strong>：在”设置“界面，点击进入”TUNNEL“部分中的”代理“，再点击进入”代理共享“，打开”启用共享“开关，并记住下方的”IP“及”端口“。</li>
+<li><strong>【iOS】启动 Shadowrocket 进行数据抓取</strong>：返回首页，打开 Shadowrocket 的连接开关，即可开始对相同 Wi-Fi 下的 Android 设备进行数据抓取。</li>
+<li><strong>【Android】配置安卓机的 Wi-Fi 代理（不同机型设置方法略有区别）</strong>：<strong>首先保证你的两个设备在同个 Wi-Fi 下</strong>；然后在”系统设置“→”无线网络“中，找到当前连接的 Wi-Fi，点击进入详细设置，找到”代理设置“，将其改为”手动“，并在”服务器“和”端口“中依次填入第 6 步中记下的内容；点击”保存“返回。</li>
+<li><strong>【Android】抓取账号登录数据</strong>：在清除了游戏后台的情况下进入游戏，完整进行一次登录操作，直到看到自己的用户名及等级，即可退出游戏。</li>
+<li><strong>还原第 1～8 步所做操作至修改前</strong>：即：停止 Shadowrocket；取消安卓机的 Wi-Fi 代理；关闭代理共享；关闭调试日志记录；切回原配置文件、原路由模式、原节点（此项非必需，视个人使用情况；但第 1～4 步在第二部分的方法一中<strong>还需再用到</strong>，所以此处<strong>建议保留不还原</strong>）。</li>
+<li><strong>【iOS】提取账号登录数据（重要！）</strong>：在”设置“界面中，点击进入”高级“部分中的”诊断“，再进入“VPN 日志”，找到刚才生成的日志点击进入；在“内容”界面中一直往下翻，直到找到夹在两排等号分隔线之间的“获取账号数据”内容，其中就有”open_id“和”token“，将它们各自复制保存好，在后面的第二部分配置过程中需要用到。</li>
+</ol>
+<h4 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h4>
+<ol>
+<li><strong>【iOS】进入配置编辑界面</strong>：在”配置文件“页面，从”本地文件“中找到当前正在使用的配置，点击它，在弹出的列表中选择”编辑纯文本“。</li>
+<li><strong>【iOS】添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的”保存“，返回 Shadowrocket 的首页。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨 Bilibili 服
+## 第一部分 获取帐号数据
+gfcn_switchserver_bili_GetToken = type=http-response,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_GetToken.js,pattern=^http:\/\/gfcn-passport\.(.+?)\.sunborngame\.com\/third\/channelLogin,max-size=1048576,requires-body=true,enable=true
+## 第二部分 切换服务器
+gfcn_switchserver_bili_P1 = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_P1.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
+## 第二部分 写入帐号数据
+gfcn_switchserver_bili_P2 = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_P2.js,pattern=^http:\/\/gfcn-game\.(.+?)\.sunborngame\.com\/index\.php\/5000\/Index\/getUidEnMicaQueue,max-size=1048576,requires-body=true,enable=true
+</code></pre>
+<ol start="3">
+<li><strong>【iOS】启用调试日志记录</strong>：在”设置“界面，点击进入”高级“部分中的”诊断“，然后打开”启用日志记录“开关；返回首页。</li>
+<li><strong>【iOS】设置代理共享</strong>：在”设置“界面，点击进入”TUNNEL“部分中的”代理“，再点击进入”代理共享“，打开”启用共享“开关，并记住下方的”IP“及”端口“。</li>
+<li><strong>【iOS】启动 Shadowrocket 进行数据抓取</strong>：返回首页，打开 Shadowrocket 的连接开关，即可开始对相同 Wi-Fi 下的 Android 设备进行数据抓取。</li>
+<li><strong>【Android】配置安卓机的 Wi-Fi 代理（不同机型设置方法略有区别）</strong>：<strong>首先保证你的两个设备在同个 Wi-Fi 下</strong>；然后在”系统设置“→”无线网络“中，找到当前连接的 Wi-Fi，点击进入详细设置，找到”代理设置“，将其改为”手动“，并在”服务器“和”端口“中依次填入第 4 步中记下的内容；点击”保存“返回。</li>
+<li><strong>【Android】抓取账号登录数据</strong>：在清除了游戏后台的情况下进入游戏，完整进行一次登录操作，直到看到自己的用户名及等级，即可退出游戏。</li>
+<li><strong>还原第 3～7 步所做操作至修改前</strong>：即：停止 Shadowrocket；取消安卓机的 Wi-Fi 代理；关闭代理共享；关闭调试日志记录。</li>
+<li><strong>【iOS】提取账号登录数据（重要！）</strong>：在”设置“界面中，点击进入”高级“部分中的”诊断“，再进入“VPN 日志”，找到刚才生成的日志点击进入；在“内容”界面中一直往下翻，直到找到夹在两排等号分隔线之间的“获取账号数据”内容，其中就有”open_id“和”token“，将它们各自复制保存好，在后面的第二部分配置过程中需要用到。</li>
+</ol>
+</details>
+<details>
+<summary>点击查看：第二部分 配置跨服</summary>
+<h4 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h4>
+<p><strong>提醒</strong>：第二部分的方法一的第 1～4 步若在第一部分的方法一中<strong>已操作过</strong>，且遵循第 10 步的建议<strong>并未还原</strong>，则此时可<strong>直接跳过</strong>，<strong>无需重复操作</strong>。</p>
+<ol>
+<li><strong>新建本机节点</strong>：在首页，点击右上角”+“，添加一个类型为”HTTP“（或”HTTPS“）、地址为”localhost“（或”127.0.0.1“）、端口为”1080“（或其他在 1-65535 之间的端口）的节点，然后在首页的”服务器节点“中选中该节点。</li>
+<li><strong>设置路由模式</strong>：将”全局路由“设置为”直连“（或”配置“）。</li>
+<li><strong>设置远程订阅 URL</strong>：在”配置文件“界面，点击右上角”+“，输入下面的远程订阅 URL，点击下载。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili.conf
+</code></pre>
+<ol start="4">
+<li><strong>下载并应用简易跨服配置</strong>：在”远程文件“中点击该 URL，选择”使用配置“，等待下载完毕后，即可看到”本地文件“中加载了“gfcn_switchserver_bili.conf”配置。</li>
+<li><strong>将脚本 P2 从云端改存至本设备</strong>：在“配置文件”界面点击该配置，选择“编辑配置”，然后点击进入“脚本”→“gfcn_switchserver_bili_P2”；在弹出的“添加脚本”界面，点击“Script”右侧的ⓘ，再在弹出的“Script”界面中，点击下方的“保存”；在弹出的预览界面中，等脚本从云端加载完毕并显示后，点击右上角的“保存”返回“Script”界面。</li>
+<li><strong>在脚本 P2 中填入账号信息并启用（重要！）</strong>：在“Script”界面中，找到上方已保存下的“gfcn_switchserver_bili_P2.js”，左划并点击“编辑”；在弹出的脚本编辑界面中，将已获取到账号数据中的“open_id”值替换掉其中的“abc”，“token”值替换掉其中的“xyz”（千万不要删改前后的双引号；粘贴后如出现空格需删除）；点击右上角“保存”返回“Script”界面，再点击“gfcn_switchserver_bili_P2.js”以选中脚本并返回“添加脚本”界面，再点击右上角“保存”返回“Script”界面，然后一路返回至主界面。</li>
+<li><strong>启动 Shadowrocket</strong>：返回 Shadowrocket 的首页，打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）</li>
+</ol>
+<h4 id="方法二手动写入当前使用中配置-2">方法二：手动写入当前使用中配置</h4>
+<p><strong>提醒</strong>：第二部分的方法二的第 1～2 步若在第一部分的方法二中<strong>已操作过</strong>，则此时可<strong>直接跳过</strong>，<strong>无需重复操作</strong>。</p>
+<ol>
+<li><strong>进入配置编辑界面</strong>：在”配置文件“界面，从”本地文件“中找到当前正在使用的配置，点击它，在弹出的列表中选择”编辑纯文本“。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的”保存“，返回“配置文件”界面。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨 Bilibili 服
+## 第一部分 获取帐号数据
+gfcn_switchserver_bili_GetToken = type=http-response,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_GetToken.js,pattern=^http:\/\/gfcn-passport\.(.+?)\.sunborngame\.com\/third\/channelLogin,max-size=1048576,requires-body=true,enable=true
+## 第二部分 切换服务器
+gfcn_switchserver_bili_P1 = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_P1.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
+## 第二部分 写入帐号数据
+gfcn_switchserver_bili_P2 = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_P2.js,pattern=^http:\/\/gfcn-game\.(.+?)\.sunborngame\.com\/index\.php\/5000\/Index\/getUidEnMicaQueue,max-size=1048576,requires-body=true,enable=true
+</code></pre>
+<ol start="3">
+<li><strong>将脚本 P2 从云端改存至本设备</strong>：在“配置文件”界面点击该配置，选择“编辑配置”，然后点击进入“脚本”→“gfcn_switchserver_bili_P2”；在弹出的“添加脚本”界面，点击“Script”右侧的ⓘ，再在弹出的“Script”界面中，点击下方的“保存”；在弹出的预览界面中，等脚本从云端加载完毕并显示后，点击右上角的“保存”返回“Script”界面。</li>
+<li><strong>在脚本 P2 中填入账号信息并启用（重要！）</strong>：在“Script”界面中，找到上方已保存下的“gfcn_switchserver_bili_P2.js”，左划并点击“编辑”；在弹出的脚本编辑界面中，将已获取到账号数据中的“open_id”值替换掉其中的“abc”，“token”值替换掉其中的“xyz”（千万不要删改前后的双引号；粘贴后如出现空格需删除）；点击右上角“保存”返回“Script”界面，再点击“gfcn_switchserver_bili_P2.js”以选中脚本并返回“添加脚本”界面，再点击右上角“保存”返回“Script”界面，然后一路返回至主界面。</li>
+<li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以返回 Shadowrocket 的首页，开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<hr>
+<h3 id="5-quantumult-x">⑸ Quantumult X</h3>
+<p>待补充完整。</p>
+<hr>
+<h3 id="6-surge-4">⑹ Surge 4</h3>
+<p>待补充完整。</p>
+<hr>
+<h3 id="7-loon">⑺ Loon</h3>
+<p>待补充完整。</p>
+<hr>
+<h2 id="a-2-类型未提供">A-2 类型（未提供）</h2>
+<blockquote>
+<p>A-2：通过<strong>使用他人提供的代理服务器</strong>，<strong>在远端重写客户端请求</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<p>暂不提供此方式为「少女前线」进行跨服，因为使用代理服务器会受多种因素影响，造成跨服不稳定。</p>
+<h2 id="b-类型未提供">B 类型（未提供）</h2>
+<blockquote>
+<p>B-1：通过<strong>对游戏客户端修改后重新打包</strong>，<strong>由他人统一签名后在线下载安装</strong>，<strong>直接</strong>实现跨服。</p>
+<p>B-2：通过<strong>对游戏客户端修改后重新打包</strong>，<strong>自行签名然后越狱安装或侧载</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<p>不提供此方式为「少女前线」进行跨服，因为修改客户端容易被封号。</p>
+<h2 id="c-1-类型">C-1 类型</h2>
+<blockquote>
+<p>C-1：通过<strong>使用云游戏平台</strong>，<strong>将游戏画面实时传输至移动设备</strong>，<strong>间接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">网易云游戏</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">见网易云游戏官网</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">网易云游戏</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">¥15.9/月<br/>¥70/季<br/>¥240/年</td>
+<td style="text-align:center">★★★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">部分渠道服平台未提供</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：</p>
+<p>网易云游戏 - 官网：<a href="https://cg.163.com">https://cg.163.com</a></p>
+</blockquote>
+<h2 id="c-2-类型">C-2 类型</h2>
+<blockquote>
+<p>C-2：通过<strong>使用云主机</strong>，<strong>将游戏画面实时传输至移动设备</strong>，<strong>间接</strong>实现跨服。</p>
+</blockquote>
+<p>此方法需自行摸索。</p>
+<hr>
+<h2 id="附录1app-store-链接">附录1：App Store 链接</h2>
+<ul>
+<li>
+<p><strong>游戏本体</strong></p>
+<ul>
+<li>少女前线：<a href="https://apps.apple.com/app/id1117273600">https://apps.apple.com/app/id1117273600</a></li>
+</ul>
+</li>
+<li>
+<p><strong>网络调试工具（仅抓包）</strong></p>
+<ul>
+<li>HTTP Catcher：<a href="https://apps.apple.com/app/id1445874902">https://apps.apple.com/app/id1445874902</a></li>
+<li>iHTTP Tracker：<a href="https://apps.apple.com/app/id1463315864">https://apps.apple.com/app/id1463315864</a></li>
+<li>Thor：<a href="https://apps.apple.com/app/id1210562295">https://apps.apple.com/app/id1210562295</a></li>
+</ul>
+</li>
+<li>
+<p><strong>网络调试工具（抓包、代理）</strong></p>
+<ul>
+<li>Shadowrocket：<a href="https://apps.apple.com/app/id932747118">https://apps.apple.com/app/id932747118</a></li>
+<li>Quantumult X：<a href="https://apps.apple.com/app/id1443988620">https://apps.apple.com/app/id1443988620</a></li>
+<li>Surge 4：<a href="https://apps.apple.com/app/id1442620678">https://apps.apple.com/app/id1442620678</a></li>
+<li>Loon：<a href="https://apps.apple.com/app/id1373567447">https://apps.apple.com/app/id1373567447</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="附录2少女前线国服客户端登录参数">附录2：「少女前线」国服客户端登录参数</h2>
+<blockquote>
+<p>以下为分别连接不同的国服服务器时，有效的客户端登录参数。</p>
+</blockquote>
+<h3 id="官服">官服</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数(→)<br/>服务器(↓)</th>
+<th style="text-align:center">URL / Host</th>
+<th style="text-align:center">Request Body<br/><code>channel</code></th>
+<th style="text-align:center">Request Body<br/><code>device</code></th>
+<th style="text-align:center">Request Body<br/><code>platformChannelId</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安卓官服</td>
+<td style="text-align:center">⋯<code>.gw.</code>⋯</td>
+<td style="text-align:center"><code>cn_mica</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>GWGW</code><br/><code>TapTap</code></td>
+</tr>
+<tr>
+<td style="text-align:center">iOS 官服</td>
+<td style="text-align:center">⋯<code>.ios.</code>⋯</td>
+<td style="text-align:center"><code>cn_appstore</code></td>
+<td style="text-align:center"><code>ios</code></td>
+<td style="text-align:center"><code>ios</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="渠道服">渠道服</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数(→)<br/>服务器(↓)</th>
+<th style="text-align:center">URL / Host</th>
+<th style="text-align:center">Request Body<br/><code>channel</code></th>
+<th style="text-align:center">Request Body<br/><code>device</code></th>
+<th style="text-align:center">Request Body<br/><code>platformChannelId</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Bilibili 服</td>
+<td style="text-align:center">⋯<code>.bili.</code>⋯</td>
+<td style="text-align:center"><code>cn_bili</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>Bili</code></td>
+</tr>
+<tr>
+<td style="text-align:center">渠道混服</td>
+<td style="text-align:center">⋯<code>.ly.</code>⋯</td>
+<td style="text-align:center"><code>cn_third</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>GWHF</code></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[「少女前线」跨服手册（散爆版）（iOS 端 → 安卓官服）]]></title>
+        <id>https://blog.mornwind.cc/GFCN-SwitchServer-iOS2GW</id>
+        <link href="https://blog.mornwind.cc/GFCN-SwitchServer-iOS2GW"/>
+        <updated>2020-05-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[
+By: Mornwind
+GitHub Link: Mornwind/GFCN_SwitchServer
+霞之丘 · 少前跨服 - 加入 QQ 群：915089623
+
+致谢
+
+参考&amp;协助
+
+霞ヶ丘詩羽x：B站专栏（cv36307...]]></summary>
+        <content type="html"><![CDATA[<blockquote>
+<p>By: <a href="https://blog.mornwind.cc">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/GFCN_SwitchServer">Mornwind/GFCN_SwitchServer</a></p>
+<p>霞之丘 · 少前跨服 - 加入 QQ 群：<a href="https://jq.qq.com/?_wv=1027&amp;k=5rnvPAT"><code>915089623</code></a></p>
+</blockquote>
+<h2 id="致谢">致谢</h2>
+<ul>
+<li><strong>参考&amp;协助</strong>
+<ul>
+<li><a href="https://space.bilibili.com/455501">霞ヶ丘詩羽x</a>：<a href="https://www.bilibili.com/read/cv3630717">B站专栏（cv3630717）</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请另寻他法。</li>
+<li><strong>无法在 iOS 端进行跨服充值，否则 1000% 会错充进 iOS 官服，切记！</strong></li>
+</ol>
+<hr>
+<h2 id="ios-端常见跨服方式">iOS 端常见跨服方式</h2>
+<p>在 iOS 端上，常见的游戏跨服方式主要可分为以下三大类六小类：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">方式</th>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#a-1-%E7%B1%BB%E5%9E%8B">A-1</a></td>
+<td style="text-align:center">通过<strong>使用网络调试工具</strong>，<br/><strong>在本地重写客户端请求</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">本地修改无需依赖他人<br/>基本不受游戏版本更新影响</td>
+<td style="text-align:center">需要会亿点操作<br/>部分工具价格较高<br/>部分工具在国区无法下载</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#a-2-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">A-2</a></td>
+<td style="text-align:center">通过<strong>使用他人提供的代理服务器</strong>，<br/><strong>在远端重写客户端请求</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">操作较少</td>
+<td style="text-align:center">依赖代理服务器的稳定性<br/>安全性无法保证</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#b-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">B-1</a></td>
+<td style="text-align:center">通过<strong>对游戏客户端修改后重新打包</strong>，<br/><strong>由他人统一签名后在线下载安装</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">几乎无需操作</td>
+<td style="text-align:center">签名所需证书费较贵<br/>更新后需等待新跨服包发布</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#b-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">B-2</a></td>
+<td style="text-align:center">通过<strong>对游戏客户端修改后重新打包</strong>，<br/><strong>自行签名然后越狱安装或侧载</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">无需花钱</td>
+<td style="text-align:center">需要会亿点操作<br/>越狱影响系统安全性<br/>每 7 天需重新签名<br/>更新后需等待新跨服包发布</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#c-1-%E7%B1%BB%E5%9E%8B">C-1</a></td>
+<td style="text-align:center">通过<strong>使用云游戏平台</strong>，<br/><strong>将游戏画面实时传输至移动设备</strong>，<br/><strong>间接</strong>实现跨服</td>
+<td style="text-align:center">操作较少<br/>能跨部分渠道服</td>
+<td style="text-align:center">可选渠道服受制于云平台<br/>严重依赖网络质量<br/>安全性无法保证<br/>非会员每日游戏时长受限<br/>非会员每次进入需排队等候</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#c-2-%E7%B1%BB%E5%9E%8B">C-2</a></td>
+<td style="text-align:center">通过<strong>使用云主机</strong>，<br/><strong>将游戏画面实时传输至移动设备</strong>，<br/><strong>间接</strong>实现跨服</td>
+<td style="text-align:center">能跨渠道服</td>
+<td style="text-align:center">需要会亿点操作<br/>云主机普遍价格很高<br/>严重依赖网络质量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-1-类型">A-1 类型</h2>
+<blockquote>
+<p>A-1：通过<strong>使用网络调试工具</strong>，<strong>在本地重写客户端请求</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/hlY95SGGX.png" alt="" loading="lazy"></td>
+<td style="text-align:center">HTTP Catcher</td>
+<td style="text-align:center">网球</td>
+<td style="text-align:center"><a href="#1-http-catcher">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/dhqszfu3i.png" alt="" loading="lazy"></td>
+<td style="text-align:center">iHTTP Tracker</td>
+<td style="text-align:center">猫头鹰</td>
+<td style="text-align:center"><a href="#2-ihttp-tracker">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/IPvBZ-6Yf.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Thor</td>
+<td style="text-align:center">锤子</td>
+<td style="text-align:center"><a href="#3-thor">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/P0iV_ZRJh.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Shadowrocket</td>
+<td style="text-align:center">小火箭</td>
+<td style="text-align:center"><a href="#4-shadowrocket">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/Q4RR6-gvS.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Quantumult X</td>
+<td style="text-align:center">圈叉</td>
+<td style="text-align:center"><a href="#5-quantumult-x">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/stNyUVg9x.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="#6-surge-4">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/HnS4fzJOE.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Loon</td>
+<td style="text-align:center">气球</td>
+<td style="text-align:center"><a href="#7-loon">文字教程</a></td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>点击查看：常用网络调试工具对比</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HTTP Catcher<br/>（网球）</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">¥28.00（内购）<br/>$3.99（内购）</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">iHTTP Tracker<br/>（猫头鹰）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">¥18.00<br/>$2.99</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">有 Bug 尚未解决，<br/>暂不可用</td>
+</tr>
+<tr>
+<td style="text-align:center">Thor<br/>（锤子）</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">¥88.00<br/>$12.99</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Shadowrocket<br/>（小火箭）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$2.99</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Quantumult X<br/>（圈叉）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$7.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">TF 名额已满</td>
+</tr>
+<tr>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$49.99（首次内购）<br/>+ $14.99/y（订阅）</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">是真的贵</td>
+</tr>
+<tr>
+<td style="text-align:center">Loon<br/>（气球）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$2.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">Bug 较多</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr>
+<h3 id="1-http-catcher">⑴ HTTP Catcher</h3>
+<details>
+<summary>点击查看：配置跨服</summary>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.hcc”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘HTTP Catcher’”；在 HTTP Catcher 中弹出的“导入”对话框中选择“好的”，即可成功导入。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/HTTP_Catcher/gfcn_switchserver_gw.hcc
+</code></pre>
+<ol start="2">
+<li><strong>启用跨服配置</strong>：进入“更多”→“重写”，在弹出的“重写列表”界面中，点击下面的跨服配置使其前面出现“✓”。</li>
+<li><strong>启用重写功能</strong>：在“重写列表”界面中，打开上面的“重写列表”开关；然后回到“更多”页面。</li>
+<li><strong>启用仅记录消息头</strong>：进入“高级设置”，打开“仅记录消息头”开关；然后回到“历史”页面。</li>
+<li><strong>启动 HTTP Catcher</strong>：点击下方的开关按钮，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 HTTP Catcher。）</li>
+</ol>
+</details>
+<hr>
+<h3 id="2-ihttp-tracker">⑵ iHTTP Tracker</h3>
+<blockquote>
+<p>有 Bug 尚未解决，暂不可用。</p>
+</blockquote>
+<details>
+<summary>点击查看：配置跨服（暂不可用）</summary>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.cs5”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后分享到“iHTTP Tracker”；在 iHTTP Tracker 中弹出的“检测到导入重写规则”对话框中选择“导入”，即可成功导入。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/iHTTP_Tracker/gfcn_switchserver_gw.cs5
+</code></pre>
+<ol start="2">
+<li><strong>启用跨服配置</strong>：进入“设置”→“规则列表”，在“重写”页面中，确保刚刚导入的跨服配置的开关已打开；然后返回“设置”页面。</li>
+<li><strong>停用网络记录保存</strong>：在“设置”页面中，关闭“保存网络记录”开关。</li>
+<li><strong>启动 iHTTP Tracker</strong>：点击下方蓝色的启动按钮，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 iHTTP Tracker。）</li>
+</ol>
+</details>
+<hr>
+<h3 id="3-thor">⑶ Thor</h3>
+<details>
+<summary>点击查看：配置跨服</summary>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.f4thor”类型的跨服配置（过滤器）文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘Thor’”；在弹出的跨服配置（过滤器）预览页面中，点击右上角导出图标，在弹出的菜单中选择“装载”，在弹出的“安全提醒”对话框中选择“继续”，即可成功导入；然后点击左上角的“✗”，回到主界面。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Thor/gfcn_switchserver_gw.f4thor
+</code></pre>
+<ol start="2">
+<li><strong>选中跨服过滤器</strong>：点击闪电按钮上方显示的过滤器名称，在弹出的“过滤器”列表中，点击选中刚导入的跨服过滤器，然后会自动返回首页。</li>
+<li><strong>启动 Thor</strong>：在“过滤器”主界面中，点击闪电按钮启动 Thor，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 Thor。）</li>
+</ol>
+</details>
+<hr>
+<h3 id="4-shadowrocket">⑷ Shadowrocket</h3>
+<blockquote>
+<p>需 Shadowrocket 为 2.1.62 (1118) 及以上的 TF 或商店版本，因为新版本中才有跨服所需的脚本功能。</p>
+<p>另外，因为 2.1.67 (1156) 版本修复了一个 Bug，使得跨服以此版本为界，分为新旧两种。强烈建议更新到 2.1.67 (1156) 版本以上。</p>
+</blockquote>
+<details>
+<summary>点击查看：配置跨服（新，适用于 2.1.67 (1156) 及以上版本）</summary>
+<h4 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h4>
+<ol>
+<li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点。</li>
+<li><strong>设置路由模式</strong>：将“全局路由”设置为“直连”（或“配置”）。</li>
+<li><strong>设置远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入下面的远程订阅 URL，点击下载。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_gw.conf
+</code></pre>
+<ol start="4">
+<li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。</li>
+<li><strong>启动 Shadowrocket</strong>：返回 Shadowrocket 的首页，打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）</li>
+</ol>
+<h4 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h4>
+<ol>
+<li><strong>进入配置编辑界面</strong>：在“配置文件”页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“保存”，返回 Shadowrocket 的首页。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨安卓官服
+## 切换服务器
+gfcn_switchserver_gw = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_gw.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
+</code></pre>
+<ol start="3">
+<li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<details>
+<summary>点击查看：配置跨服（旧，适用于 2.1.62 (1118) ～ 2.1.67 (1155) 版本）</summary>
+<h4 id="方法一直接订阅简易跨服配置-2">方法一：直接订阅简易跨服配置</h4>
+<ol>
+<li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点。</li>
+<li><strong>设置路由模式</strong>：将“全局路由”设置为“直连”（或“配置”）。</li>
+<li><strong>设置远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入下面的远程订阅 URL，点击下载。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_gw_old.conf
+</code></pre>
+<ol start="4">
+<li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。</li>
+<li><strong>启动 Shadowrocket</strong>：返回 Shadowrocket 的首页，打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）</li>
+</ol>
+<h4 id="方法二手动写入当前使用中配置-2">方法二：手动写入当前使用中配置</h4>
+<ol>
+<li><strong>进入配置编辑界面</strong>：在“配置文件”页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“保存”，返回 Shadowrocket 的首页。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨安卓官服
+## 切换服务器
+gfcn_switchserver_gw_old = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_gw_old.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
+</code></pre>
+<ol start="3">
+<li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<hr>
+<h3 id="5-quantumult-x">⑸ Quantumult X</h3>
+<details>
+<summary>点击查看：配置跨服</summary>
+<h4 id="方法一本地脚本商店版-tf-版均可用">方法一：本地脚本（商店版、TF 版均可用）</h4>
+<pre><code>[rewrite_local]
+# 少女前线 跨安卓官服
+## 切换服务器
+^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body gfcn_switchserver_gw.js
+</code></pre>
+<h4 id="方法二远程脚本仅-tf-版可用">方法二：远程脚本（仅 TF 版可用）</h4>
+<pre><code>[rewrite_local]
+# 少女前线 跨安卓官服
+## 切换服务器
+^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php url script-request-body https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Quantumult_X/gfcn_switchserver_gw.js
+</code></pre>
+</details>
+<hr>
+<h3 id="6-surge-4">⑹ Surge 4</h3>
+<details>
+<summary>点击查看：配置跨服</summary>
+<h4 id="方法一订阅模块化配置">方法一：订阅模块化配置</h4>
+<ol>
+<li><strong>安装并启用跨服配置模块</strong>：在“首页”中找到“模块”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“模块”，在弹出的“模块”界面中，找到“安装的模块”部分，点击“安装新模块...”，然后在弹出的“安装模块”对话框中输入下面的 URL 地址，点“好的”下载模块文件。然后在弹出的配置预览窗口中，<strong>检查有无恶意内容并仔细阅读最下方的“警告”</strong>，在确认无误后，点击最下方的“安装”。回到“模块”界面，即可看到跨服配置模块已成功安装，左侧有“✓”表示该模块已启用。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Surge_4/gfcn_switchserver_gw.sgmodule
+</code></pre>
+<ol start="2">
+<li><strong>启用“脚本”功能</strong>：回到“首页”中，将“脚本”卡片的开关打开（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见）。</li>
+<li><strong>启用“始终开启”功能</strong>：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。</li>
+<li><strong>启动 Surge 4</strong>：点击“首页”右上角“启动”按钮启动 Surge 4，即可在 iOS 端跨服登录安卓国服。</li>
+</ol>
+<h4 id="方法二手动编辑配置">方法二：手动编辑配置</h4>
+<ol>
+<li><strong>手动添加跨服配置</strong>：点击“首页”左上角配置名，在弹出的“配置列表”窗口中，点击“在文本模式中编辑”（或是使用任一款编辑器打开你的 Surge 配置文件（.conf）直接进行编辑）。在编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角“完成”保存修改。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨安卓官服
+## 切换服务器
+gfcn_switchserver_gw = type=http-request,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Surge_4/gfcn_switchserver_gw.js,requires-body=1
+</code></pre>
+<ol start="2">
+<li><strong>启用“脚本”功能</strong>：回到“首页”中，将“脚本”卡片的开关打开（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见）。</li>
+<li><strong>启用“始终开启”功能</strong>：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。</li>
+<li><strong>启动 Surge 4</strong>：点击“首页”右上角“启动”按钮启动 Surge 4，即可完成跨服。</li>
+</ol>
+</details>
+<hr>
+<h3 id="7-loon">⑺ Loon</h3>
+<details>
+<summary>点击查看：配置跨服</summary>
+<h4 id="方法一直接下载简易跨服配置">方法一：直接下载简易跨服配置</h4>
+<ol>
+<li><strong>进入“从 URL 下载”页面</strong>：点击下方的“配置”，然后翻到最下面“编辑”部分，点击“从 URL 下载”。</li>
+<li><strong>从 URL 下载配置</strong>：在弹出的“从 URL 下载”页面中，点击最上方的“添加”。然后在弹出的对话框中，将下方的 URL 复制进去，并点击“确定”。接下来弹出的两个提示对话框“发现一个配置文件，是否解析并替换当前配置？”及“解析配置文件成功”，都选择“确定”。然后返回 Loon 的首页“仪表”页 。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Loon/gfcn_switchserver_gw.conf
+</code></pre>
+<ol start="3">
+<li><strong>启动 Loon</strong>：点击 Loon 首页”仪表“页右上角的“启动“开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Loon 的连接。）</li>
+</ol>
+<h4 id="方法二手动写入当前使用中配置-3">方法二：手动写入当前使用中配置</h4>
+<ol>
+<li><strong>进入配置编辑界面</strong>：点击下方的“配置”，然后翻到最下面“编辑”部分，点击“文本编辑”。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“完成”，然后返回首页“仪表”页。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨安卓官服
+## 切换服务器
+http-request ^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Loon/gfcn_switchserver_gw.js, requires-body=true, tag=gfcn_switchserver_gw
+</code></pre>
+<ol start="3">
+<li><strong>启用“脚本”功能</strong>：在“仪表”页面中，找到“脚本”卡片，打开“脚本”功能的开关。（若未找到，点击功能卡片下方的“快捷方式”，将“脚本”设置为可见即可）</li>
+<li><strong>重启 Loon</strong>：为确保修改生效，可以开关一次 Loon 右上角的“启动”开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<hr>
+<h2 id="a-2-类型未提供">A-2 类型（未提供）</h2>
+<blockquote>
+<p>A-2：通过<strong>使用他人提供的代理服务器</strong>，<strong>在远端重写客户端请求</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<p>暂不提供此方式为「少女前线」进行跨服，因为使用代理服务器会受多种因素影响，造成跨服不稳定。</p>
+<h2 id="b-类型未提供">B 类型（未提供）</h2>
+<blockquote>
+<p>B-1：通过<strong>对游戏客户端修改后重新打包</strong>，<strong>由他人统一签名后在线下载安装</strong>，<strong>直接</strong>实现跨服。</p>
+<p>B-2：通过<strong>对游戏客户端修改后重新打包</strong>，<strong>自行签名然后越狱安装或侧载</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<p>不提供此方式为「少女前线」进行跨服，因为修改客户端容易被封号。</p>
+<h2 id="c-1-类型">C-1 类型</h2>
+<blockquote>
+<p>C-1：通过<strong>使用云游戏平台</strong>，<strong>将游戏画面实时传输至移动设备</strong>，<strong>间接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">网易云游戏</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">见网易云游戏官网</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">网易云游戏</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">¥15.9/月<br/>¥70/季<br/>¥240/年</td>
+<td style="text-align:center">★★★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">部分渠道服平台未提供</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：</p>
+<p>网易云游戏 - 官网：<a href="https://cg.163.com">https://cg.163.com</a></p>
+</blockquote>
+<h2 id="c-2-类型">C-2 类型</h2>
+<blockquote>
+<p>C-2：通过<strong>使用云主机</strong>，<strong>将游戏画面实时传输至移动设备</strong>，<strong>间接</strong>实现跨服。</p>
+</blockquote>
+<p>此方法需自行摸索。</p>
+<hr>
+<h2 id="附录1app-store-链接">附录1：App Store 链接</h2>
+<ul>
+<li>
+<p><strong>游戏本体</strong></p>
+<ul>
+<li>少女前线：<a href="https://apps.apple.com/app/id1117273600">https://apps.apple.com/app/id1117273600</a></li>
+</ul>
+</li>
+<li>
+<p><strong>网络调试工具（仅抓包）</strong></p>
+<ul>
+<li>HTTP Catcher：<a href="https://apps.apple.com/app/id1445874902">https://apps.apple.com/app/id1445874902</a></li>
+<li>iHTTP Tracker：<a href="https://apps.apple.com/app/id1463315864">https://apps.apple.com/app/id1463315864</a></li>
+<li>Thor：<a href="https://apps.apple.com/app/id1210562295">https://apps.apple.com/app/id1210562295</a></li>
+</ul>
+</li>
+<li>
+<p><strong>网络调试工具（抓包、代理）</strong></p>
+<ul>
+<li>Shadowrocket：<a href="https://apps.apple.com/app/id932747118">https://apps.apple.com/app/id932747118</a></li>
+<li>Quantumult X：<a href="https://apps.apple.com/app/id1443988620">https://apps.apple.com/app/id1443988620</a></li>
+<li>Surge 4：<a href="https://apps.apple.com/app/id1442620678">https://apps.apple.com/app/id1442620678</a></li>
+<li>Loon：<a href="https://apps.apple.com/app/id1373567447">https://apps.apple.com/app/id1373567447</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="附录2少女前线国服客户端登录参数">附录2：「少女前线」国服客户端登录参数</h2>
+<blockquote>
+<p>以下为分别连接不同的国服服务器时，有效的客户端登录参数。</p>
+</blockquote>
+<h3 id="官服">官服</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数(→)<br/>服务器(↓)</th>
+<th style="text-align:center">URL / Host</th>
+<th style="text-align:center">Request Body<br/><code>channel</code></th>
+<th style="text-align:center">Request Body<br/><code>device</code></th>
+<th style="text-align:center">Request Body<br/><code>platformChannelId</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安卓官服</td>
+<td style="text-align:center">⋯<code>.gw.</code>⋯</td>
+<td style="text-align:center"><code>cn_mica</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>GWGW</code><br/><code>TapTap</code></td>
+</tr>
+<tr>
+<td style="text-align:center">iOS 官服</td>
+<td style="text-align:center">⋯<code>.ios.</code>⋯</td>
+<td style="text-align:center"><code>cn_appstore</code></td>
+<td style="text-align:center"><code>ios</code></td>
+<td style="text-align:center"><code>ios</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="渠道服">渠道服</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数(→)<br/>服务器(↓)</th>
+<th style="text-align:center">URL / Host</th>
+<th style="text-align:center">Request Body<br/><code>channel</code></th>
+<th style="text-align:center">Request Body<br/><code>device</code></th>
+<th style="text-align:center">Request Body<br/><code>platformChannelId</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Bilibili 服</td>
+<td style="text-align:center">⋯<code>.bili.</code>⋯</td>
+<td style="text-align:center"><code>cn_bili</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>Bili</code></td>
+</tr>
+<tr>
+<td style="text-align:center">渠道混服</td>
+<td style="text-align:center">⋯<code>.ly.</code>⋯</td>
+<td style="text-align:center"><code>cn_third</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>GWHF</code></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[（已失效，仅作留念）「崩坏3」跨服手册（iOS 端 → 安卓国服）]]></title>
+        <id>https://blog.mornwind.cc/BH3CN-SwitchServer-iOS2Android</id>
+        <link href="https://blog.mornwind.cc/BH3CN-SwitchServer-iOS2Android"/>
+        <updated>2020-02-17T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[目前，iOS 端「崩坏3」玩安卓国服，可通过 HTTP Catcher / iHTTP Tracker / Thor / Shadowrocket / Pepi / Quantumult / Quantumult X / Surge 4 /...]]></summary>
+        <content type="html"><![CDATA[<p>目前，iOS 端「崩坏3」玩安卓国服，可通过 HTTP Catcher / iHTTP Tracker / Thor / Shadowrocket / Pepi / Quantumult / Quantumult X / Surge 4 / Loon 等 9 款网络调试工具来进行跨服，无需越狱或使用跨服包。</p>
+<p>⚠️注⚠️：自 4.0 版本更新后，A/B 类方法全部失效，仅可使用 C 类方法进行跨服。望周知。</p>
+<!-- more -->
+<blockquote>
+<p>By: <a href="https://blog.mornwind.cc">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/BH3CN_SwitchServer">Mornwind/BH3CN_SwitchServer</a></p>
+</blockquote>
+<h2 id="致谢">致谢</h2>
+<ul>
+<li><strong>参考&amp;协助</strong>
+<ul>
+<li><a href="https://space.bilibili.com/455501">霞ヶ丘詩羽x</a>：<a href="https://www.bilibili.com/read/cv3610324">B站专栏（cv3610324）</a></li>
+<li><a href="https://space.bilibili.com/6876517">FlintyLemming</a>：<a href="https://bitbucket.flinty.moe/projects/PER/repos/bh3_server_switch/browse">QuanX 跨服教程</a></li>
+</ul>
+</li>
+<li><strong>指导&amp;纠错</strong>
+<ul>
+<li>NobyDa</li>
+<li>chavyleung</li>
+<li>KorenKrita</li>
+</ul>
+</li>
+</ul>
+<h2 id="前言">前言</h2>
+<p>作为一个晚登录两三天没能拿到“登录纪念勋章”的安卓国服的甲板老清洁工，自从嫌弃安卓机的卡慢（以及当年月光的光翼特效显示不出来），咬咬牙入了 iPod touch 和 iPad Pro 之后，便开始发愁：安卓端甲板上的老婆们，要怎么打包带到 iOS 端？</p>
+<p>奈何，米忽悠一直不为 iOS 客户端加上安卓国服的登录入口（反过来也没有）。后来 ME 社跨服包的出现，为我带来了一线光明。找“Msk包子”大佬购入了无需自签的 iOS 端跨服客户端以后，连续用了好几个版本，省去了每周重新自签的麻烦，倒也还算舒服（只不过得每隔三四个版本付一次分发平台的证书费） 。</p>
+<p>最近在 TG 上研究 Surge 4 上可用的签到脚本的时候，偶然结识了一位在用 Quantumult X 的大佬“FlintyLemming”，而他的为崩坏3跨服的方法为我指明了另一条道路，也就促使了本项目的诞生。</p>
+<p>在跟“FlintyLemming”大佬进行沟通交流的过程中，我也了解到，他在 Quantumult X 上实现的跨服方法，是借鉴B站一位大佬“霞ヶ丘詩羽x”提供的方案而完成的。而本项目，则是同时借鉴了两位大佬的方法，在 Surge 4 上实现了跨服，同时也为 Quantumult X 用户提供了另一种自定义方案。</p>
+<p>此项目的初衷，就是为了能让常挂代理工具（如：Surge 4、Quantumult X）的玩家，无需频繁开关代理工具，就能在忘掉有这么一回事的情况下，在 iOS 端直接登入安卓国服，上舰<del>玩老婆</del>陪老婆玩。</p>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li><strong>非官方直接提供的“跨服”行为，本身就违反了 Mihoyo 的用户协议。如若担心自己被封号，请勿使用本方法跨服，买对应的设备去玩更安全放心。</strong></li>
+<li>目前在 iOS 端登录安卓国服，仍无法进行充值，还需要自备安卓设备或者用 PC 端进行充值。</li>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>目前跨服<strong>只可在官服之间进行</strong>。渠道服由于<strong>账号系统</strong>不同以及游戏包体中的<strong>登录器</strong>不同，现阶段没有找到方法跨服，只能通过在 PC 端上扫码进行登录这种方式，敬请见谅。本项目中关于渠道服的部分，仅作学习参考，尚起不到实际用途。</li>
+<li><strong>若出现资源缺失，需先进 iOS 国服下载资源。</strong></li>
+</ol>
+<hr>
+<h2 id="效果预览">效果预览</h2>
+<p><img src="https://static.gridea.dev/280337189156422152/h_V8RyUmA.jpg" alt="崩坏3 跨服预览" loading="lazy"></p>
+<hr>
+<h2 id="ios-端常见跨服方式">iOS 端常见跨服方式</h2>
+<p>在 iOS 端上，常见的游戏跨服方式主要可分为以下三大类六小类：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">方式</th>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#a-1-%E7%B1%BB%E5%9E%8B%E5%B7%B2%E5%85%A8%E9%83%A8%E5%A4%B1%E6%95%88">A-1</a></td>
+<td style="text-align:center">通过<strong>使用网络调试工具</strong>，<br/><strong>在本地重写客户端请求</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">本地修改无需依赖他人<br/>基本不受游戏版本更新影响</td>
+<td style="text-align:center">需要会亿点操作<br/>部分工具价格较高<br/>部分工具在国区无法下载</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#a-2-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">A-2</a></td>
+<td style="text-align:center">通过<strong>使用他人提供的代理服务器</strong>，<br/><strong>在远端重写客户端请求</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">操作较少</td>
+<td style="text-align:center">依赖代理服务器的稳定性<br/>安全性无法保证</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#b-%E7%B1%BB%E5%9E%8B%E5%B7%B2%E5%85%A8%E9%83%A8%E5%A4%B1%E6%95%88">B-1</a></td>
+<td style="text-align:center">通过<strong>对游戏客户端修改后重新打包</strong>，<br/><strong>由他人统一签名后在线下载安装</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">几乎无需操作</td>
+<td style="text-align:center">签名所需证书费较贵<br/>更新后需等待新跨服包发布</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#b-%E7%B1%BB%E5%9E%8B%E5%B7%B2%E5%85%A8%E9%83%A8%E5%A4%B1%E6%95%88">B-2</a></td>
+<td style="text-align:center">通过<strong>对游戏客户端修改后重新打包</strong>，<br/><strong>自行签名然后越狱安装或侧载</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">无需花钱</td>
+<td style="text-align:center">需要会亿点操作<br/>越狱影响系统安全性<br/>每 7 天需重新签名<br/>更新后需等待新跨服包发布</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#c-1-%E7%B1%BB%E5%9E%8B">C-1</a></td>
+<td style="text-align:center">通过<strong>使用云游戏平台</strong>，<br/><strong>将游戏画面实时传输至移动设备</strong>，<br/><strong>间接</strong>实现跨服</td>
+<td style="text-align:center">操作较少<br/>能跨部分渠道服</td>
+<td style="text-align:center">可选渠道服受制于云平台<br/>严重依赖网络质量<br/>安全性无法保证<br/>非会员每日游戏时长受限<br/>非会员每次进入需排队等候</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#c-2-%E7%B1%BB%E5%9E%8B">C-2</a></td>
+<td style="text-align:center">通过<strong>使用云主机</strong>，<br/><strong>将游戏画面实时传输至移动设备</strong>，<br/><strong>间接</strong>实现跨服</td>
+<td style="text-align:center">能跨渠道服</td>
+<td style="text-align:center">需要会亿点操作<br/>云主机普遍价格很高<br/>严重依赖网络质量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-1-类型已全部失效">A-1 类型（已全部失效）</h2>
+<blockquote>
+<p>A-1：通过<strong>使用网络调试工具</strong>，<strong>在本地重写客户端请求</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/hlY95SGGX.png" alt="" loading="lazy"></td>
+<td style="text-align:center">HTTP Catcher</td>
+<td style="text-align:center">网球</td>
+<td style="text-align:center"><a href="#1-http-catcher">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/dhqszfu3i.png" alt="" loading="lazy"></td>
+<td style="text-align:center">iHTTP Tracker</td>
+<td style="text-align:center">猫头鹰</td>
+<td style="text-align:center"><a href="#2-ihttp-tracker">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/IPvBZ-6Yf.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Thor</td>
+<td style="text-align:center">锤子</td>
+<td style="text-align:center"><a href="#3-thor">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/P0iV_ZRJh.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Shadowrocket</td>
+<td style="text-align:center">小火箭</td>
+<td style="text-align:center"><a href="#4-shadowrocket">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/vrsb5Obtj.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Pepi</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="#5-pepi">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/YVL3WyH1J.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Quantumult</td>
+<td style="text-align:center">圈</td>
+<td style="text-align:center"><a href="#6-quantumult">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/Q4RR6-gvS.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Quantumult X</td>
+<td style="text-align:center">圈叉</td>
+<td style="text-align:center"><a href="https://bitbucket.flinty.moe/projects/PER/repos/bh3_server_switch/browse/README.md">图文教程（Flinty）</a><br/><a href="#7-quantumult-x">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/stNyUVg9x.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="#8-surge-4">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/HnS4fzJOE.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Loon</td>
+<td style="text-align:center">气球</td>
+<td style="text-align:center">参考 Surge 4</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HTTP Catcher<br/>（网球）</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">¥28.00（内购）<br/>$3.99（内购）</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">3.0 版正在开发中</td>
+</tr>
+<tr>
+<td style="text-align:center">iHTTP Tracker<br/>（猫头鹰）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">¥18.00<br/>$2.99</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">需 2.0 版</td>
+</tr>
+<tr>
+<td style="text-align:center">Thor<br/>（锤子）</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">¥88.00<br/>$12.99</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Shadowrocket<br/>（小火箭）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$2.99</td>
+<td style="text-align:center">★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Pepi</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$1.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">开发者已停更</td>
+</tr>
+<tr>
+<td style="text-align:center">Quantumult<br/>（圈）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$4.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">开发者已停更</td>
+</tr>
+<tr>
+<td style="text-align:center">Quantumult X<br/>（圈叉）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$7.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">TF 名额已满</td>
+</tr>
+<tr>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$49.99（首次内购）<br/>+ $14.99/y（订阅）</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Loon<br/>（气球）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$2.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">Bug 较多</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：</p>
+<p>世界蛇⟡崩3少前跨服 - QQ 群：<a href="https://jq.qq.com/?_wv=1027&amp;k=5rnvPAT"><code>915089623</code></a></p>
+</blockquote>
+<h3 id="1-http-catcher">⑴ HTTP Catcher</h3>
+<details>
+<summary>点击查看：配置方法（已失效）</summary>
+<h4 id="️-特别说明-️">⚠️ 特别说明 ⚠️</h4>
+<ol>
+<li>需定时清理抓包记录，避免长时间使用后，占用太多存储空间。</li>
+</ol>
+<h4 id="配置方法">配置方法</h4>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.hcc”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘HTTP Catcher’”；在 HTTP Catcher 中弹出的“导入”对话框中选择“好的”，即可成功导入。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/HTTP_Catcher/bh3cn_switchserver_v4.0.0.hcc
+</code></pre>
+<ol start="2">
+<li><strong>启用跨服配置</strong>：进入“更多”→“重写”，在弹出的“重写列表”界面中，点击下面的跨服配置使其前面出现“✓”。</li>
+<li><strong>启用重写功能</strong>：在“重写列表”界面中，打开上面的“重写列表”开关；然后回到“更多”页面。</li>
+<li><strong>启用 HTTPS 解密功能</strong>：在“更多”页面，打开最上面的“解密 HTTPS 流量”开关（旧版本中，此开关为“开启 HTTPS 抓包”）。</li>
+<li><strong>安装 MitM 证书</strong>：在上一步中弹出的“安装证书描述文件”对话框中选择“安装”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 HTTP Catcher 的“更多”页面。</li>
+<li><strong>启用仅记录消息头</strong>：进入“高级设置”，打开“仅记录消息头”开关；然后回到“历史”页面。</li>
+<li><strong>启动 HTTP Catcher</strong>：点击下方的开关按钮，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 HTTP Catcher。）</li>
+</ol>
+</details>
+<h3 id="2-ihttp-tracker">⑵ iHTTP Tracker</h3>
+<details>
+<summary>点击查看：配置方法（已失效）</summary>
+<h4 id="️-特别说明-️-2">⚠️ 特别说明 ⚠️</h4>
+<ol>
+<li>需 iHTTP Tracker 的 2.0 (41) 及以上 TF 或商店版本。</li>
+<li>停用网络记录保存功能，可有效避免长时间使用后占用太多存储空间的问题。</li>
+</ol>
+<h4 id="配置方法-2">配置方法</h4>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.cs5”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后分享到“iHTTP Tracker”；在 iHTTP Tracker 中弹出的“检测到导入重写规则”对话框中选择“导入”，即可成功导入。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/iHTTP_Tracker/bh3cn_switchserver_v4.0.0.cs5
+</code></pre>
+<ol start="2">
+<li><strong>启用跨服配置</strong>：进入“设置”→“规则列表”，在“重写”页面中，确保刚刚导入的跨服配置的开关已打开；然后返回“设置”页面。</li>
+<li><strong>安装 MitM 证书</strong>：进入“设置”→“HTTPS 证书管理”，在“HTTPS 证书管理”页面中点击“前往安装证书”，在跳转的浏览器页面中点击“rootCA.pem”按钮，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Thor 的“设置”页面。</li>
+<li><strong>启用 HTTPS 解析</strong>：在“设置”页面中，打开“开启 HTTPS”开关。</li>
+<li><strong>停用网络记录保存</strong>：在“设置”页面中，关闭“保存网络记录”开关。</li>
+<li><strong>启动 iHTTP Tracker</strong>：点击下方蓝色的启动按钮，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 iHTTP Tracker。）</li>
+</ol>
+</details>
+<h3 id="3-thor">⑶ Thor</h3>
+<details>
+<summary>点击查看：配置方法（已失效）</summary>
+<h4 id="️-特别说明-️-3">⚠️ 特别说明 ⚠️</h4>
+<ol>
+<li>需及时清理抓包记录，避免长时间使用后占用太多存储空间。</li>
+<li>请勿从共享 Apple ID 或盗版来源下载 Thor，否则会在 Thor <strong>验证收据时触发保护机制</strong>，导致 Thor 的<strong>关键功能永久失效</strong>。</li>
+<li>请及时更新 Thor 版本，因为<strong>新版本 Thor 上生成的跨服配置（过滤器）文件无法在旧版本上正常使用</strong>。</li>
+</ol>
+<h4 id="配置方法-3">配置方法</h4>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.f4thor”类型的跨服配置（过滤器）文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘Thor’”；在弹出的跨服配置（过滤器）预览页面中，点击右上角导出图标，在弹出的菜单中选择“装载”，在弹出的“安全提醒”对话框中选择“继续”，即可成功导入；然后点击左上角的“✗”，回到首页。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Thor/bh3cn_switchserver.f4thor
+</code></pre>
+<ol start="2">
+<li><strong>选中跨服所用过滤器</strong>：点击闪电按钮上方显示的过滤器名称，在弹出的“过滤器”列表中，点击刚刚导入的跨服所用过滤器，然后会自动返回首页。</li>
+<li><strong>安装 MitM 证书</strong>：进入“更多”→“HTTPS 解析设置”，在“HTTPS 证书管理”页面中点击“安装证书到系统”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Thor 的“HTTPS 证书管理”页面。</li>
+<li><strong>启用 HTTPS 解析</strong>：在“HTTPS 证书管理”页面中，打开证书右侧的开关；然后返回首页。</li>
+<li><strong>启动 Thor</strong>：点击闪电按钮启动 Thor，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 Thor。）</li>
+</ol>
+</details>
+<h3 id="4-shadowrocket">⑷ Shadowrocket</h3>
+<details>
+<summary>点击查看：配置方法（已失效）</summary>
+<h4 id="️-特别说明-️-4">⚠️ 特别说明 ⚠️</h4>
+<ol>
+<li>一定要是 Shadowrocket 的 2.1.49 (964) 及以上 TF 或商店版本，因为旧版本中有一个“正则出错导致匹配结果越界”的 Bug，会使得 VPN 在触发规则时停止运行。</li>
+<li>新建的节点为本机地址（可以自行谷歌一下“localhost”及“127.0.0.1”的用途），并非自建服务器。</li>
+</ol>
+<h4 id="配置方法重定向法">配置方法（重定向法）</h4>
+<blockquote>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
+<h5 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h5>
+<blockquote>
+<p>适合于：从未使用过 Shadowrocket 的新用户；曾用过 Shadowrocket 但目前没有上外网需求的老用户；折腾不来或不爱折腾的新、老用户。</p>
+</blockquote>
+<ol>
+<li><strong>新建本机节点</strong>：在首页，点击右上角“+”，添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其他在 1-65535 之间的端口）的节点，然后在首页的“服务器节点”中选中该节点。</li>
+<li><strong>设置路由模式</strong>：将“全局路由”设置为“直连”。</li>
+<li><strong>设置远程订阅 URL</strong>：在“配置文件”页面，点击右上角“+”，输入下面的远程订阅 URL，点击下载。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Shadowrocket/bh3cn_switchserver.conf
+</code></pre>
+<ol start="4">
+<li><strong>下载并应用简易跨服配置</strong>：在“远程文件”中点击该 URL，选择“使用配置”，等待下载完毕后，即可看到“本地文件”中加载了本配置。</li>
+<li><strong>安装 MitM 证书</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，点击“证书授权”部分的“密码”右侧的ⓘ，在弹出的“证书”窗口中点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后返回 Shadowrocket 的“HTTPS 解密”页面。</li>
+<li><strong>启用 HTTPS 解密</strong>：打开“HTTPS 解密”的开关，点击右上角的“✓”保存设置；然后返回 Shadowrocket 的首页。</li>
+<li><strong>启动 Shadowrocket</strong>：打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）</li>
+</ol>
+<h5 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h5>
+<blockquote>
+<p>适合于：目前仍在使用 Shadowrocket 上外网的老用户；爱折腾的新、老用户。</p>
+</blockquote>
+<ol>
+<li><strong>进入配置编辑界面</strong>：在“配置文件”页面，从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑纯文本”。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[URL Rewrite]</code>、<code>[MITM]</code> 两处下方的代码，在配置文件中分别找到对应位置复制进去，然后点击右上角的“保存”。</li>
+</ol>
+<pre><code>[URL Rewrite]
+# 崩坏3 跨服
+# &gt; 获取全平台服务器列表
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) https://$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4 HEADER
+# &gt; 改写连入服务器的客户端标识
+# &gt;&gt; 安卓国服
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.14.51.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
+# &gt;&gt; iOS国服
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://139.224.7.27/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
+# &gt;&gt; 全平台（桌面）服
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 HEADER
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+<ol start="3">
+<li><strong>安装 MitM 证书</strong>：从“本地文件”中找到当前正在使用的配置，点击它，在弹出的列表中选择“编辑配置”，进入“HTTPS 解密”，点击“证书授权”部分的“密码”右侧的ⓘ，在弹出的“证书”窗口中点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后返回 Shadowrocket 的“HTTPS 解密”页面。</li>
+<li><strong>启用 HTTPS 解密</strong>：打开“HTTPS 解密”的开关，点击右上角的“✓”保存设置；然后返回 Shadowrocket 的首页。</li>
+<li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<h3 id="5-pepi">⑸ Pepi</h3>
+<details>
+<summary>点击查看：配置方法（已失效）</summary>
+<h4 id="️-特别说明-️-5">⚠️ 特别说明 ⚠️</h4>
+<ol>
+<li>新建的节点为本机地址（可以自行谷歌一下“localhost”及“127.0.0.1”的用途），并非自建服务器。</li>
+</ol>
+<h4 id="配置方法重定向法-2">配置方法（重定向法）</h4>
+<blockquote>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
+<h5 id="方法一直接下载简易跨服配置">方法一：直接下载简易跨服配置</h5>
+<blockquote>
+<p>适合于：从未使用过 Pepi 的新用户；曾用过 Pepi 但目前没有上外网需求的老用户；折腾不来或不爱折腾的新、老用户。</p>
+</blockquote>
+<ol>
+<li><strong>新建本机节点</strong>：在首页，点击绿色圆按钮下方第一个项目“暂无节点”，进入“服务器节点”页面，点击“添加节点”，然后添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其它在 1-65535 之间的端口）的节点，然后在“服务器节点”页面。</li>
+<li><strong>下载并应用简易跨服规则文件</strong>：点击主页左上角三横线“☰”，进入“配置”→“规则文件”页面，点击“导入”中的“从 URL 下载”，在弹出的窗口中，输入下面的 URL 下载规则文件，然后在上方“规则文件”列表中点击选中刚刚下载的规则。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Pepi/bh3cn_switchserver.conf
+</code></pre>
+<ol start="3">
+<li><strong>安装 MitM 证书</strong>：回到首页，点击主页左上角三横线“☰”，进入“设置”→“HTTPS”页面，点击“证书”中的“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Pepi 的“HTTPS”页面。</li>
+<li><strong>配置 HTTPS 解密</strong>：在“HTTPS”页面中，进入“域名”页面，在“添加主机名称”中添加一条 <code>*.bh3.com</code>，然后点击右上角“✓”，回到“HTTPS”页面，打开“解密 HTTPS 流量”开关，然后再点击右上角“✓”，然后回到首页。</li>
+<li><strong>启动 Pepi</strong>：在首页，点击中间绿色圆形按钮启动 Pepi，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Pepi。）</li>
+</ol>
+<h5 id="方法二手动写入当前使用中配置-2">方法二：手动写入当前使用中配置</h5>
+<blockquote>
+<p>适合于：目前仍在使用 Pepi 上外网的老用户；爱折腾的新、老用户。</p>
+</blockquote>
+<ol>
+<li><strong>新建本机节点</strong>：在首页，点击绿色圆按钮下方第一个项目“暂无节点”，进入“服务器节点”页面，点击“添加节点”，然后添加一个类型为“HTTP”（或“HTTPS”）、地址为“localhost”（或“127.0.0.1”）、端口为“1080”（或其它在 1-65535 之间的端口）的节点，然后在“服务器节点”页面。</li>
+<li><strong>进入配置编辑界面</strong>：点击主页左上角三横线“☰”，进入“配置”→“规则文件”页面，在“规则文件”中找到正在使用的规则文件，左划，点击“编辑”，进入配置编辑界面。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[URL REWRITE]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的“保存”。</li>
+</ol>
+<pre><code>[URL REWRITE]
+# 崩坏3 跨服
+# &gt; 获取全平台服务器列表
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) https://$1.bh3.com/query_dispatch?version=$2_gf_pc HEADER
+# &gt; 改写连入服务器的客户端标识
+# &gt;&gt; 安卓国服
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.14.51.73/query_gameserver?version=$1_gf_pc HEADER
+# &gt;&gt; iOS国服
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://139.224.7.27/query_gameserver?version=$1_gf_pc HEADER
+# &gt;&gt; 全平台（桌面）服
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.15.162.73/query_gameserver?version=$1_gf_pc HEADER
+</code></pre>
+<ol start="4">
+<li><strong>安装 MitM 证书</strong>：回到首页，点击主页左上角三横线“☰”，进入“设置”→“HTTPS”页面，点击“证书”中的“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书，然后回到 Pepi 的“HTTPS”页面。</li>
+<li><strong>配置 HTTPS 解密</strong>：在“HTTPS”页面中，进入“域名”页面，在“添加主机名称”中添加一条 <code>*.bh3.com</code>，然后点击右上角“✓”，回到“HTTPS”页面，打开“解密 HTTPS 流量”开关，然后再点击右上角“✓”，然后回到首页。</li>
+<li><strong>重启 Pepi</strong>：在首页，点击中间绿色圆形按钮启动 Pepi，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<h3 id="6-quantumult">⑹ Quantumult</h3>
+<details>
+<summary>点击查看：配置方法（已失效）</summary>
+<h4 id="️-特别说明-️-6">⚠️ 特别说明 ⚠️</h4>
+<ol>
+<li>运行模式请一定要选择为“自动分流”模式，否则会导致跨服配置不生效。</li>
+</ol>
+<h4 id="配置方法重定向法-3">配置方法（重定向法）</h4>
+<blockquote>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
+<h5 id="方法一直接下载简易跨服配置-2">方法一：直接下载简易跨服配置</h5>
+<blockquote>
+<p>适合于：从未使用过 Quantumult 的新用户；曾用过 Quantumult 但目前没有上外网需求的老用户；折腾不来或不爱折腾的新、老用户。</p>
+</blockquote>
+<ol>
+<li><strong>下载简易跨服配置</strong>：在“设置”页面的“配置文件”部分，点击“下载配置文件”，在弹出的窗口中输入下面的配置文件下载 URL，点击“好”来下载配置文件，然后在弹出的配置编辑窗口中点击右上角“保存”。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Quantumult/bh3cn_switchserver.conf
+</code></pre>
+<ol start="2">
+<li><strong>启用 HTTPS 解密</strong>：在“设置”页面的“TCP”部分，找到“HTTPS 解密”点击进入，然后打开“HTTPS 解密”的开关。</li>
+<li><strong>安装 MitM 证书</strong>：点击下方“密钥及证书”部分中的“生成密钥及证书”，成功生成证书后，点击右上角“保存”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；返回 Quantumult，保存“HTTPS 解密”设置，然后返回“设置”页面。</li>
+<li><strong>设置运行模式</strong>：在“设置”页面的“TCP”部分，找到“运行模式”点击进入，在“选择运行模式”中选择“自动分流”，然后返回“主页”。</li>
+<li><strong>启动 Quantumult</strong>：打开“主页”右上角的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+<li><strong>停止 Quantumult</strong>：不玩游戏时，别忘了停止 Quantumult 的连接。</li>
+</ol>
+<h5 id="方法二手动写入当前使用中配置-3">方法二：手动写入当前使用中配置</h5>
+<blockquote>
+<p>适合于：目前仍在使用 Quantumult 上外网的老用户；爱折腾的新、老用户。</p>
+</blockquote>
+<ol>
+<li><strong>进入配置编辑界面</strong>：在“设置”页面的“配置文件”部分，点击“编辑配置文件”。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[REWRITE]</code>、<code>[MITM]</code> 两处下方的代码，在配置文件中分别找到对应位置复制进去，然后点击右上角的“保存”。</li>
+</ol>
+<pre><code>[REWRITE]
+# 崩坏3 跨服
+# &gt; 获取全平台服务器列表
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) url 302 https://$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4
+# &gt; 改写连入服务器的客户端标识
+# &gt;&gt; 安卓国服
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) url 302 http://106.14.51.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4
+# &gt;&gt; iOS国服
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) url 302 http://139.224.7.27/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4
+# &gt;&gt; 全平台（桌面）服
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) url 302 http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+<ol start="3">
+<li><strong>启用 HTTPS 解密</strong>：在“设置”页面的“TCP”部分，找到“HTTPS 解密”点击进入，然后打开“HTTPS 解密”的开关。</li>
+<li><strong>安装 MitM 证书</strong>：点击下方“密钥及证书”部分中的“生成密钥及证书”，成功生成证书后，点击右上角“保存”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装该证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；返回 Quantumult，保存“HTTPS 解密”设置，然后返回“设置”页面。</li>
+<li><strong>设置运行模式</strong>：在“设置”页面的“TCP”部分，找到“运行模式”点击进入，在“选择运行模式”中选择“自动分流”，然后返回“主页”。</li>
+<li><strong>重启 Quantumult</strong>：为确保修改生效，可以开关一次 Quantumult 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<h3 id="7-quantumult-x">⑺ Quantumult X</h3>
+<details>
+<summary>点击查看：配置方法（已失效）</summary>
+<h4 id="️-特别说明-️-7">⚠️ 特别说明 ⚠️</h4>
+<ol>
+<li>“脚本法”中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用“重定向法”，或者另寻他法。</li>
+<li>请勿从共享 Apple ID 或盗版来源下载 Quantumult X，否则会在 Quantumult X <strong>验证收据时触发保护机制</strong>，导致 Quantumult X 的<strong>关键功能永久失效</strong>。</li>
+</ol>
+<h4 id="配置教程">配置教程</h4>
+<p>详见 FlintyLemming 的 <a href="https://bitbucket.flinty.moe/projects/PER/repos/bh3_server_switch/browse/README.md">Quantumult X 跨服教程</a>。</p>
+<h4 id="配置方法-4">配置方法</h4>
+<h5 id="方法一重定向法">方法一：重定向法</h5>
+<blockquote>
+<p>仅使用 <strong>URL 重定向（URL Rewrite）</strong> 功能实现。</p>
+</blockquote>
+<pre><code>[rewrite_remote]
+# 崩坏3 跨服（新手直接订阅使用，无需自行更动）
+https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Quantumult_X/bh3cn_switchserver.conf, tag=BH3CN_SwitchServer, enabled=true
+</code></pre>
+<h5 id="方法二脚本法">方法二：脚本法</h5>
+<blockquote>
+<p>仅使用 <strong>脚本（Script）</strong> 功能实现。</p>
+</blockquote>
+<h6 id="方法一本地脚本商店版-tf-版均可用">方法㈠：本地脚本（商店版、TF 版均可用）</h6>
+<pre><code>[rewrite_local]
+# 崩坏3 跨服
+# &gt; 获取全平台服务器列表
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) url script-request-header bh3cn_switchserver.js
+# &gt; 改写连入服务器的客户端标识
+^http:\/\/(.+?)\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) url script-request-header bh3cn_switchserver.js
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+<h6 id="方法二远程脚本仅-tf-版可用">方法㈡：远程脚本（仅 TF 版可用）</h6>
+<pre><code>[rewrite_local]
+# 崩坏3 跨服
+# &gt; 获取全平台服务器列表
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) url script-request-header https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Quantumult_X/bh3cn_switchserver.js
+# &gt; 改写连入服务器的客户端标识
+^http:\/\/(.+?)\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) url script-request-header https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Quantumult_X/bh3cn_switchserver.js
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+</details>
+<h3 id="8-surge-4">⑻ Surge 4</h3>
+<details>
+<summary>点击查看：配置方法（已失效）</summary>
+<h4 id="️-特别说明-️-8">⚠️ 特别说明 ⚠️</h4>
+<ol>
+<li>“脚本法”中，跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请使用“重定向法”，或者另寻他法。</li>
+</ol>
+<h4 id="跨服方法">跨服方法</h4>
+<h5 id="方法一重定向法-2">方法一：重定向法</h5>
+<blockquote>
+<p>基于 <strong>URL 重定向（URL Rewrite）</strong> 功能实现跨服，并可通过 <strong>模块（Module）</strong> 功能实现配置订阅。</p>
+</blockquote>
+<h6 id="方法一添加模块化跨服配置无需手动编辑推荐">方法㈠：添加模块化跨服配置，无需手动编辑（推荐）</h6>
+<ol>
+<li><strong>安装 MitM 证书</strong>：在“首页”中找到“MitM”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“配置根证书”，在弹出的“HTTPS 解密”窗口中，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Surge 4 的“首页”。</li>
+<li><strong>安装并启用跨服配置模块</strong>：在“首页”中找到“模块”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“模块”，在弹出的“模块”界面中，找到“安装的模块”部分，点击“安装新模块...”，然后在弹出的“安装模块”对话框中输入下面的 URL 地址，点“好的”下载模块文件。然后在弹出的配置预览窗口中，<strong>检查有无恶意内容并仔细阅读最下方的“警告”</strong>，在确认无误后，点击最下方的“安装”。回到“模块”界面，即可看到跨服配置模块已成功安装，左侧有“✓”表示该模块已启用。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Surge_4/bh3cn_switchserver_A.sgmodule
+</code></pre>
+<ol start="4">
+<li><strong>启用“Rewrite”和“MitM”功能</strong>：回到“首页”中，将“Rewrite”和“MitM”两个卡片的开关打开（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见）。</li>
+<li><strong>启用“始终开启”功能</strong>：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。</li>
+<li><strong>启动 Surge 4</strong>：点击“首页”右上角“启动”按钮启动 Surge 4，即可在 iOS 端跨服登录安卓国服。</li>
+</ol>
+<h6 id="方法二手动将跨服配置写入配置文件">方法㈡：手动将跨服配置写入配置文件</h6>
+<ol>
+<li><strong>安装 MitM 证书</strong>：在“首页”中找到“MitM”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“配置根证书”，在弹出的“HTTPS 解密”窗口中，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Surge 4 的“首页”。</li>
+<li><strong>手动添加跨服配置</strong>：点击“首页”左上角配置名，在弹出的“配置列表”窗口中，点击“在文本模式中编辑”（或是使用任一款编辑器打开你的 Surge 配置文件（.conf）直接进行编辑）。在编辑窗口中，将以下配置中 <code>[URL Rewrite]</code>、<code>[MITM]</code> 两处下方的代码，在配置文件中分别找到对应位置复制进去，然后点击右上角“完成”保存修改。</li>
+</ol>
+<pre><code>[URL Rewrite]
+# 崩坏3 跨服
+# &gt; 获取全平台服务器列表
+^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+) https://$1.bh3.com/query_dispatch?version=$2_gf_pc&amp;t=$4 header
+# &gt; 改写连入服务器的客户端标识
+# &gt;&gt; 安卓国服
+^http:\/\/106\.14\.51\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.14.51.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; iOS国服
+^http:\/\/139\.224\.7\.27\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://139.224.7.27/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+# &gt;&gt; 全平台（桌面）服
+^http:\/\/106\.15\.162\.73\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+) http://106.15.162.73/query_gameserver?version=$1_gf_pc&amp;t=$3&amp;uid=$4 header
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+<ol start="4">
+<li><strong>启用“Rewrite”和“MitM”功能</strong>：回到“首页”中，将“Rewrite”和“MitM”两个卡片的开关打开（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见）。</li>
+<li><strong>启用“始终开启”功能</strong>：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。</li>
+<li><strong>启动 Surge 4</strong>：点击“首页”右上角“启动”按钮启动 Surge 4，即可在 iOS 端跨服登录安卓国服。</li>
+</ol>
+<h5 id="方法二脚本法-2">方法二：脚本法</h5>
+<blockquote>
+<p>基于 <strong>脚本（Script）</strong> 功能实现跨服，并可通过 <strong>模块（Module）</strong> 功能实现配置订阅。</p>
+</blockquote>
+<h6 id="方法一添加模块化跨服配置无需手动编辑推荐-2">方法㈠：添加模块化跨服配置，无需手动编辑（推荐）</h6>
+<ol>
+<li><strong>安装 MitM 证书</strong>：在“首页”中找到“MitM”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“配置根证书”，在弹出的“HTTPS 解密”窗口中，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Surge 4 的“首页”。</li>
+<li><strong>安装并启用跨服配置模块</strong>：在“首页”中找到“模块”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“模块”，在弹出的“模块”界面中，找到“安装的模块”部分，点击“安装新模块...”，然后在弹出的“安装模块”对话框中输入下面的 URL 地址，点“好的”下载模块文件。然后在弹出的配置预览窗口中，<strong>检查有无恶意内容并仔细阅读最下方的“警告”</strong>，在确认无误后，点击最下方的“安装”。回到“模块”界面，即可看到跨服配置模块已成功安装，左侧有“✓”表示该模块已启用。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Surge_4/bh3cn_switchserver_B.sgmodule
+</code></pre>
+<ol start="4">
+<li><strong>启用“脚本”和“MitM”功能</strong>：回到“首页”中，将“脚本”和“MitM”两个卡片的开关打开（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见）。</li>
+<li><strong>启用“始终开启”功能</strong>：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。</li>
+<li><strong>启动 Surge 4</strong>：点击“首页”右上角“启动”按钮启动 Surge 4，即可在 iOS 端跨服登录安卓国服。</li>
+</ol>
+<h6 id="方法二手动将跨服配置写入配置文件-2">方法㈡：手动将跨服配置写入配置文件</h6>
+<ol>
+<li><strong>安装MitM 证书</strong>：在“首页”中找到“MitM”卡片（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见），点击“配置根证书”，在弹出的“HTTPS 解密”窗口中，点击“生成新的 CA 证书”，成功生成证书后，再点击“安装根证书”，允许下载配置描述文件，前往系统的“设置”→“通用”→“描述文件与设备管理”中安装 MitM 所需证书。</li>
+<li><strong>信任 MitM 证书</strong>：在系统的“设置”→“通用”→“关于本机”→“证书信任设置”中信任该证书；然后回到 Surge 4 的“首页”。</li>
+<li><strong>手动添加跨服配置</strong>：点击“首页”左上角配置名，在弹出的“配置列表”窗口中，点击“在文本模式中编辑”（或是使用任一款编辑器打开你的 Surge 配置文件（.conf）直接进行编辑）。在编辑窗口中，将以下配置中 <code>[Script]</code>、<code>[MITM]</code> 两处下方的代码，在配置文件中分别找到对应位置复制进去，然后点击右上角“完成”保存修改。</li>
+</ol>
+<pre><code>[Script]
+# 崩坏3 跨服
+# &gt; 获取全平台服务器列表
+bh3cn_switchserver = type=http-request,pattern=^https:\/\/(.+?)\.bh3\.com\/query_dispatch\?version=(.+?)_gf_(.+?)&amp;t=(\d+),script-path=https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Surge_4/bh3cn_switchserver.js
+# &gt; 改写连入服务器的客户端标识
+bh3cn_switchserver = type=http-request,pattern=^http:\/\/(.+?)\/query_gameserver\?version=(.+?)_gf_(.+?)&amp;t=(\d+)&amp;uid=(\d+),script-path=https://raw.githubusercontent.com/Mornwind/BH3CN_SwitchServer/master/Surge_4/bh3cn_switchserver.js
+
+[MITM]
+hostname = *.bh3.com
+</code></pre>
+<ol start="4">
+<li><strong>启用“脚本”和“MitM”功能</strong>：回到“首页”中，将“脚本”和“MitM”两个卡片的开关打开（若未找到，则去“更多”→“外观”→“卡片”中将该卡片设为可见）。</li>
+<li><strong>启用“始终开启”功能</strong>：在“更多”→“设置”→“始终开启”中，打开“自动启动 Surge”的开关，即可保持 Surge 4 一直后台开启。</li>
+<li><strong>启动 Surge 4</strong>：点击“首页”右上角“启动”按钮启动 Surge 4，即可完成跨服。</li>
+</ol>
+</details>
+<h3 id="9-loon">⑼ Loon</h3>
+<blockquote>
+<p>参考方法 <a href="#8-surge-4">⑻ Surge 4</a>，此处略去。</p>
+</blockquote>
+<h2 id="a-2-类型未提供">A-2 类型（未提供）</h2>
+<blockquote>
+<p>A-2：通过<strong>使用他人提供的代理服务器</strong>，<strong>在远端重写客户端请求</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<p>尚不提供此方式为「崩坏3」进行跨服。</p>
+<h2 id="b-类型已全部失效">B 类型（已全部失效）</h2>
+<blockquote>
+<p>B-1：通过<strong>对游戏客户端修改后重新打包</strong>，<strong>由他人统一签名后在线下载安装</strong>，<strong>直接</strong>实现跨服。</p>
+<p>B-2：通过<strong>对游戏客户端修改后重新打包</strong>，<strong>自行签名然后越狱安装或侧载</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">ME 社跨服包</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">见 ME 社公众号</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">逆熵乐队跨服包</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">见逆熵乐队公众号</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">ME 社跨服包<br/>（自签）</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">免费</td>
+<td style="text-align:center">★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">Cydia 已失效</td>
+</tr>
+<tr>
+<td style="text-align:center">ME 社跨服包<br/>（免签）</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">¥60.00/三个大版本</td>
+<td style="text-align:center">★★★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">逆熵乐队跨服包<br/>（自签）</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">免费</td>
+<td style="text-align:center">★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">已停止更新</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：</p>
+<p>ME 社 - 微信公众号：（主）<code>me_shebao</code>；（备）<code>me_dby</code></p>
+<p>AntiEntropy 逆熵乐队 - 微信公众号：<code>aeband</code></p>
+</blockquote>
+<h2 id="c-1-类型">C-1 类型</h2>
+<blockquote>
+<p>C-1：通过<strong>使用云游戏平台</strong>，<strong>将游戏画面实时传输至移动设备</strong>，<strong>间接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">网易云游戏</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">见网易云游戏官网</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">网易云游戏</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">¥15.9/月<br/>¥70/季<br/>¥240/年</td>
+<td style="text-align:center">★★★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">部分渠道服平台上没有</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：</p>
+<p>网易云游戏 - 官网：<a href="https://cg.163.com">https://cg.163.com</a></p>
+</blockquote>
+<h2 id="c-2-类型">C-2 类型</h2>
+<blockquote>
+<p>C-2：通过<strong>使用云主机</strong>，<strong>将游戏画面实时传输至移动设备</strong>，<strong>间接</strong>实现跨服。</p>
+</blockquote>
+<p>此方法需自行摸索。</p>
+<hr>
+<h2 id="附录1app-store-链接">附录1：App Store 链接</h2>
+<ul>
+<li>
+<p><strong>游戏本体</strong></p>
+<ul>
+<li>崩坏3：<a href="https://apps.apple.com/app/id1143402987">https://apps.apple.com/app/id1143402987</a></li>
+</ul>
+</li>
+<li>
+<p><strong>网络调试工具（仅抓包）</strong></p>
+<ul>
+<li>HTTP Catcher：<a href="https://apps.apple.com/app/id1445874902">https://apps.apple.com/app/id1445874902</a></li>
+<li>iHTTP Tracker：<a href="https://apps.apple.com/app/id1463315864">https://apps.apple.com/app/id1463315864</a></li>
+<li>Thor：<a href="https://apps.apple.com/app/id1210562295">https://apps.apple.com/app/id1210562295</a></li>
+</ul>
+</li>
+<li>
+<p><strong>网络调试工具（抓包、代理）</strong></p>
+<ul>
+<li>Shadowrocket：<a href="https://apps.apple.com/app/id932747118">https://apps.apple.com/app/id932747118</a></li>
+<li>Pepi：<a href="https://apps.apple.com/app/id1283082051">https://apps.apple.com/app/id1283082051</a></li>
+<li>Quantumult：<a href="https://apps.apple.com/app/id1252015438">https://apps.apple.com/app/id1252015438</a></li>
+<li>Quantumult X：<a href="https://apps.apple.com/app/id1443988620">https://apps.apple.com/app/id1443988620</a></li>
+<li>Surge 4：<a href="https://apps.apple.com/app/id1442620678">https://apps.apple.com/app/id1442620678</a></li>
+<li>Loon：<a href="https://apps.apple.com/app/id1373567447">https://apps.apple.com/app/id1373567447</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="附录2崩坏3国服客户端登录参数">附录2：「崩坏3」国服客户端登录参数</h2>
+<blockquote>
+<p>以下为分别连接不同的国服服务器时，有效的客户端登录参数。</p>
+</blockquote>
+<h3 id="官服">官服</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">服务器 \ 参数</th>
+<th style="text-align:center">客户端标识</th>
+<th style="text-align:center">配置服务器 IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安卓国服</td>
+<td style="text-align:center"><code>gf_android</code><br/><code>gf_pc</code></td>
+<td style="text-align:center"><code>106.14.51.73</code></td>
+</tr>
+<tr>
+<td style="text-align:center">iOS 国服</td>
+<td style="text-align:center"><code>gf_ios</code><br/><code>gf_pc</code></td>
+<td style="text-align:center"><code>139.224.7.27</code></td>
+</tr>
+<tr>
+<td style="text-align:center">全平台（桌面）服</td>
+<td style="text-align:center"><code>gf_pc</code><br/><code>gf_android</code><br/><code>gf_ios</code></td>
+<td style="text-align:center"><code>106.15.162.73</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="渠道服">渠道服</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">服务器 \ 参数</th>
+<th style="text-align:center">客户端标识</th>
+<th style="text-align:center">配置服务器 IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Bilibili 服</td>
+<td style="text-align:center"><code>gf_pc</code><br/><code>gf_android_bilibili</code></td>
+<td style="text-align:center"><code>139.196.248.220</code></td>
+</tr>
+<tr>
+<td style="text-align:center">应用宝服</td>
+<td style="text-align:center"><code>gf_pc</code><br/><code>gf_android_tencent</code></td>
+<td style="text-align:center"><code>115.159.20.29</code></td>
+</tr>
+<tr>
+<td style="text-align:center">渠道 1 服</td>
+<td style="text-align:center"><code>gf_pc</code><br/><code>gf_android_coolpad</code><br/><code>gf_android_gionee</code><br/><code>gf_android_huawei</code><br/><code>gf_android_lenovo</code><br/><code>gf_android_oppo</code><br/><code>gf_android_vivo</code></td>
+<td style="text-align:center"><code>139.196.248.218</code></td>
+</tr>
+<tr>
+<td style="text-align:center">渠道 2 服</td>
+<td style="text-align:center"><code>gf_pc</code><br/><code>gf_android_qihoo</code><br/><code>gf_android_uc</code><br/><code>gf_android_wandoujia</code><br/><code>gf_android_xiaomi</code></td>
+<td style="text-align:center"><code>139.196.248.219</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="测试服需搭配测试专用客户端">测试服（需搭配测试专用客户端）</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">服务器 \ 参数</th>
+<th style="text-align:center">客户端标识</th>
+<th style="text-align:center">配置服务器 IP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安卓测试服（外部）</td>
+<td style="text-align:center"><code>beta</code></td>
+<td style="text-align:center"><code>139.196.1.196:5080</code></td>
+</tr>
+<tr>
+<td style="text-align:center">iOS 测试服（外部）</td>
+<td style="text-align:center"><code>beta_ios</code></td>
+<td style="text-align:center"><code>49.235.123.106:16000</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="附录3崩坏3服务器状态标识">附录3：「崩坏3」服务器状态标识</h2>
+<ul>
+<li><strong>推荐</strong>：<code>&quot;retcode&quot;: 0</code>、<code>&quot;server_state&quot;: &quot;Recommend&quot;</code></li>
+<li><strong>隐藏</strong>：<code>&quot;retcode&quot;: 0</code>、<code>&quot;server_state&quot;: &quot;HIDE&quot;</code></li>
+<li><strong>维护</strong>：<code>&quot;retcode&quot;: 2</code></li>
+</ul>
+]]></content>
+    </entry>
+</feed>

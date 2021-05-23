@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en" style="--theme-color: #262626; --link-color: #262626;">
+<head>
+  <meta charset="UTF-8">
+  <title>「少女前线」跨服手册（散爆版）（iOS 端 → Bilibili 服） - Mornwind&#39;s Blog</title>
+
+  <link rel="icon" href="https://static.gridea.dev/280337189156422152/XASIcJdP6.ico">
+<!-- <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"> -->
+<link rel="alternate" type="application/atom+xml" title="Mornwind&#39;s Blog - Atom Feed" href="https://blog.mornwind.cc/atom.xml">
+
+  
+
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-NFCRR8Q57W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script> -->
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-182385326-1');
+    ga('set', 'dimension1', 'site/ur3ZlRsdL');
+    ga('set', 'dimension2', 'post/LbZceH0IP');
+    ga('send', 'pageview');
+    // gtag('set', {
+    //   'custom_map': {
+    //     'dimension1': 'siteId',
+    //     'dimension2': 'postId',
+    //   }
+    // })
+
+    // gtag('config', 'G-NFCRR8Q57W', {
+    //   'siteId': 'site/ur3ZlRsdL',
+    //   'postId': 'post/LbZceH0IP',
+    // });
+  </script>
+
+
+
+  <script>
+    ga('create', 'UA-160036109-1', {name: 'user'});
+    ga('user.send', 'pageview');
+    // gtag('config', 'UA-160036109-1');
+  </script>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="目前，iOS 端「少女前线」玩 Bilibili 服，可通过 HTTP Catcher / iHTTP Tracker / Thor / Shadowrocket / Quantumult X / Surge 4 / Loon 等 7 款网络调试工具来进行跨服。">
+
+  <meta property="og:title" content="「少女前线」跨服手册（散爆版）（iOS 端 → Bilibili 服） - Mornwind&#39;s Blog">
+  <meta property="og:description" content="目前，iOS 端「少女前线」玩 Bilibili 服，可通过 HTTP Catcher / iHTTP Tracker / Thor / Shadowrocket / Quantumult X / Surge 4 / Loon 等 7 款网络调试工具来进行跨服。">
+  
+  <meta property="og:url" content="https://blog.mornwind.cc/GFCN-SwitchServer-iOS2Bili/">
+  <meta property="og:site_name" content="Mornwind&#39;s Blog">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image:alt" content="「少女前线」跨服手册（散爆版）（iOS 端 → Bilibili 服）">
+
+  <meta name="gridea:post_id" content="LbZceH0IP">
+
+  <link rel="canonical" href="https://blog.mornwind.cc/GFCN-SwitchServer-iOS2Bili">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.0.3/styles/a11y-light.css">
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@gridea/theme@1.0.8/css/main.css">
+
+</head>
+<body>
+  
+    
+  
+  <div id="page">
+    <div class="mb-16 sticky top-0 z-20 bg-white">
+  <header class="py-4 flex items-baseline justify-between max-w-2xl mx-auto px-2">
+    <h1 class="text-lg text-center font-medium px-4 md:px-0 flex items-center">
+      <div class="site-logo-text font-normal">M</div>
+      <a href="/">Mornwind&#39;s Blog</a>
+    </h1>
+    <div class="hidden sm:flex justify-center">
+      
+    </div>
+    <div class="flex sm:hidden py-2 px-4 text-center cursor-pointer" @click="openMenu = true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></svg>
+    </div>
+  </header>
+
+  <div class="fixed top-0 right-0 bottom-0 left-0 bg-white hidden" :style="{
+    display: openMenu ? 'block !important' : 'none',
+  }" v-if="openMenu">
+    <div class="py-4 px-2 flex justify-end" @click="openMenu = false">
+      <div class="flex py-2 px-4 text-center cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></svg>
+      </div>
+    </div>
+    <div class="flex flex-col p-4">
+      
+    </div>
+  </div>
+</div>
+    <div class="border-b border-gray-200">
+      <div class="max-w-2xl mx-auto px-6 md:px-2">
+        <div class="my-24 text-center">
+          <h1 class="text-2xl font-bold">「少女前线」跨服手册（散爆版）（iOS 端 → Bilibili 服）</h1>
+          <div class="post-title-bar mx-auto rounded mt-4"></div>
+          <div class="text-gray-400 mt-4">2021.05.18</div>
+          <div class="flex justify-center mt-4">
+            
+              <a href="https://blog.mornwind.cc/tags/SwitchServer" class="inline-flex items-center mr-4 text-sm text-gray-600">
+                <span class="mr-1">#</span>跨服
+              </a>
+            
+              <a href="https://blog.mornwind.cc/tags/GFCN" class="inline-flex items-center mr-4 text-sm text-gray-600">
+                <span class="mr-1">#</span>少女前线
+              </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="sticky-bar" class="w-full sticky top-0 z-10 bg-white" style="height: 64px;"></div>
+    <div class="p-4 md:p-16 bg-white">
+      <div class="max-w-2xl mx-auto px-4 flex relative">
+        <section class="post-content flex-1 default-post-content max-w-2xl">
+          <div v-pre>
+            <blockquote>
+<p>By: <a href="https://blog.mornwind.cc">Mornwind</a></p>
+<p>GitHub Link: <a href="https://github.com/Mornwind/GFCN_SwitchServer">Mornwind/GFCN_SwitchServer</a></p>
+<p>霞之丘 · 少前跨服 - 加入 QQ 群：<a href="https://jq.qq.com/?_wv=1027&amp;k=5rnvPAT"><code>915089623</code></a></p>
+</blockquote>
+<h2 id="致谢">致谢</h2>
+<ul>
+<li><strong>参考&amp;协助</strong>
+<ul>
+<li><a href="https://space.bilibili.com/455501">霞ヶ丘詩羽x</a>：<a href="https://www.bilibili.com/read/cv3630717">B站专栏（cv3630717）</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="️-注意事项-️">⚠️ 注意事项 ⚠️</h2>
+<ol>
+<li>本项目内所提到的所有客户端与服务器，均为<strong>国服</strong>。</li>
+<li>跨服脚本中<strong>并未含有</strong>用于修改游戏内数据以获得不正当收益的作弊内容，只是用来切换服务器，故理论上不会被封号。跨服脚本代码<strong>公开透明</strong>地存放于本项目中，欢迎随时进行检查。如若不放心，还请另寻他法。</li>
+<li><strong>无法在 iOS 端进行跨服充值，否则 1000% 会错充进 iOS 官服，切记！</strong></li>
+<li>iOS 端跨渠道混服，可参照跨 Bilibili 服的方法。</li>
+</ol>
+<hr>
+<h2 id="ios-端常见跨服方式">iOS 端常见跨服方式</h2>
+<p>在 iOS 端上，常见的游戏跨服方式主要可分为以下三大类六小类：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">方式</th>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="#a-1-%E7%B1%BB%E5%9E%8B">A-1</a></td>
+<td style="text-align:center">通过<strong>使用网络调试工具</strong>，<br/><strong>在本地重写客户端请求</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">本地修改无需依赖他人<br/>基本不受游戏版本更新影响</td>
+<td style="text-align:center">需要会亿点操作<br/>部分工具价格较高<br/>部分工具在国区无法下载</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#a-2-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">A-2</a></td>
+<td style="text-align:center">通过<strong>使用他人提供的代理服务器</strong>，<br/><strong>在远端重写客户端请求</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">操作较少</td>
+<td style="text-align:center">依赖代理服务器的稳定性<br/>安全性无法保证</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#b-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">B-1</a></td>
+<td style="text-align:center">通过<strong>对游戏客户端修改后重新打包</strong>，<br/><strong>由他人统一签名后在线下载安装</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">几乎无需操作</td>
+<td style="text-align:center">签名所需证书费较贵<br/>更新后需等待新跨服包发布</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#b-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">B-2</a></td>
+<td style="text-align:center">通过<strong>对游戏客户端修改后重新打包</strong>，<br/><strong>自行签名然后越狱安装或侧载</strong>，<br/><strong>直接</strong>实现跨服</td>
+<td style="text-align:center">无需花钱</td>
+<td style="text-align:center">需要会亿点操作<br/>越狱影响系统安全性<br/>每 7 天需重新签名<br/>更新后需等待新跨服包发布</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#c-1-%E7%B1%BB%E5%9E%8B">C-1</a></td>
+<td style="text-align:center">通过<strong>使用云游戏平台</strong>，<br/><strong>将游戏画面实时传输至移动设备</strong>，<br/><strong>间接</strong>实现跨服</td>
+<td style="text-align:center">操作较少<br/>能跨部分渠道服</td>
+<td style="text-align:center">可选渠道服受制于云平台<br/>严重依赖网络质量<br/>安全性无法保证<br/>非会员每日游戏时长受限<br/>非会员每次进入需排队等候</td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="#c-2-%E7%B1%BB%E5%9E%8B">C-2</a></td>
+<td style="text-align:center">通过<strong>使用云主机</strong>，<br/><strong>将游戏画面实时传输至移动设备</strong>，<br/><strong>间接</strong>实现跨服</td>
+<td style="text-align:center">能跨渠道服</td>
+<td style="text-align:center">需要会亿点操作<br/>云主机普遍价格很高<br/>严重依赖网络质量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a-1-类型">A-1 类型</h2>
+<blockquote>
+<p>A-1：通过<strong>使用网络调试工具</strong>，<strong>在本地重写客户端请求</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/hlY95SGGX.png" alt="" loading="lazy"></td>
+<td style="text-align:center">HTTP Catcher</td>
+<td style="text-align:center">网球</td>
+<td style="text-align:center"><a href="#1-http-catcher">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/dhqszfu3i.png" alt="" loading="lazy"></td>
+<td style="text-align:center">iHTTP Tracker</td>
+<td style="text-align:center">猫头鹰</td>
+<td style="text-align:center"><a href="#2-ihttp-tracker">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/IPvBZ-6Yf.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Thor</td>
+<td style="text-align:center">锤子</td>
+<td style="text-align:center"><a href="#3-thor">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/P0iV_ZRJh.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Shadowrocket</td>
+<td style="text-align:center">小火箭</td>
+<td style="text-align:center"><a href="#4-shadowrocket">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/Q4RR6-gvS.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Quantumult X</td>
+<td style="text-align:center">圈叉</td>
+<td style="text-align:center"><a href="#5-quantumult-x">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/stNyUVg9x.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center"><a href="#6-surge-4">文字教程</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><img src="https://static.gridea.dev/280337189156422152/HnS4fzJOE.png" alt="" loading="lazy"></td>
+<td style="text-align:center">Loon</td>
+<td style="text-align:center">气球</td>
+<td style="text-align:center"><a href="#7-loon">文字教程</a></td>
+</tr>
+</tbody>
+</table>
+<details>
+<summary>点击查看：常用网络调试工具对比</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">HTTP Catcher<br/>（网球）</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">¥28.00（内购）<br/>$3.99（内购）</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">iHTTP Tracker<br/>（猫头鹰）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">¥18.00<br/>$2.99</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">有 Bug 尚未解决，<br/>暂不可用</td>
+</tr>
+<tr>
+<td style="text-align:center">Thor<br/>（锤子）</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">¥88.00<br/>$12.99</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Shadowrocket<br/>（小火箭）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$2.99</td>
+<td style="text-align:center">★★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">Quantumult X<br/>（圈叉）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$7.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">TF 名额已满</td>
+</tr>
+<tr>
+<td style="text-align:center">Surge 4</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$49.99（首次内购）<br/>+ $14.99/y（订阅）</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">是真的贵</td>
+</tr>
+<tr>
+<td style="text-align:center">Loon<br/>（气球）</td>
+<td style="text-align:center">❌</td>
+<td style="text-align:center">$2.99</td>
+<td style="text-align:center">★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">Bug 较多</td>
+</tr>
+</tbody>
+</table>
+</details>
+<hr>
+<h3 id="1-http-catcher">⑴ HTTP Catcher</h3>
+<details>
+<summary>点击查看：第一部分 获取账号登录信息</summary>
+<p><strong>注意事项</strong>：只有<strong>首次跨服</strong>、<strong>账号登录数据失效</strong>两种情况下才需要完整执行一次第一部分的操作。<strong>不需要每次跨服前都去执行一次！</strong></p>
+<ol>
+<li><strong>【iOS】启用 Wi-Fi 访问</strong>：进入“更多”→“Wi-Fi 访问”，打开“允许 Wi-Fi 访问”开关，并记住下方的“IP 地址”及“端口”；下滑返回“更多”界面。</li>
+<li><strong>【iOS】禁用 HTTPS 解密</strong>：在“更多”界面中，关闭“解密 HTTPS 流量”开关。</li>
+<li><strong>【iOS】禁用仅记录消息头</strong>：进入“更多”→“高级设置”，关闭“仅记录消息头”开关；然后回到“历史”页面。</li>
+<li><strong>【iOS】启动 HTTP Catcher 进行数据抓取</strong>：点击下方的开关按钮启动 HTTP Catcher，即可开始对相同 Wi-Fi 下的 Android 设备进行数据抓取。</li>
+<li><strong>【Android】配置安卓机的 Wi-Fi 代理（不同机型设置方法略有区别）</strong>：<strong>首先保证你的两个设备在同个 Wi-Fi 下</strong>；然后在“系统设置”→“无线网络”中，找到当前连接的 Wi-Fi，点击进入详细设置，找到“代理设置”，将其改为“手动”，并在“服务器”和“端口”中依次填入第 1 步中记下的内容；点击“保存”返回。</li>
+<li><strong>【Android】抓取账号登录数据</strong>：在清除了游戏后台的情况下进入游戏，完整进行一次登录操作，直到看到自己的用户名及等级，即可退出游戏。</li>
+<li><strong>还原第 1～5 步所做操作至修改前</strong>：即：停止 HTTP Catcher；禁用“Wi-Fi 访问”；取消安卓机的 Wi-Fi 代理；开启“仅记录消息头”；启用 HTTPS 解密（此项非必需，视个人使用情况）。</li>
+<li><strong>【iOS】提取账号登录数据（重要！）</strong>：在“历史”界面上方的搜索栏中输入“/third”，即可搜出一条显示为“/third/channelLogin”的记录，点击进入；在弹出的界面中，点击上方的“响应”选项卡，在下方“Preview”中即可找到“open_id”和“token”，将各自后面所跟双引号内的内容复制保存好（复制时不包括双引号本身），在后面的第二部分配置过程中需要用到。</li>
+</ol>
+</details>
+<details>
+<summary>点击查看：第二部分 配置跨服</summary>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.hcc”类型的跨服配置文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘HTTP Catcher’”；在 HTTP Catcher 中弹出的“导入”对话框中选择“好的”，即可成功导入。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/HTTP_Catcher/gfcn_switchserver_bili.hcc
+</code></pre>
+<ol start="2">
+<li><strong>填入账号信息（重要！）</strong>：进入“更多”→“重写”，在弹出的“重写列表”界面中，找到有“写入账号数据”的一条，点击右侧的ⓘ进入“编辑重写”界面；在“规则”中，先点进第一项（含“openid=”），进入“编辑规则”界面，找到最下方的“替换”部分，将已获取到账号数据中的“open_id”值替换掉其中的“abc”（千万不要删改其前后的“$1”及“&amp;”；粘贴后如出现空格需删除），点击右上角的“存储”回到“编辑重写”界面；再点进第二项（含“sid=”），进入“编辑规则”界面，找到最下方的“替换”部分，将已获取到账号数据中的“token”值替换掉其中的“xyz”（千万不要删改其前后的“$1”及“&amp;”；粘贴后如出现空格需删除），点击右上角的“存储”回到“编辑重写”界面；再点击右上角的“存储”回到“重写列表”界面。</li>
+<li><strong>启用跨服配置</strong>：在“重写列表”界面中，依次点击关于跨服的“切换服务器P1”、“切换服务器P2”、“写入账号数据”这三条跨服配置，使其前面全都出现“✓”。</li>
+<li><strong>启用重写功能</strong>：在“重写列表”界面中，打开上面的“重写列表”开关；然后回到“更多”页面。</li>
+<li><strong>启用仅记录消息头</strong>：进入“高级设置”，打开“仅记录消息头”开关；然后回到“历史”页面。</li>
+<li><strong>启动 HTTP Catcher</strong>：点击下方的开关按钮，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 HTTP Catcher。）</li>
+</ol>
+</details>
+<hr>
+<h3 id="2-ihttp-tracker">⑵ iHTTP Tracker</h3>
+<blockquote>
+<p>有 Bug 尚未解决，暂不可用。</p>
+</blockquote>
+<hr>
+<h3 id="3-thor">⑶ Thor</h3>
+<details>
+<summary>点击查看：第一部分 获取账号登录信息</summary>
+<p><strong>注意事项</strong>：只有<strong>首次跨服</strong>、<strong>账号登录数据失效</strong>两种情况下才需要完整执行一次第一部分的操作。<strong>不需要每次跨服前都去执行一次！</strong></p>
+<ol>
+<li><strong>【iOS】设置抓取数据的过滤器</strong>：在“过滤器”主界面中，点击闪电按钮上方显示的漏斗图标或过滤器名称，在弹出的“过滤器”列表中，找到“全局抓包”，点击选中并自动返回主界面。</li>
+<li><strong>【iOS】禁用 HTTPS 解密</strong>：在“更多”界面中，点击“HTTPS 解析设置”进入“HTTPS 证书管理”界面，将“CA 证书”中已启用的证书停用；然后返回主界面。</li>
+<li><strong>【iOS】启用 Wi-Fi 监听</strong>：在“过滤器”主界面中，点击闪电按钮启动 Thor；然后翻到界面最下方，先关闭“本机监听”的开关，再打开“Wi-Fi 监听”的开关，并记住“Wi-Fi 监听”下方的“服务器”及“端口”。</li>
+<li><strong>【Android】配置安卓机的 Wi-Fi 代理（不同机型设置方法略有区别）</strong>：<strong>首先保证你的两个设备在同个 Wi-Fi 下</strong>；然后在“系统设置”→“无线网络”中，找到当前连接的 Wi-Fi，点击进入详细设置，找到“代理设置”，将其改为“手动”，并在“服务器”和“端口”中依次填入第 1 步中记下的内容；点击“保存”返回。</li>
+<li><strong>【Android】抓取账号登录数据</strong>：在清除了游戏后台的情况下进入游戏，完整进行一次登录操作，直到看到自己的用户名及等级，即可退出游戏。</li>
+<li><strong>还原第 2～4 步所做操作至修改前</strong>：即：停止 Thor（会自动重置“本机监听”与“Wi-Fi 监听”的开关为默认状态，无需手改）；取消安卓机的 Wi-Fi 代理；启用 HTTPS 解密（此项非必需，视个人使用情况）。</li>
+<li><strong>【iOS】提取账号登录数据（重要！）</strong>：在“会话记录”界面中，点击进入找到刚才生成的“全局抓包”记录；在弹出的界面上方的“关键字”搜索栏中输入“/third”并点击“搜索”，即可搜出一条显示为“/third/channelLogin”的记录，点击进入；在弹出的界面中，点击上方的“响应”选项卡，再点击“消息体”部分中的“text/html”，在弹出的“消息体”内容界面中即可找到“open_id”和“token”，将各自后面所跟双引号内的内容复制保存好（复制时不包括双引号本身），在后面的第二部分配置过程中需要用到。</li>
+</ol>
+</details>
+<details>
+<summary>点击查看：第二部分 配置跨服</summary>
+<ol>
+<li><strong>下载并导入跨服配置文件</strong>：下载下面的“.f4thor”类型的跨服配置（过滤器）文件，通过“共享”或“在其他应用中打开”调出系统分享菜单，然后选择“拷贝到‘Thor’”；在弹出的跨服配置（过滤器）预览页面中，点击右上角导出图标，在弹出的菜单中选择“装载”，在弹出的“安全提醒”对话框中选择“继续”，即可成功导入；然后点击左上角的“✗”，回到主界面。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Thor/gfcn_switchserver_bili.f4thor
+</code></pre>
+<ol start="2">
+<li><strong>填入账号信息（重要！）</strong>：在“过滤器”主界面中，点击闪电按钮上方显示的漏斗图标或过滤器名称，在弹出的“过滤器”列表中，找到刚导入的跨服过滤器，点击右侧的ⓘ并选择“编辑”；在弹出的过滤器详细设置界面中，找到第二项“挂载断点”并点击下方进入；在“编辑断点”界面中，找到第二项“写入账号数据”并点击其下方的“变量绑定”；在“变量绑定”界面中，进入“${open_id}”下的“当前值”，填入已获取到账号数据中的“open_id”值，返回“变量绑定”界面；再进入“${token}”下的“当前值”，填入已获取到账号数据中的“token”值，返回“变量绑定”界面；点击两次左上角“返回”，然后再点击右上角“存储”，即可保存更改并返回“过滤器”列表。</li>
+<li><strong>选中跨服过滤器</strong>：在“过滤器”列表中，点击选中跨服过滤器，然后就会自动返回主界面。</li>
+<li><strong>启动 Thor</strong>：在“过滤器”主界面中，点击闪电按钮启动 Thor，然后在清除了游戏后台的情况下进入游戏，即可完成跨服。（不玩游戏时，别忘了停止 Thor。）</li>
+</ol>
+</details>
+<hr>
+<h3 id="4-shadowrocket">⑷ Shadowrocket</h3>
+<blockquote>
+<p>需 Shadowrocket 为 2.1.67 (1156) 及以上的 TF 或商店版本。</p>
+</blockquote>
+<details>
+<summary>点击查看：第一部分 获取账号登录信息</summary>
+<p><strong>注意事项</strong>：只有<strong>首次跨服</strong>、<strong>账号登录数据失效</strong>两种情况下才需要完整执行一次第一部分的操作。<strong>不需要每次跨服前都去执行一次！</strong></p>
+<h4 id="方法一直接订阅简易配置">方法一：直接订阅简易配置</h4>
+<ol>
+<li><strong>【iOS】新建本机节点</strong>：在首页，点击右上角”+“，添加一个类型为”HTTP“（或”HTTPS“）、地址为”localhost“（或”127.0.0.1“）、端口为”1080“（或其他在 1-65535 之间的端口）的节点，然后在首页的”服务器节点“中选中该节点。</li>
+<li><strong>【iOS】设置路由模式</strong>：将”全局路由“设置为”直连“（或”配置“）。</li>
+<li><strong>【iOS】设置远程订阅 URL</strong>：在”配置文件“页面，点击右上角”+“，输入下面的远程订阅 URL，点击下载。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili.conf
+</code></pre>
+<ol start="4">
+<li><strong>【iOS】下载并应用简易配置</strong>：在”远程文件“中点击该 URL，选择”使用配置“，等待下载完毕后，即可看到”本地文件“中加载了本配置。</li>
+<li><strong>【iOS】启用调试日志记录</strong>：在”设置“界面，点击进入”高级“部分中的”诊断“，然后打开”启用日志记录“开关；返回首页。</li>
+<li><strong>【iOS】设置代理共享</strong>：在”设置“界面，点击进入”TUNNEL“部分中的”代理“，再点击进入”代理共享“，打开”启用共享“开关，并记住下方的”IP“及”端口“。</li>
+<li><strong>【iOS】启动 Shadowrocket 进行数据抓取</strong>：返回首页，打开 Shadowrocket 的连接开关，即可开始对相同 Wi-Fi 下的 Android 设备进行数据抓取。</li>
+<li><strong>【Android】配置安卓机的 Wi-Fi 代理（不同机型设置方法略有区别）</strong>：<strong>首先保证你的两个设备在同个 Wi-Fi 下</strong>；然后在”系统设置“→”无线网络“中，找到当前连接的 Wi-Fi，点击进入详细设置，找到”代理设置“，将其改为”手动“，并在”服务器“和”端口“中依次填入第 6 步中记下的内容；点击”保存“返回。</li>
+<li><strong>【Android】抓取账号登录数据</strong>：在清除了游戏后台的情况下进入游戏，完整进行一次登录操作，直到看到自己的用户名及等级，即可退出游戏。</li>
+<li><strong>还原第 1～8 步所做操作至修改前</strong>：即：停止 Shadowrocket；取消安卓机的 Wi-Fi 代理；关闭代理共享；关闭调试日志记录；切回原配置文件、原路由模式、原节点（此项非必需，视个人使用情况；但第 1～4 步在第二部分的方法一中<strong>还需再用到</strong>，所以此处<strong>建议保留不还原</strong>）。</li>
+<li><strong>【iOS】提取账号登录数据（重要！）</strong>：在”设置“界面中，点击进入”高级“部分中的”诊断“，再进入“VPN 日志”，找到刚才生成的日志点击进入；在“内容”界面中一直往下翻，直到找到夹在两排等号分隔线之间的“获取账号数据”内容，其中就有”open_id“和”token“，将它们各自复制保存好，在后面的第二部分配置过程中需要用到。</li>
+</ol>
+<h4 id="方法二手动写入当前使用中配置">方法二：手动写入当前使用中配置</h4>
+<ol>
+<li><strong>【iOS】进入配置编辑界面</strong>：在”配置文件“页面，从”本地文件“中找到当前正在使用的配置，点击它，在弹出的列表中选择”编辑纯文本“。</li>
+<li><strong>【iOS】添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的”保存“，返回 Shadowrocket 的首页。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨 Bilibili 服
+## 第一部分 获取帐号数据
+gfcn_switchserver_bili_GetToken = type=http-response,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_GetToken.js,pattern=^http:\/\/gfcn-passport\.(.+?)\.sunborngame\.com\/third\/channelLogin,max-size=1048576,requires-body=true,enable=true
+## 第二部分 切换服务器
+gfcn_switchserver_bili_P1 = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_P1.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
+## 第二部分 写入帐号数据
+gfcn_switchserver_bili_P2 = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_P2.js,pattern=^http:\/\/gfcn-game\.(.+?)\.sunborngame\.com\/index\.php\/5000\/Index\/getUidEnMicaQueue,max-size=1048576,requires-body=true,enable=true
+</code></pre>
+<ol start="3">
+<li><strong>【iOS】启用调试日志记录</strong>：在”设置“界面，点击进入”高级“部分中的”诊断“，然后打开”启用日志记录“开关；返回首页。</li>
+<li><strong>【iOS】设置代理共享</strong>：在”设置“界面，点击进入”TUNNEL“部分中的”代理“，再点击进入”代理共享“，打开”启用共享“开关，并记住下方的”IP“及”端口“。</li>
+<li><strong>【iOS】启动 Shadowrocket 进行数据抓取</strong>：返回首页，打开 Shadowrocket 的连接开关，即可开始对相同 Wi-Fi 下的 Android 设备进行数据抓取。</li>
+<li><strong>【Android】配置安卓机的 Wi-Fi 代理（不同机型设置方法略有区别）</strong>：<strong>首先保证你的两个设备在同个 Wi-Fi 下</strong>；然后在”系统设置“→”无线网络“中，找到当前连接的 Wi-Fi，点击进入详细设置，找到”代理设置“，将其改为”手动“，并在”服务器“和”端口“中依次填入第 4 步中记下的内容；点击”保存“返回。</li>
+<li><strong>【Android】抓取账号登录数据</strong>：在清除了游戏后台的情况下进入游戏，完整进行一次登录操作，直到看到自己的用户名及等级，即可退出游戏。</li>
+<li><strong>还原第 3～7 步所做操作至修改前</strong>：即：停止 Shadowrocket；取消安卓机的 Wi-Fi 代理；关闭代理共享；关闭调试日志记录。</li>
+<li><strong>【iOS】提取账号登录数据（重要！）</strong>：在”设置“界面中，点击进入”高级“部分中的”诊断“，再进入“VPN 日志”，找到刚才生成的日志点击进入；在“内容”界面中一直往下翻，直到找到夹在两排等号分隔线之间的“获取账号数据”内容，其中就有”open_id“和”token“，将它们各自复制保存好，在后面的第二部分配置过程中需要用到。</li>
+</ol>
+</details>
+<details>
+<summary>点击查看：第二部分 配置跨服</summary>
+<h4 id="方法一直接订阅简易跨服配置">方法一：直接订阅简易跨服配置</h4>
+<p><strong>提醒</strong>：第二部分的方法一的第 1～4 步若在第一部分的方法一中<strong>已操作过</strong>，且遵循第 10 步的建议<strong>并未还原</strong>，则此时可<strong>直接跳过</strong>，<strong>无需重复操作</strong>。</p>
+<ol>
+<li><strong>新建本机节点</strong>：在首页，点击右上角”+“，添加一个类型为”HTTP“（或”HTTPS“）、地址为”localhost“（或”127.0.0.1“）、端口为”1080“（或其他在 1-65535 之间的端口）的节点，然后在首页的”服务器节点“中选中该节点。</li>
+<li><strong>设置路由模式</strong>：将”全局路由“设置为”直连“（或”配置“）。</li>
+<li><strong>设置远程订阅 URL</strong>：在”配置文件“界面，点击右上角”+“，输入下面的远程订阅 URL，点击下载。</li>
+</ol>
+<pre><code>https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili.conf
+</code></pre>
+<ol start="4">
+<li><strong>下载并应用简易跨服配置</strong>：在”远程文件“中点击该 URL，选择”使用配置“，等待下载完毕后，即可看到”本地文件“中加载了“gfcn_switchserver_bili.conf”配置。</li>
+<li><strong>将脚本 P2 从云端改存至本设备</strong>：在“配置文件”界面点击该配置，选择“编辑配置”，然后点击进入“脚本”→“gfcn_switchserver_bili_P2”；在弹出的“添加脚本”界面，点击“Script”右侧的ⓘ，再在弹出的“Script”界面中，点击下方的“保存”；在弹出的预览界面中，等脚本从云端加载完毕并显示后，点击右上角的“保存”返回“Script”界面。</li>
+<li><strong>在脚本 P2 中填入账号信息并启用（重要！）</strong>：在“Script”界面中，找到上方已保存下的“gfcn_switchserver_bili_P2.js”，左划并点击“编辑”；在弹出的脚本编辑界面中，将已获取到账号数据中的“open_id”值替换掉其中的“abc”，“token”值替换掉其中的“xyz”（千万不要删改前后的双引号；粘贴后如出现空格需删除）；点击右上角“保存”返回“Script”界面，再点击“gfcn_switchserver_bili_P2.js”以选中脚本并返回“添加脚本”界面，再点击右上角“保存”返回“Script”界面，然后一路返回至主界面。</li>
+<li><strong>启动 Shadowrocket</strong>：返回 Shadowrocket 的首页，打开 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。（不玩游戏时，别忘了停止 Shadowrocket 的连接。）</li>
+</ol>
+<h4 id="方法二手动写入当前使用中配置-2">方法二：手动写入当前使用中配置</h4>
+<p><strong>提醒</strong>：第二部分的方法二的第 1～2 步若在第一部分的方法二中<strong>已操作过</strong>，则此时可<strong>直接跳过</strong>，<strong>无需重复操作</strong>。</p>
+<ol>
+<li><strong>进入配置编辑界面</strong>：在”配置文件“界面，从”本地文件“中找到当前正在使用的配置，点击它，在弹出的列表中选择”编辑纯文本“。</li>
+<li><strong>添加跨服配置</strong>：在弹出的编辑窗口中，将以下配置中 <code>[Script]</code> 下方的代码，在配置文件中找到对应位置复制进去，然后点击右上角的”保存“，返回“配置文件”界面。</li>
+</ol>
+<pre><code>[Script]
+# 少女前线 跨 Bilibili 服
+## 第一部分 获取帐号数据
+gfcn_switchserver_bili_GetToken = type=http-response,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_GetToken.js,pattern=^http:\/\/gfcn-passport\.(.+?)\.sunborngame\.com\/third\/channelLogin,max-size=1048576,requires-body=true,enable=true
+## 第二部分 切换服务器
+gfcn_switchserver_bili_P1 = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_P1.js,pattern=^http:\/\/gfcn-transit\.ios\.sunborngame\.com\/index\.php,max-size=1048576,requires-body=true,enable=true
+## 第二部分 写入帐号数据
+gfcn_switchserver_bili_P2 = type=http-request,script-path=https://raw.githubusercontent.com/Mornwind/GFCN_SwitchServer/master/Shadowrocket/gfcn_switchserver_bili_P2.js,pattern=^http:\/\/gfcn-game\.(.+?)\.sunborngame\.com\/index\.php\/5000\/Index\/getUidEnMicaQueue,max-size=1048576,requires-body=true,enable=true
+</code></pre>
+<ol start="3">
+<li><strong>将脚本 P2 从云端改存至本设备</strong>：在“配置文件”界面点击该配置，选择“编辑配置”，然后点击进入“脚本”→“gfcn_switchserver_bili_P2”；在弹出的“添加脚本”界面，点击“Script”右侧的ⓘ，再在弹出的“Script”界面中，点击下方的“保存”；在弹出的预览界面中，等脚本从云端加载完毕并显示后，点击右上角的“保存”返回“Script”界面。</li>
+<li><strong>在脚本 P2 中填入账号信息并启用（重要！）</strong>：在“Script”界面中，找到上方已保存下的“gfcn_switchserver_bili_P2.js”，左划并点击“编辑”；在弹出的脚本编辑界面中，将已获取到账号数据中的“open_id”值替换掉其中的“abc”，“token”值替换掉其中的“xyz”（千万不要删改前后的双引号；粘贴后如出现空格需删除）；点击右上角“保存”返回“Script”界面，再点击“gfcn_switchserver_bili_P2.js”以选中脚本并返回“添加脚本”界面，再点击右上角“保存”返回“Script”界面，然后一路返回至主界面。</li>
+<li><strong>重启 Shadowrocket</strong>：为确保修改生效，可以返回 Shadowrocket 的首页，开关一次 Shadowrocket 的连接开关，然后在清除了游戏后台的情况下进入游戏，即可实现跨服。</li>
+</ol>
+</details>
+<hr>
+<h3 id="5-quantumult-x">⑸ Quantumult X</h3>
+<p>待补充完整。</p>
+<hr>
+<h3 id="6-surge-4">⑹ Surge 4</h3>
+<p>待补充完整。</p>
+<hr>
+<h3 id="7-loon">⑺ Loon</h3>
+<p>待补充完整。</p>
+<hr>
+<h2 id="a-2-类型未提供">A-2 类型（未提供）</h2>
+<blockquote>
+<p>A-2：通过<strong>使用他人提供的代理服务器</strong>，<strong>在远端重写客户端请求</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<p>暂不提供此方式为「少女前线」进行跨服，因为使用代理服务器会受多种因素影响，造成跨服不稳定。</p>
+<h2 id="b-类型未提供">B 类型（未提供）</h2>
+<blockquote>
+<p>B-1：通过<strong>对游戏客户端修改后重新打包</strong>，<strong>由他人统一签名后在线下载安装</strong>，<strong>直接</strong>实现跨服。</p>
+<p>B-2：通过<strong>对游戏客户端修改后重新打包</strong>，<strong>自行签名然后越狱安装或侧载</strong>，<strong>直接</strong>实现跨服。</p>
+</blockquote>
+<p>不提供此方式为「少女前线」进行跨服，因为修改客户端容易被封号。</p>
+<h2 id="c-1-类型">C-1 类型</h2>
+<blockquote>
+<p>C-1：通过<strong>使用云游戏平台</strong>，<strong>将游戏画面实时传输至移动设备</strong>，<strong>间接</strong>实现跨服。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">图标</th>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">别名</th>
+<th style="text-align:center">跨服教程与配置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">网易云游戏</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">见网易云游戏官网</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">跨服工具</th>
+<th style="text-align:center">国区商店<br/>购买与下载</th>
+<th style="text-align:center">正规渠道价格</th>
+<th style="text-align:center">跨服操作<br/>方便程度</th>
+<th style="text-align:center">设备上同时<br/>挂梯与跨服</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">网易云游戏</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">¥15.9/月<br/>¥70/季<br/>¥240/年</td>
+<td style="text-align:center">★★★★★</td>
+<td style="text-align:center">✅</td>
+<td style="text-align:center">部分渠道服平台未提供</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>注：</p>
+<p>网易云游戏 - 官网：<a href="https://cg.163.com">https://cg.163.com</a></p>
+</blockquote>
+<h2 id="c-2-类型">C-2 类型</h2>
+<blockquote>
+<p>C-2：通过<strong>使用云主机</strong>，<strong>将游戏画面实时传输至移动设备</strong>，<strong>间接</strong>实现跨服。</p>
+</blockquote>
+<p>此方法需自行摸索。</p>
+<hr>
+<h2 id="附录1app-store-链接">附录1：App Store 链接</h2>
+<ul>
+<li>
+<p><strong>游戏本体</strong></p>
+<ul>
+<li>少女前线：<a href="https://apps.apple.com/app/id1117273600">https://apps.apple.com/app/id1117273600</a></li>
+</ul>
+</li>
+<li>
+<p><strong>网络调试工具（仅抓包）</strong></p>
+<ul>
+<li>HTTP Catcher：<a href="https://apps.apple.com/app/id1445874902">https://apps.apple.com/app/id1445874902</a></li>
+<li>iHTTP Tracker：<a href="https://apps.apple.com/app/id1463315864">https://apps.apple.com/app/id1463315864</a></li>
+<li>Thor：<a href="https://apps.apple.com/app/id1210562295">https://apps.apple.com/app/id1210562295</a></li>
+</ul>
+</li>
+<li>
+<p><strong>网络调试工具（抓包、代理）</strong></p>
+<ul>
+<li>Shadowrocket：<a href="https://apps.apple.com/app/id932747118">https://apps.apple.com/app/id932747118</a></li>
+<li>Quantumult X：<a href="https://apps.apple.com/app/id1443988620">https://apps.apple.com/app/id1443988620</a></li>
+<li>Surge 4：<a href="https://apps.apple.com/app/id1442620678">https://apps.apple.com/app/id1442620678</a></li>
+<li>Loon：<a href="https://apps.apple.com/app/id1373567447">https://apps.apple.com/app/id1373567447</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="附录2少女前线国服客户端登录参数">附录2：「少女前线」国服客户端登录参数</h2>
+<blockquote>
+<p>以下为分别连接不同的国服服务器时，有效的客户端登录参数。</p>
+</blockquote>
+<h3 id="官服">官服</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数(→)<br/>服务器(↓)</th>
+<th style="text-align:center">URL / Host</th>
+<th style="text-align:center">Request Body<br/><code>channel</code></th>
+<th style="text-align:center">Request Body<br/><code>device</code></th>
+<th style="text-align:center">Request Body<br/><code>platformChannelId</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">安卓官服</td>
+<td style="text-align:center">⋯<code>.gw.</code>⋯</td>
+<td style="text-align:center"><code>cn_mica</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>GWGW</code><br/><code>TapTap</code></td>
+</tr>
+<tr>
+<td style="text-align:center">iOS 官服</td>
+<td style="text-align:center">⋯<code>.ios.</code>⋯</td>
+<td style="text-align:center"><code>cn_appstore</code></td>
+<td style="text-align:center"><code>ios</code></td>
+<td style="text-align:center"><code>ios</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="渠道服">渠道服</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数(→)<br/>服务器(↓)</th>
+<th style="text-align:center">URL / Host</th>
+<th style="text-align:center">Request Body<br/><code>channel</code></th>
+<th style="text-align:center">Request Body<br/><code>device</code></th>
+<th style="text-align:center">Request Body<br/><code>platformChannelId</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Bilibili 服</td>
+<td style="text-align:center">⋯<code>.bili.</code>⋯</td>
+<td style="text-align:center"><code>cn_bili</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>Bili</code></td>
+</tr>
+<tr>
+<td style="text-align:center">渠道混服</td>
+<td style="text-align:center">⋯<code>.ly.</code>⋯</td>
+<td style="text-align:center"><code>cn_third</code></td>
+<td style="text-align:center"><code>adr</code></td>
+<td style="text-align:center"><code>GWHF</code></td>
+</tr>
+</tbody>
+</table>
+
+          </div>
+          <div class="py-4 text-gray-600 flex items-center justify-between">
+            <div class="">
+              <div class="text-sm text-gray-300">最后更新于: </div>
+              <div class="text-base font-medium">2021.05.23</div>
+            </div>
+            <!-- <div class="flex items-center text-sm text-gray-600">
+              <i class="ri-eye-line"></i> <span class="ml-2">{{ views }}</span>
+            </div> -->
+          </div>
+          <div>
+            <div id="disqus_thread"></div>
+          </div>
+        </section>
+        
+          <!-- <aside class="sticky toc-container flex-shrink-0 hidden md:block">
+            <div class="text-gray-600 mb-4">目 录</div>
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%87%B4%E8%B0%A2">致谢</a></li>
+<li><a href="#%EF%B8%8F-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-%EF%B8%8F">⚠️ 注意事项 ⚠️</a></li>
+<li><a href="#ios-%E7%AB%AF%E5%B8%B8%E8%A7%81%E8%B7%A8%E6%9C%8D%E6%96%B9%E5%BC%8F">iOS 端常见跨服方式</a></li>
+<li><a href="#a-1-%E7%B1%BB%E5%9E%8B">A-1 类型</a>
+<ul>
+<li><a href="#1-http-catcher">⑴ HTTP Catcher</a></li>
+<li><a href="#2-ihttp-tracker">⑵ iHTTP Tracker</a></li>
+<li><a href="#3-thor">⑶ Thor</a></li>
+<li><a href="#4-shadowrocket">⑷ Shadowrocket</a>
+<ul>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E7%9B%B4%E6%8E%A5%E8%AE%A2%E9%98%85%E7%AE%80%E6%98%93%E9%85%8D%E7%BD%AE">方法一：直接订阅简易配置</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E5%86%99%E5%85%A5%E5%BD%93%E5%89%8D%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%85%8D%E7%BD%AE">方法二：手动写入当前使用中配置</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%B8%80%E7%9B%B4%E6%8E%A5%E8%AE%A2%E9%98%85%E7%AE%80%E6%98%93%E8%B7%A8%E6%9C%8D%E9%85%8D%E7%BD%AE">方法一：直接订阅简易跨服配置</a></li>
+<li><a href="#%E6%96%B9%E6%B3%95%E4%BA%8C%E6%89%8B%E5%8A%A8%E5%86%99%E5%85%A5%E5%BD%93%E5%89%8D%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%85%8D%E7%BD%AE-2">方法二：手动写入当前使用中配置</a></li>
+</ul>
+</li>
+<li><a href="#5-quantumult-x">⑸ Quantumult X</a></li>
+<li><a href="#6-surge-4">⑹ Surge 4</a></li>
+<li><a href="#7-loon">⑺ Loon</a></li>
+</ul>
+</li>
+<li><a href="#a-2-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">A-2 类型（未提供）</a></li>
+<li><a href="#b-%E7%B1%BB%E5%9E%8B%E6%9C%AA%E6%8F%90%E4%BE%9B">B 类型（未提供）</a></li>
+<li><a href="#c-1-%E7%B1%BB%E5%9E%8B">C-1 类型</a></li>
+<li><a href="#c-2-%E7%B1%BB%E5%9E%8B">C-2 类型</a></li>
+<li><a href="#%E9%99%84%E5%BD%951app-store-%E9%93%BE%E6%8E%A5">附录1：App Store 链接</a></li>
+<li><a href="#%E9%99%84%E5%BD%952%E5%B0%91%E5%A5%B3%E5%89%8D%E7%BA%BF%E5%9B%BD%E6%9C%8D%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%99%BB%E5%BD%95%E5%8F%82%E6%95%B0">附录2：「少女前线」国服客户端登录参数</a>
+<ul>
+<li><a href="#%E5%AE%98%E6%9C%8D">官服</a></li>
+<li><a href="#%E6%B8%A0%E9%81%93%E6%9C%8D">渠道服</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </aside> -->
+        
+      </div>
+    </div>
+    <div class="py-8 text-gray-300 text-center border-t border-gray-200">
+  Powered by Gridea
+</div>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+  
+  <script src="//cdn.jsdelivr.net/npm/@gridea/theme@1.0.8/js/main.js"></script>
+
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.0.0/build/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+    <center><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i>&nbsp;总访问量：<span id="busuanzi_value_site_pv"></span>&nbsp;次&nbsp;|&nbsp;</span><span id="busuanzi_container_site_uv"><i class="fa fa-users"></i>&nbsp;总访客数：<span id="busuanzi_value_site_uv"></span>&nbsp;人</span></center>
+  
+</body>
+</html>
